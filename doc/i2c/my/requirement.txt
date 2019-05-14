@@ -1,0 +1,11 @@
+Date: 2014/08/09
+
+I2C driver and board requirement specification. 
+
+- I2C interface communication to the sensor.
+- Able to set the threshold in the internal register of the sensor from the userspace. 
+- Alert pin will trigger high threshold interrupt and needs to be communicated
+to the upper program.
+- Hardware address to be set up for the device.
+- driver to support identification of the device.
+- Resolution of 13 bit is acceptable.

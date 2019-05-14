@@ -1,0 +1,9 @@
+Links:
+
+http://renjucnair.blogspot.ca/2012/01/writing-i2c-client-driver.html
+http://www.embedded-bits.co.uk/2009/i2c-in-the-2632-linux-kernel/
+http://bravegnu.org/device-model/device-model.txt
+
+
+
+

@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	
+	<meta property="fb:page_id" content="246262332260">
+	<meta property="og:type" content="athlete">
+	<meta property="fb:admins" value="USER_ID1,USER_ID2">
+	
+	<script src="thermistor_ckt_diagram_files/ca-pub-5398719259847980.js" type="text/javascript" async=""></script><script src="thermistor_ckt_diagram_files/ga.js" async="" type="text/javascript"></script><script src="thermistor_ckt_diagram_files/mootools-yui-compressed.js" type="text/javascript"></script>
+	<script src="thermistor_ckt_diagram_files/moo_more.js" type="text/javascript"></script>
+	<script src="thermistor_ckt_diagram_files/common.js" type="text/javascript"></script>
+	<script src="thermistor_ckt_diagram_files/MooClipNew.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+	//copy functions
+	window.addEvent("domready",function(){var a=$$(".codesnip-container .copy");var b=new MooClip(a,{moviePath:"/common/js/MooClip/ZeroClipboard.swf",dataSource:function(c){return c.getParent(".codesnip-container").getElement(".codesnip").get("text").tidy()},onCopy:function(d,c){c.set("text","Copied");c.highlight();(function(){c.set("text","Copy Code")}).delay(3000)}})});		
+	</script>
+
+
+
+	 <title>bildr  » Simple Temperature With Thermistor + Arduino</title>
+	
+	
+	<!-- <title>Simple Temperature With Thermistor + Arduino </title> -->
+	
+	<!-- <title>Simple Temperature With Thermistor + Arduino </title> -->
+ 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="generator" content="WordPress 3.9.1">
+	
+	
+	
+	<meta property="fb:admins" content="12502024">
+	<meta property="og:site_name" content="bildr">
+	<meta property="og:type" content="article">
+	
+	
+	<link rel="stylesheet" href="thermistor_ckt_diagram_files/style.css" type="text/css" media="screen">
+	
+	<link rel="stylesheet" href="thermistor_ckt_diagram_files/codesnippet.css" type="text/css" media="screen">
+	
+	<link rel="stylesheet" href="thermistor_ckt_diagram_files/common.css" type="text/css" media="screen">
+	<link rel="alternate" type="application/rss+xml" title="bildr RSS Feed" href="http://bildr.org/feed/">
+	<link rel="pingback" href="http://bildr.org/blog/xmlrpc.php">
+
+	
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4050921-8']);
+  _gaq.push(['_setDomainName', '.bildr.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+
+
+<body data-twttr-rendered="true">
+	<div id="headerWrapper">
+		<div id="globalNavigationWrapper">
+			
+			
+			
+			
+			<ul id="globalNavigation">
+				<li>Home</li>
+				<li><a href="http://forum.bildr.org/">Forum</a></li>
+				<li><a href="http://wiki.bildr.org/">Wiki</a></li>
+				<li><a href="http://code.bildr.org/">Code</a></li>
+				
+				<ul id="globalNavigationRight">
+					<li><a href="http://bildr.org/feed/">RSS</a></li>
+					<li><a href="http://twitter.com/bildr">Twitter</a></li>
+					<li><a href="http://www.facebook.com/bildr.DIY">Facebook</a></li>
+				</ul>
+				
+			</ul>
+			
+			
+			
+			
+			
+		</div>
+	
+	
+	
+		<div id="header">
+			<a id="mainLogo" class="blog" href="http://bildr.org/"></a>
+			
+			<div id="headSearch">
+				<form method="get" id="searchform" action="http://bildr.org/">
+				<input size="18" name="s" id="searchInput" type="text"><label for="searchInput" style="line-height: normal; position: absolute; cursor: text; left: 4px; top: 2px;" class="overTxtLabel">search blog...</label>
+				<a id="searchChoices" data-searchtext="search blog..." href="#"></a>
+				
+				<div id="searchMenu">
+					<a class="wiki" href="#">Search Wiki</a>
+				<!-- <a class="code" href="#">Search Code</a> -->
+					<a class="forum" href="#">Search Forum</a>
+					<a class="blog" href="#">Search Blog</a>
+				</div>
+				
+				
+				<input id="searchsubmit" value="Search" class="btn" type="submit">
+				</form>
+			</div>
+			
+			<div id="user">		
+				<a href="http://forum.bildr.org/ucp.php?mode=login" title="Login" accesskey="l">Login</a>
+		 / <a href="http://forum.bildr.org/ucp.php?mode=register">Register</a>			</div>
+			
+		</div>
+	</div>
+	
+	<div id="actionWrapper">
+		<div id="actionBar">
+		
+		
+		<ul id="actions">
+			<li class="page_item page-item-2"><a href="http://bildr.org/about/">About</a></li>
+		</ul>
+		
+				
+		
+		</div>
+	</div>
+	
+		
+	
+		<div id="PCGHelp">
+			<div class="ga">
+			
+			
+			<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-5398719259847980";
+			/* bildrBlog */
+			google_ad_slot = "6547056212";
+			google_ad_width = 728;
+			google_ad_height = 90;
+			//-->
+			</script>
+			<script type="text/javascript" src="thermistor_ckt_diagram_files/show_ads.js">
+			</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" frameborder="0" height="90" width="728"></iframe></ins></ins>
+			
+			</div>
+		</div>
+	
+		
+	<div class="content">
+	
+	
+	
+	
+	
+
+
+
+		
+		<div class="post">
+		
+			<h2>
+				<a href="http://bildr.org/2012/11/thermistor-arduino/">
+					Simple Temperature With Thermistor + Arduino				</a>
+			</h2>
+			
+			<div class="date">
+				Friday, November 23	<sup class="super">rd</sup>
+	, 2012			</div>
+			
+			<div class="postContent">
+				<p><img class="noFrame" src="thermistor_ckt_diagram_files/Thermistor.jpg"></p>
+<div class="columnBody">
+<div class="leftColumn">
+<p>A Thermistor is a thermal-resistor. It’s just a simple device that changes it’s resistance based on temperature. If the <a href="http://bildr.org/2012/11/photoresistor-arduino/">LRD/Photoresistor</a> is day of of arduino class. The thermistor should be day 1.01. (Can I do that?).</p>
+<p><b>If you need precise temperature readings, this is not the part for you. Check out the <a href="http://bildr.org/2011/07/ds18b20-arduino/">DS18B20</a>, <a href="http://bildr.org/2011/01/tmp102-arduino/">TMP102</a>, or <a href="http://bildr.org/2011/02/mlx90614-arduino/">MLX90614</a></b></p>
+<p>Thermistors are not that precise or anything, so you wont be able to 
+tell the temperature with it, but if you need to know when the 
+temperature has changed, this will work for you. And on the plus side, 
+they are crazy cheap considering the alternatives, incredibly simple to 
+hookup, and have some of the easiest code ever. You can find these 
+pretty easily at most hobby electronics shops, or just add some to your 
+next <a href="https://www.sparkfun.com/products/250">sparkfun order</a>.</p>
+</div>
+<div class="rightColumn">
+<p><a href="http://bildr.org/blog/wp-content/uploads/2012/11/Thermistor-arduino.png"><img src="thermistor_ckt_diagram_files/Thermistor-arduino-400x288.png" alt="" title="Thermistor-arduino" class="alignleft size-medium wp-image-2207" height="288" width="400"></a></p>
+</div>
+</div>
+<h3>Hooking it up, and why</h3>
+<p>The thermistor changes its resistance with temperature so we can 
+measure that change using one of the Arduino’s analog pins. But to do 
+that we need a fixed resistor (not changing) that we can use for that 
+comparison (We are using a 10K resistor). This is called a <a href="http://en.wikipedia.org/wiki/Voltage_divider">voltage divider</a> and divides the 5v between the thermistor and the resistor. </p>
+<p>The analog read on your arduino is basically a voltage meter. at 5V 
+(its max) it would read 1023, and at 0v it read 0. So we can measure how
+ much voltage is on the thermistor using the analogRead and we have our 
+reading. </p>
+<p>The amount of that 5V that each part gets is proportional to its 
+resistance. So if the the thermistor and the resistor have the same 
+resistance, the 5V is split evenly (2.5V) to each part. (analog reading 
+of 512)</p>
+<p>But if the thermistor is really hot and is reading only 1K of 
+resistance, the 10K resistor is going to soak up 10 times as much of 
+that 5V. So the thermistor would only get .45V. (analog reading of 92)</p>
+<p>And if it is in the refrigerator, the thermistor may be 40K or 
+resistance, so the thermistor will soak up 4 times as much of that 5V as
+ the 10K resistor. So the thermistor would get 4V. (analog reading of 
+819)</p>
+<h3>Code</h3>
+<p>The arduino code for this just could not be easier. We are adding 
+some serial prints and delays to it just so you can easily see the 
+readings, but they dont need to be there if you dont need them.</p>
+<div class="codesnip-container">
+<div class="codeHead">
+				<a class="copy" href="#">Copy Code</a>
+			</div>
+<pre class="arduino codesnip" style="font-family:monospace;"><span class="kw4">int</span> thermistorPin <span class="sy0">=</span> A0<span class="sy0">;</span> <span class="co1">//analog pin 0</span>
+
+<span class="kw4">void</span> setup<span class="br0">(</span><span class="br0">)</span><span class="br0">{</span>
+  <span class="kw3">Serial</span>.<span class="me1">begin</span><span class="br0">(</span>9600<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+
+<span class="kw4">void</span> loop<span class="br0">(</span><span class="br0">)</span><span class="br0">{</span>
+  <span class="kw4">int</span> thermistorReading <span class="sy0">=</span> <span class="kw3">analogRead</span><span class="br0">(</span>thermistorPin<span class="br0">)</span><span class="sy0">;</span> 
+
+  <span class="kw3">Serial</span>.<span class="me1">println</span><span class="br0">(</span>thermistorReading<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw3">delay</span><span class="br0">(</span>250<span class="br0">)</span><span class="sy0">;</span> <span class="co1">//just here to slow down the output for easier reading</span>
+<span class="br0">}</span></pre>
+<div class="codeFoot">
+				Unless otherwise stated, this code is released under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a> – Please use, change and share it.
+			</div>
+<p></p></div>
+			</div>
+			
+			
+			<div class="network">
+				
+	<span class="reTweet">
+		<script src="thermistor_ckt_diagram_files/widgets.js" type="text/javascript"></script>
+		<iframe style="width: 110px; height: 20px;" data-twttr-rendered="true" title="Twitter Tweet Button" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" src="thermistor_ckt_diagram_files/tweet_button.htm" allowtransparency="true" scrolling="no" id="twitter-widget-0" frameborder="0"></iframe>
+	</span>				
+	<span class="facebook">				
+		<iframe src="thermistor_ckt_diagram_files/like.htm" scrolling="no" style="border:none; overflow:hidden; width:100px; height:21px;" allowtransparency="true" frameborder="0"></iframe>
+	</span>				<a class="forumDiscussion" href="http://forum.bildr.org/viewtopic.php?t=1100">No Comments</a>			</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		
+	
+	
+	<div class="alignleft"></div>
+	<div class="alignright"></div>
+	
+	
+	
+	</div>
+
+<div id="footerWrapper">
+	<div id="footerLine"></div>	
+	
+	<div id="footer">
+		
+		<div id="footerLinks">
+		<div id="footer1">
+							<h3>Archives</h3>
+				
+				<ul>
+						<li><a href="http://bildr.org/2013/10/">October 2013</a></li>
+	<li><a href="http://bildr.org/2012/11/">November 2012</a></li>
+	<li><a href="http://bildr.org/2012/08/">August 2012</a></li>
+	<li><a href="http://bildr.org/2012/04/">April 2012</a></li>
+	<li><a href="http://bildr.org/2012/03/">March 2012</a></li>
+	<li><a href="http://bildr.org/2012/02/">February 2012</a></li>
+	<li><a href="http://bildr.org/2012/01/">January 2012</a></li>
+	<li><a href="http://bildr.org/2011/10/">October 2011</a></li>
+	<li><a href="http://bildr.org/2011/09/">September 2011</a></li>
+	<li><a href="http://bildr.org/2011/08/">August 2011</a></li>
+	<li><a href="http://bildr.org/2011/07/">July 2011</a></li>
+	<li><a href="http://bildr.org/2011/06/">June 2011</a></li>
+	<li><a href="http://bildr.org/2011/05/">May 2011</a></li>
+	<li><a href="http://bildr.org/2011/04/">April 2011</a></li>
+	<li><a href="http://bildr.org/2011/03/">March 2011</a></li>
+	<li><a href="http://bildr.org/2011/02/">February 2011</a></li>
+	<li><a href="http://bildr.org/2011/01/">January 2011</a></li>
+	<li><a href="http://bildr.org/2010/12/">December 2010</a></li>
+	<li><a href="http://bildr.org/2010/11/">November 2010</a></li>
+	<li><a href="http://bildr.org/2010/10/">October 2010</a></li>
+	<li><a href="http://bildr.org/2010/09/">September 2010</a></li>
+				</ul>
+					</div>
+	
+		<div id="footer2">
+							<h3>Categories</h3>
+				<ul>
+						<li class="cat-item cat-item-5"><a href="http://bildr.org/category/funded-projects/" title="View all posts filed under funded projects">funded projects</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://bildr.org/category/promotions/" title="View all posts filed under Promotions">Promotions</a>
+</li>
+	<li class="cat-item cat-item-62"><a href="http://bildr.org/category/review/" title="View all posts filed under Review">Review</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://bildr.org/category/site/" title="View all posts filed under Site">Site</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://bildr.org/category/tutorials/" title="View all posts filed under Tutorials">Tutorials</a>
+</li>
+	<li class="cat-item cat-item-55"><a href="http://bildr.org/category/user-contributed-articles/" title="View all posts filed under User Contributed Articles">User Contributed Articles</a>
+</li>
+	<li class="cat-item cat-item-102"><a href="http://bildr.org/category/user-project/" title="View all posts filed under User Project">User Project</a>
+</li>
+				</ul>
+					</div>
+		
+		
+		
+		<div id="footer3">
+			<h3>about</h3>
+			
+			<ul>									
+				<li id="copyright">Content available under: <br><a href="http://creativecommons.org/licenses/by-sa/3.0/" class="external ">Attribution-Share Alike 3.0 Unported</a></li> 						
+				<li>Proudly powered by <a href="http://wordpress.org/">WordPress</a>, <strong><a href="http://www.themelab.com/" title="Theme Lab">Free WordPress Themes</a>, and <a href="http://www.websiteoffice.com/">Search Marketing</a></strong></li>
+			</ul>
+		</div>
+		</div>
+		
+		
+		<div class="clearDiv"></div>
+	
+	
+	</div>
+	<div id="footerGrad"></div>
+</div>	
+		
+
+
+
+
+
+<div style="position: absolute; overflow: hidden; height: 1px; width: 1px;" id="MooClipContainer78283727"><object id="MooClip78283727" type="application/x-shockwave-flash" data="thermistor_ckt_diagram_files/ZeroClipboard.swf" height="500" width="500"><param name="quality" value="best"><param name="allowScriptAccess" value="always"><param name="wMode" value="transparent"><param name="swLiveConnect" value="true"><param name="loop" value="false"><param name="menu" value="false"><param name="allowFullScreen" value="false"><param name="wmode" value="transparent"><param name="flashVars" value="id=MooClip78283727&amp;width=500&amp;height=500"></object></div></body></html>
+<!-- Dynamic page generated in 1.207 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-07-12 13:26:30 -->
+<!-- super cache -->
