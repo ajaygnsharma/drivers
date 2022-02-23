@@ -1,0 +1,1 @@
+The dts file is compiled and a dtb file is created. Look for the compiled 'dtb' file to make sure that the correct dts file is included.
