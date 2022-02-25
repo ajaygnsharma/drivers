@@ -1,1 +1,0 @@
-cmd_/home/user1/workspace/uclinux/drivers/hello_world/helloworld.ko := arm-linux-ld -EL  -r -o /home/user1/workspace/uclinux/drivers/hello_world/helloworld.ko /home/user1/workspace/uclinux/drivers/hello_world/helloworld.o /home/user1/workspace/uclinux/drivers/hello_world/helloworld.mod.o
