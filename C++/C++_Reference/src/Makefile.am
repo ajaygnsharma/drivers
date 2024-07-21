@@ -1,0 +1,49 @@
+AM_CXXFLAGS = -g3 -O0
+
+bin_PROGRAMS=01_char_to_string\
+ 02_exceptionex\
+ 03_serialize_obj\
+ 04_serialize_to_string\
+ 05_null_ptr\
+ 06_void_ptr\
+ 07_sizeof_in_array_declaration\
+ 08_mkpasswd\
+ 09_serialize_to_string_with_pad\
+ 10_atoi_with_pad\
+ 11_clone_master\
+ 12_clone_slave\
+ 13_vector_structure\
+ 14_chronos_timer_api\
+ 15_stoi\
+ 16_bitfield_union\
+ 17_sscanf_date_time\
+ 18_opasswd_del\
+ 19_bitset_to_bitfield\
+ 20_void_ptr_cast\
+ 21_bitset_for_loop\
+ 22_factory_cfg
+
+01_char_to_string_SOURCES=01_char_to_string.cpp
+02_exceptionex_SOURCES=02_exceptionex.cpp
+03_serialize_obj_SOURCES=03_serialize_obj.cpp
+04_serialize_to_string_SOURCES=04_serialize_to_string.cpp
+05_null_ptr_SOURCES=05_null_ptr.cpp
+06_void_ptr_SOURCES=06_void_ptr.cpp
+07_sizeof_in_array_declaration_SOURCES=07_sizeof_in_array_declaration.cpp
+08_mkpasswd_SOURCES=08_mkpasswd.cpp
+09_serialize_to_string_with_pad_SOURCES=09_serialize_to_string_with_pad.cpp
+10_atoi_with_pad_SOURCES=10_atoi_with_pad.cpp
+11_clone_master_SOURCES=11_clone_master.cpp
+12_clone_slave_SOURCES=12_clone_slave.cpp
+13_vector_structure_SOURCES=13_vector_structure.cpp
+14_chronos_timer_api_SOURCES=14_chronos_timer_api.cpp
+15_stoi_SOURCES=15_stoi.cpp
+16_bitfield_union_SOURCES=16_bitfield_union.cpp
+17_sscanf_date_time_SOURCES=17_sscanf_date_time.cpp
+18_opasswd_del_SOURCES=18_opasswd_del.cpp
+19_bitset_to_bitfield_SOURCES=19_bitset_to_bitfield.cpp
+20_void_ptr_cast_SOURCES=20_void_ptr_cast.cpp
+21_bitset_for_loop_SOURCES=21_bitset_for_loop.cpp
+22_factory_cfg_SOURCES=22_factory_cfg.cpp
+
+08_mkpasswd_LDADD = /usr/lib/x86_64-linux-gnu/libcrypt.so.1.1.0

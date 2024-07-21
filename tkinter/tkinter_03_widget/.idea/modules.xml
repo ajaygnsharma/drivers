@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../python_01_sprintf/.idea/python_01_sprintf.iml" filepath="$PROJECT_DIR$/../python_01_sprintf/.idea/python_01_sprintf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tkinter_03_widget.iml" filepath="$PROJECT_DIR$/.idea/tkinter_03_widget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tkinter_04_frame/.idea/tkinter_04_frame.iml" filepath="$PROJECT_DIR$/../tkinter_04_frame/.idea/tkinter_04_frame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tkinter_05_counter/.idea/tkinter_05_counter.iml" filepath="$PROJECT_DIR$/../tkinter_05_counter/.idea/tkinter_05_counter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tkinter_06_roll_die/.idea/tkinter_06_roll_die.iml" filepath="$PROJECT_DIR$/../tkinter_06_roll_die/.idea/tkinter_06_roll_die.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tkinter_07_temperature_convert/.idea/tkinter_07_temperature_convert.iml" filepath="$PROJECT_DIR$/../tkinter_07_temperature_convert/.idea/tkinter_07_temperature_convert.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tkinter_08_listbox/.idea/tkinter_08_listbox.iml" filepath="$PROJECT_DIR$/../tkinter_08_listbox/.idea/tkinter_08_listbox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tkinter_09_serialPort_listbox/.idea/tkinter_09_serialPort_listbox.iml" filepath="$PROJECT_DIR$/../tkinter_09_serialPort_listbox/.idea/tkinter_09_serialPort_listbox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tkinter_10_nothread/.idea/tkinter_10_thread.iml" filepath="$PROJECT_DIR$/../tkinter_10_nothread/.idea/tkinter_10_thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tkinter_11_thread/.idea/tkinter_11_thread.iml" filepath="$PROJECT_DIR$/../tkinter_11_thread/.idea/tkinter_11_thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tkinter_12_unitTest/.idea/tkinter_12_unitTest.iml" filepath="$PROJECT_DIR$/../tkinter_12_unitTest/.idea/tkinter_12_unitTest.iml" />
+    </modules>
+  </component>
+</project>

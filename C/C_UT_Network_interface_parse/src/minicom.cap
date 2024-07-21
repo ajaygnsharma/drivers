@@ -1,0 +1,4123 @@
+
+Login incorrect
+ibuc login: root
+# mount binping google.com
+ping: bad address 'google.com'
+# ls
+bin         interfaces  ttyS0
+# ififconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.19.20  netmask 255.255.0.0  broadcast 10.10.255.255
+        inet6 fe80::5610:ecff:fe33:ea9a  prefixlen 64  scopeid 0x20<link>
+        ether 54:10:ec:33:ea:9a  txqueuelen 1000  (Ethernet)
+        RX packets 270  bytes 19963 (19.4 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 15  bytes 1146 (1.1 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 28  base 0x8000  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 4  bytes 280 (280.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4  bytes 280 (280.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+# rescat /reet# cat /etc/res# cat /etc/resolv.conf 
+cat: can't open '/etc/resolv.conf': No such file or directory
+# cd /e# cd /etc/
+# ls -l re# ls -l resolv.conf 
+lrwxrwxrwx    1 root     root            18 Jul 19  2019 resolv.conf -> ../tmp/resolv.conf
+# cd ../
+# pwd
+/
+# cd tm# cd tmp/
+# cat resifdown eth0
+# ifup eth10
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+# ls
+dbus           dhcpd.leases~  sshd
+dhcpd.leases   messages       subsys
+# cpwd
+/tmp
+# resolcd ./et/et# cd /etc/
+# ls
+apache2              inputrc              random-seed
+bind.keys            iproute2             resolv.conf
+dbus-1               issue                services
+dhcp                 libnl                shadow
+dropbear             mke2fs.conf          shadow-
+fonts                mtab                 shells
+fstab                network              ssh
+group                nftables             ssl
+group-               nsswitch.conf        ts.conf
+hostapd.conf         os-release           udev
+hostname             passwd               wgetrc
+hosts                passwd-              wireless-regdb
+ibuc.conf            profile              wpa_supplicant.conf
+init.d               profile.d
+inittab              protocols
+# cat re# cat resolv.conf cat ifs# cat fstab 
+# <file system>	<mount pt>	<type>	<options>	<dump>	<pass>
+/dev/root	/		ext2	rw,noauto	0	1
+proc		/proc		proc	defaults	0	0
+devpts		/dev/pts	devpts	defaults,gid=5,mode=620,ptmxmode=0666	0	0
+tmpfs		/dev/shm	tmpfs	mode=0777	0	0
+tmpfs		/tmp		tmpfs	mode=1777	0	0
+tmpfs		/run		tmpfs	mode=0755,nosuid,nodev	0	0
+sysfs		/sys		sysfs	defaults	0	0
+10.10.19.12:/home/asharma/dev/buildroot-at91/output/target/usr/bin /root/bin nfs defaults,user,exec,port=2049,nolock,proto=tcp 0 0
+# ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=0 ttl=64 time=1.312 ms
+c^H
+^C
+--- 10.10.19.12 ping statistics ---
+8 packets transmitted, 1 packets received, 87% packet loss
+round-trip min/avg/max = 1.312/1.312/1.312 ms
+# # ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+^C
+--- 10.10.19.12 ping statistics ---
+4 packets transmitted, 0 packets received, 100% packet loss
+# 
+# 
+# # ping 10.10.19.120.1
+PING 10.10.10.1 (10.10.10.1): 56 data bytes
+64 bytes from 10.10.10.1: seq=0 ttl=64 time=1.009 ms
+64 bytes from 10.10.10.1: seq=1 ttl=64 time=0.762 ms
+64 bytes from 10.10.10.1: seq=2 ttl=64 time=0.787 ms
+^C
+--- 10.10.10.1 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.762/0.852/1.009 ms
+# # ping 10.10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+^C
+--- 10.10.19.12 ping statistics ---
+5 packets transmitted, 0 packets received, 100% packet loss
+# 
+# 
+# route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         10.10.10.1      0.0.0.0         UG    0      0        0 eth0
+10.10.0.0       0.0.0.0         255.255.0.0     U     0      0        0 eth0
+# # route# ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=6 ttl=64 time=0.821 ms
+64 bytes from 10.10.19.12: seq=7 ttl=64 time=0.950 ms
+64 bytes from 10.10.19.12: seq=8 ttl=64 time=0.849 ms
+64 bytes from 10.10.19.12: seq=9 ttl=64 time=0.949 ms
+64 bytes from 10.10.19.12: seq=10 ttl=64 time=0.896 ms
+64 bytes from 10.10.19.12: seq=11 ttl=64 time=0.930 ms
+^C
+--- 10.10.19.12 ping statistics ---
+12 packets transmitted, 6 packets received, 50% packet loss
+round-trip min/avg/max = 0.821/0.899/0.950 ms
+# scd 
+# cd mount bin
+# cd bin
+# ls
+[                                   lat_sig
+[[                                  lat_syscall
+ab                                  lat_tcp
+apachectl                           lat_udp
+apxs                                lat_unix
+ar                                  lat_unix_connect
+arpaname                            less
+asc2log                             libevdev-tweak-device
+aserver                             libinput
+awk                                 line
+basename                            lmdd
+bc                                  lmhttp
+bccmd                               log2asc
+bcmserver                           log2long
+bluemoon                            logger
+bluetoothctl                        logname
+btattach                            logresolve
+btgatt-server                       loop_o
+btmon                               lrz
+bunzip2                             lsiio
+bw_file_rd                          lsof
+bw_mem                              lspci
+bw_mmap_rd                          lsscsi
+bw_pipe                             lsusb
+bw_tcp                              lsz
+bw_unix                             lua
+bzcat                               luac
+cairo-sphinx                        lzcat
+can-calc-bit-timing                 lzma
+canbusload                          lzopcat
+candump                             md5sum
+canfdtest                           mdig
+cangen                              memsize
+cangw                               mesg
+canlogserver                        mhz
+canplayer                           microcom
+cansend                             mkfifo
+cansniffer                          mkpasswd
+checkgid                            modeprint
+chrt                                modetest
+chvt                                mouse-dpi-tool
+ciptool                             mpg123
+cksum                               mpg123-id3dump
+clear                               mpg123-strip
+cmp                                 mpicalc
+core-ibuc                           mpris-proxy
+core_ibuc                           msleep
+crontab                             mtdev-test
+cut                                 mv6tool
+dbclient                            named-rrchecker
+dbmmanage                           nano
+dbus-cleanup-sockets                net-snmp-create-v3-user
+dbus-daemon                         nl
+dbus-launch                         node
+dbus-monitor                        nohup
+dbus-run-session                    npm
+dbus-send                           nproc
+dbus-test-tool                      npx
+dbus-update-activation-environment  nslookup
+dbus-uuidgen                        od
+dc                                  openvt
+ddcmon                              out123
+deallocvt                           p9bit_example
+decode-dimms                        par_mem
+decode-edid                         par_ops
+decode-vaio                         passwd
+delv                                paste
+diff                                patch
+dirname                             pcregrep
+disk                                pcretest
+dos2unix                            phytool
+drmdevice                           planes
+dropbearconvert                     printf
+dropbearkey                         proptest
+du                                  python
+dumpsexp                            python2
+e2cp                                python2.7
+e2ln                                rb
+e2ls                                rctest
+e2mkdir                             readlink
+e2mv                                realpath
+e2rm                                render
+e2tail                              renice
+easy_install                        reset
+easy_install-2.7                    resize
+egrep                               rfcomm
+eject                               rngtest
+enough                              rotatelogs
+env                                 rview
+envvars                             rvim
+envvars-std                         rx
+evtest                              rz
+ex                                  sb
+expr                                scp
+factor                              screenlog.0
+fallocate                           sdptool
+fb-test                             senda_example
+fb-test-offset                      seq
+fb-test-perf                        setfattr
+fb-test-rect                        setip-ibuc
+fc-cache                            setkeycodes
+fc-cat                              setserial
+fc-conflist                         setsid
+fc-list                             sftp
+fc-match                            sha1sum
+fc-pattern                          sha256sum
+fc-query                            sha3sum
+fc-scan                             sha512sum
+fc-validate                         shred
+fcgistarter                         slcan_attach
+fgrep                               slcand
+file                                slcanpty
+find                                sort
+flock                               spi-config
+flushdisk                           spi-pipe
+fold                                ssh
+free                                ssh-add
+fuser                               ssh-agent
+gapplication                        ssh-copy-id
+gatttool                            ssh-keygen
+gcore                               ssh-keyscan
+gdb                                 strace
+gdbserver                           strace-log-merge
+gdbus                               stream
+gio                                 strings
+gio-querymodules                    svc
+gpg-error                           svok
+gpgrt-config                        swupdate
+grab                                sx
+grep                                sz
+gresource                           tail
+gsettings                           tee
+hciattach                           telnet
+hciconfig                           test
+hcidump                             testj1939
+hcitool                             tftp
+head                                time
+hello                               timeout
+hex2hcd                             timer-ibuc
+hexdump                             timing_o
+hexedit                             tlb
+hmac256                             top
+hostapd_cli                         touchpad-edge-detector
+hostid                              tr
+htcacheclean                        traceroute
+htdbm                               tree
+htdigest                            truncate
+htpasswd                            ts_calibrate
+httpd                               ts_conf
+httxt2dbm                           ts_finddev
+id                                  ts_harvest
+iio_event_monitor                   ts_print
+iio_generic_buffer                  ts_print_mt
+install                             ts_print_raw
+ipcrm                               ts_test
+ipcs                                ts_test_mt
+iperf3                              ts_uinput
+iptables-xml                        ts_verify
+isotpdump                           tty
+isotpperf                           udevadm
+isotprecv                           uniq
+isotpsend                           unix2dos
+isotpserver                         unlink
+isotpsniffer                        unlzma
+isotptun                            unlzop
+jacd                                unxz
+jspy                                unzip
+jsr                                 uptime
+killall                             usbhid-dump
+kms-steal-crtc                      user_example
+kms-universal-planes                uudecode
+kmstest                             uuencode
+l2ping                              vbltest
+l2test                              view
+last                                vim
+lat_connect                         vimdiff
+lat_ctx                             vlock
+lat_fcntl                           w
+lat_fifo                            wc
+lat_fs                              wget
+lat_http                            which
+lat_mem_rd                          who
+lat_mmap                            whoami
+lat_ops                             xargs
+lat_pagefault                       xmlwf
+lat_pipe                            xxd
+lat_proc                            xz
+lat_rpc                             xzcat
+lat_select                          yes
+lat_sem
+# ./core-ibuc
+IBUC Core
+Timer ID: 205144
+Ethernet init
+Cfg and /etc/network/interface IP match
+Cfg and /etc/network/interface Gateway match
+cfg mask=a0a0a01, if_ip=ffff0000admin=2337
+CPE=1234
+IBUC>
+CIA
+CIA=10.10.19.20
+IBUC>
+CIG
+CIG=10.10.10.1
+IBUC>
+CIM
+CIG=10.10.10.1
+IBUC>
+CIM=255.255.0.0
+CIG=10.10.10.1
+IBUC>
+CIM
+CIG=10.10.10.1
+IBUC>
+CIM
+CIG=10.10.10.1
+IBUC>
+RomBOOT
+
+
+AT91Bootstrap 3.8.11 (Tue Jul 23 14:20:53 PDT 2019)
+
+SD/MMC: Image: Read file u-boot.bin to 0x23f00000
+MMC: ADMA supported
+SD: Card Capacity: Standard
+SD: Specification Version 3.0X
+SD/MMC: Done to load image
+<debug_uart> 
+
+U-Boot 2018.07-linux4sam_6.0 (Jul 23 2019 - 14:21:02 -0700)
+
+CPU: SAMA5D27 1G bits DDR2 SDRAM
+Crystal frequency:       24 MHz
+CPU clock        :      492 MHz
+Master clock     :      164 MHz
+DRAM:  128 MiB
+MMC:   sdio-host@a0000000: 0, sdio-host@b0000000: 1
+Loading Environment from FAT... OK
+In:    serial@f8020000
+Out:   serial@f8020000
+Err:   serial@f8020000
+Net:   eth0: ethernet@f8008000
+Hit any key to stop autoboot:  1  0 
+3920912 bytes read in 246 ms (15.2 MiB/s)
+## Loading kernel from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Linux4SAM Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x210000e0
+     Data Size:    3879200 Bytes = 3.7 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x22000000
+     Entry Point:  0x22000000
+     Hash algo:    crc32
+     Hash value:   6bc04ff1
+     Hash algo:    sha1
+     Hash value:   6de3a2a0549dd96833e9bbf0998e6e35423c46f2
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading fdt from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'base_fdt' fdt subimage
+     Description:  Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x213b332c
+     Data Size:    39685 Bytes = 38.8 KiB
+     Architecture: ARM
+     Load Address: 0x23000000
+     Hash algo:    crc32
+     Hash value:   6937a0c4
+     Hash algo:    sha1
+     Hash value:   1d1992fa75a654b87e28861801fbb8cae482435c
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading fdt from 0x213b332c to 0x23000000
+   Booting using the fdt blob at 0x23000000
+   Loading Kernel Image ... OK
+   Loading Device Tree to 27b48000, end 27b54b04 ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.14.73-linux4sam_6.0 (asharma@rmcdonald-3630) (gcc version 8.2.1 20180802 (GNU Toolchain for the A-profile Architecture 8.2-2018.11 (arm-rel-8.26))) #1 Tue Jul 23 14:36:41 PDT 2019
+CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Atmel SAMA5D27 SOM1 EK
+Memory policy: Data cache writeback
+cma: Reserved 16 MiB at 0x26800000
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists, mobility grouping on.  Total pages: 32480
+Kernel command line: console=ttyS0,115200 root=/dev/mmcblk1p2 rw rootwait rootfstype=ext4 atmel.pm_modes=standby,ulp1
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 103524K/131072K available (6144K kernel code, 259K rwdata, 1044K rodata, 1024K init, 174K bss, 11164K reserved, 16384K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc8800000 - 0xff800000   ( 880 MB)
+    lowmem  : 0xc0000000 - 0xc8000000   ( 128 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc0700000   (7136 kB)
+      .init : 0xc0900000 - 0xc0a00000   (1024 kB)
+      .data : 0xc0a00000 - 0xc0a40f70   ( 260 kB)
+       .bss : 0xc0a40f70 - 0xc0a6c7c4   ( 175 kB)
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C-310 ID prefetch enabled, offset 2 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c9, AUX_CTRL 0x36020000
+clocksource: pit: mask: 0x7ffffff max_cycles: 0x7ffffff, max_idle_ns: 11654027029 ns
+sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 21474836475000000ns
+Console: colour dummy device 80x30
+Calibrating delay loop... 326.86 BogoMIPS (lpj=1634304)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x20100000 - 0x20100060
+devtmpfs: initialized
+random: get_random_u32 called from 0xc032cbe8 with crng_init=0
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 5 rev 1
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+AT91: PM: standby: standby, suspend: ulp1
+clocksource: tcb_clksrc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 186464433812 ns
+at_xdmac f0010000.dma-controller: 16 channels, mapped at 0xc8847000
+at_xdmac f0004000.dma-controller: 16 channels, mapped at 0xc8849000
+AT91: Detected SoC family: sama5d2
+AT91: Detected SoC: sama5d27c 128MiB SiP, revision 2
+VDDANA: supplied by VDDIN_3V3
+advref: supplied by VDDANA
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+at91_i2c f8028000.i2c: could not find pctldev for node /ahb/apb/pinctrl@fc038000/i2c0_default, deferring probe
+media: Linux media interface: v0.10
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource tcb_clksrc
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+workingset: timestamp_bits=14 max_order=15 bucket_order=1
+io scheduler noop registered (default)
+io scheduler mq-deadline registered
+io scheduler kyber registered
+pinctrl-at91-pio4 fc038000.pinctrl: atmel pinctrl initialized
+brd: module loaded
+loop: module loaded
+atmel_usart_serial.0.auto: ttyS2 at MMIO 0xf801c000 (irq = 34, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.1.auto: ttyS0 at MMIO 0xf8020000 (irq = 35, base_baud = 5125000) is a ATMEL_SERIAL
+console [ttyS0] enabled
+atmel_usart_serial.2.auto: ttyS3 at MMIO 0xfc008000 (irq = 40, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.3.auto: ttyS1 at MMIO 0xfc00c000 (irq = 41, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_qspi f0024000.spi: sst26vf064b (8192 Kbytes)
+5 ofpart partitions found on MTD device f0024000.spi
+Creating 5 MTD partitions on "f0024000.spi":
+0x000000000000-0x000000010000 : "at91bootstrap"
+0x000000010000-0x0000000b0000 : "bootloader"
+0x0000000b0000-0x0000000c0000 : "bootloader env"
+0x0000000c0000-0x0000000e0000 : "device tree"
+0x0000000e0000-0x0000004e0000 : "kernel"
+atmel_spi f8000000.spi: DMA TX channel not available, SPI unable to use DMA
+atmel_spi f8000000.spi: Atmel SPI Controller using PIO only
+atmel_spi f8000000.spi: Using FIFO (16 data)
+atmel_spi f8000000.spi: Atmel SPI Controller version 0x311 at 0xf8000000 (irq 27)
+atmel_spi fc000000.spi: Using dma0chan0 (tx) and dma0chan1 (rx) for DMA transfers
+atmel_spi fc000000.spi: Using FIFO (16 data)
+atmel_spi fc000000.spi: Atmel SPI Controller version 0x311 at 0xfc000000 (irq 39)
+libphy: Fixed MDIO Bus: probed
+CAN device driver interface
+libphy: MACB_mii_bus: probed
+Micrel KSZ8081 or KSZ8091 f8008000.ethernet-ffffffff:07: attached PHY driver [Micrel KSZ8081 or KSZ8091] (mii_bus:phy_addr=f8008000.ethernet-ffffffff:07, irq=176)
+macb f8008000.ethernet eth0: Cadence GEM rev 0x00020203 at 0xf8008000 irq 28 (54:10:ec:33:ea:9a)
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-atmel: EHCI Atmel driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-atmel: OHCI Atmel driver
+usbcore: registered new interface driver usb-storage
+rtc rtc0: invalid alarm value: 1900-1-1 0:0:0
+at91_rtc f80480b0.rtc: registered as rtc0
+at91_rtc f80480b0.rtc: AT91 Real Time Clock driver.
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+AT91: Starting after user reset
+sama5d4_wdt f8048040.watchdog: initialized (timeout = 16 sec, nowayout = 0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-at91 a0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc0: SDHCI controller on a0000000.sdio-host [a0000000.sdio-host] using ADMA
+sdhci-at91 b0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc1: SDHCI controller on b0000000.sdio-host [b0000000.sdio-host] using ADMA
+ledtrig-cpu: registered to indicate activity on CPUs
+atmel_aes f002c000.aes: version: 0x500
+atmel_aes f002c000.aes: Atmel AES - Using dma0chan2, dma0chan3 for DMA transfers
+atmel_sha f0028000.sha: version: 0x510
+atmel_sha f0028000.sha: using dma0chan4 for DMA transfers
+atmel_sha f0028000.sha: Atmel SHA1/SHA256/SHA224/SHA384/SHA512
+atmel_tdes fc044000.tdes: version: 0x703
+atmel_tdes fc044000.tdes: using dma0chan5, dma0chan6 for DMA transfers
+atmel_tdes fc044000.tdes: Atmel DES/TDES
+at91-sama5d2_adc fc030000.adc: setting up trigger as external_rising
+at91-sama5d2_adc fc030000.adc: version: 800
+ip_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 10
+Segment Routing with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+can: controller area network core (rev 20170425 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20170425)
+can: broadcast manager protocol (rev 20170425 t)
+can: netlink gateway (rev 20170425) max_hops=1
+at91_i2c f8028000.i2c: can't get DMA channel, continue without DMA support
+at91_i2c f8028000.i2c: Using FIFO (16 data)
+at24 0-0050: 256 byte 24c02 EEPROM, writable, 8 bytes/write
+at91_i2c f8028000.i2c: AT91 i2c bus driver (hw version: 0x704).
+mmc1: new high speed SD card at address e624
+mmcblk1: mmc1:e624 SU02G 1.84 GiB 
+pinctrl-at91-pio4 fc038000.pinctrl: pin PA29 already requested by f8000000.spi; cannot claim for gpio_keys
+pinctrl-at91-pio4 fc038000.pinctrl: pin-29 (gpio_keys) status -22
+pinctrl-at91-pio4 fc038000.pinctrl: could not request pin 29 (PA29) from group PA29  on device atmel_pinctrl
+gpio-keys gpio_keys: Error applying setting, reverse things back
+gpio-keys: probe of gpio_keys failed with error -22
+at91_rtc f80480b0.rtc: setting system clock to 2012-01-28 15:53:00 UTC (1327765980)
+ALSA device list:
+  #0: Dummy 1
+ mmcblk1: p1 p2
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan7 for rx DMA transfers
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan8 for tx DMA transfers
+random: fast init done
+EXT4-fs (mmcblk1p2): recovery complete
+EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:2.
+devtmpfs: mounted
+Freeing unused kernel memory: 1024K
+EXT4-fs (mmcblk1p2): re-mounted. Opts: data=ordered
+mount: mounting 10.10.19.12:/home/asharma/dev/buildroot-at91/output/target/usr/bin on /root/bin failed: Network is unreachable
+Starting syslogd: OK
+Starting klogd: OK
+Populating /dev using udev: udevd[118]: starting version 3.2.7
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+udevd[118]: specified group 'kvm' unknown
+udevd[119]: starting eudev-3.2.7
+done
+Initializing random number generator... urandom_read: 1 callbacks suppressed
+random: dd: uninitialized urandom read (512 bytes read)
+done.
+Starting rngd: OK
+random: crng init done
+Starting system message bus: dbus-daemon[153]: Failed to start message bus: Could not get UID and GID for username "dbus"
+done
+Starting network: IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+OK
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+Starting dropbear sshd: OK
+Starting sshd: OK
+Starting DHCP server: FAIL
+
+Welcome to the IBUC
+ibuc login: rroooott
+
+# 
+# (reverse-i-search)'': (reverse-i-search)'p': ping 10.10.19.12(reverse-i-search)'pi': ping 10.10.19.12(reverse-i-search)'pin': ping 10.10.19.12(reverse-i-search)'ping': ping 10.10.19.12# ping 10.10.19.12ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=0 ttl=64 time=1.468 ms
+64 bytes from 10.10.19.12: seq=1 ttl=64 time=0.784 ms
+^C
+--- 10.10.19.12 ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss
+round-trip min/avg/max = 0.784/1.126/1.468 ms
+# cd bin
+# cd ..
+# ls
+bin         interfaces  ttyS0
+# mount bin
+# cd bin
+# ls(reverse-i-search)'': (reverse-i-search)'.': cd ..(reverse-i-search)'./': ./core-ibuc(reverse-i-search)'./c': ./core-ibuc(reverse-i-search)'./co': ./core-ibuc(reverse-i-search)'./cor': ./core-ibuc(reverse-i-search)'./core': ./core-ibuc# ./core-ibuc./core-ibuc
+IBUC Core
+Timer ID: 205144
+Ethernet init
+Cfg and /etc/network/interface IP match
+Cfg and /etc/network/interface Gateway match
+cfg mask=a0a0a01, if_ip=ffff0000admin=2337
+
+error=Please enter valid password
+IBUC>
+CIA
+write() of 4 bytes failed!
+rror=Please enter valid password
+IBUC>
+CPE=1234
+IBUC>
+CPIA
+error=invalid command
+IBUC>
+CIA
+CIA=10.10.19.20
+IBUC>
+CIG
+CIG=10.10.10.1
+IBUC>
+CIM
+CIG=10.10.10.1
+IBUC>
+CIM=155255.255.0.0
+CIG=10.10.10.1
+IBUC>
+COI
+error=invalid command
+IBUC>
+COMIM
+error=invalid command
+IBUC>
+CIM
+error=invalid command
+IBUC>
+CIM
+error=invalid command
+IBUC>
+
+IBUC>
+
+IBUC>
+
+IBUC>
+CIM
+error=invalid command
+IBUC>
+CIM=10.10.10
+errwrite() of 4 bytes failed!
+r=invalid command
+IBUC>
+CIM
+error=invalid command
+IBUC>
+RomBOOT
+
+
+AT91Bootstrap 3.8.11 (Tue Jul 23 14:20:53 PDT 2019)
+
+SD/MMC: Image: Read file u-boot.bin to 0x23f00000
+MMC: ADMA supported
+SD: Card Capacity: Standard
+SD: Specification Version 3.0X
+SD/MMC: Done to load image
+<debug_uart> 
+
+U-Boot 2018.07-linux4sam_6.0 (Jul 23 2019 - 14:21:02 -0700)
+
+CPU: SAMA5D27 1G bits DDR2 SDRAM
+Crystal frequency:       24 MHz
+CPU clock        :      492 MHz
+Master clock     :      164 MHz
+DRAM:  128 MiB
+MMC:   sdio-host@a0000000: 0, sdio-host@b0000000: 1
+Loading Environment from FAT... OK
+In:    serial@f8020000
+Out:   serial@f8020000
+Err:   serial@f8020000
+Net:   eth0: ethernet@f8008000
+Hit any key to stop autoboot:  1  0 
+3920912 bytes read in 246 ms (15.2 MiB/s)
+## Loading kernel from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Linux4SAM Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x210000e0
+     Data Size:    3879200 Bytes = 3.7 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x22000000
+     Entry Point:  0x22000000
+     Hash algo:    crc32
+     Hash value:   6bc04ff1
+     Hash algo:    sha1
+     Hash value:   6de3a2a0549dd96833e9bbf0998e6e35423c46f2
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading fdt from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'base_fdt' fdt subimage
+     Description:  Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x213b332c
+     Data Size:    39685 Bytes = 38.8 KiB
+     Architecture: ARM
+     Load Address: 0x23000000
+     Hash algo:    crc32
+     Hash value:   6937a0c4
+     Hash algo:    sha1
+     Hash value:   1d1992fa75a654b87e28861801fbb8cae482435c
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading fdt from 0x213b332c to 0x23000000
+   Booting using the fdt blob at 0x23000000
+   Loading Kernel Image ... OK
+   Loading Device Tree to 27b48000, end 27b54b04 ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.14.73-linux4sam_6.0 (asharma@rmcdonald-3630) (gcc version 8.2.1 20180802 (GNU Toolchain for the A-profile Architecture 8.2-2018.11 (arm-rel-8.26))) #1 Tue Jul 23 14:36:41 PDT 2019
+CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Atmel SAMA5D27 SOM1 EK
+Memory policy: Data cache writeback
+cma: Reserved 16 MiB at 0x26800000
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists, mobility grouping on.  Total pages: 32480
+Kernel command line: console=ttyS0,115200 root=/dev/mmcblk1p2 rw rootwait rootfstype=ext4 atmel.pm_modes=standby,ulp1
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 103524K/131072K available (6144K kernel code, 259K rwdata, 1044K rodata, 1024K init, 174K bss, 11164K reserved, 16384K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc8800000 - 0xff800000   ( 880 MB)
+    lowmem  : 0xc0000000 - 0xc8000000   ( 128 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc0700000   (7136 kB)
+      .init : 0xc0900000 - 0xc0a00000   (1024 kB)
+      .data : 0xc0a00000 - 0xc0a40f70   ( 260 kB)
+       .bss : 0xc0a40f70 - 0xc0a6c7c4   ( 175 kB)
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C-310 ID prefetch enabled, offset 2 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c9, AUX_CTRL 0x36020000
+clocksource: pit: mask: 0x7ffffff max_cycles: 0x7ffffff, max_idle_ns: 11654027029 ns
+sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 21474836475000000ns
+Console: colour dummy device 80x30
+Calibrating delay loop... 326.86 BogoMIPS (lpj=1634304)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x20100000 - 0x20100060
+devtmpfs: initialized
+random: get_random_u32 called from 0xc032cbe8 with crng_init=0
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 5 rev 1
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+AT91: PM: standby: standby, suspend: ulp1
+clocksource: tcb_clksrc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 186464433812 ns
+at_xdmac f0010000.dma-controller: 16 channels, mapped at 0xc8847000
+at_xdmac f0004000.dma-controller: 16 channels, mapped at 0xc8849000
+AT91: Detected SoC family: sama5d2
+AT91: Detected SoC: sama5d27c 128MiB SiP, revision 2
+VDDANA: supplied by VDDIN_3V3
+advref: supplied by VDDANA
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+at91_i2c f8028000.i2c: could not find pctldev for node /ahb/apb/pinctrl@fc038000/i2c0_default, deferring probe
+media: Linux media interface: v0.10
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource tcb_clksrc
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+workingset: timestamp_bits=14 max_order=15 bucket_order=1
+io scheduler noop registered (default)
+io scheduler mq-deadline registered
+io scheduler kyber registered
+pinctrl-at91-pio4 fc038000.pinctrl: atmel pinctrl initialized
+brd: module loaded
+loop: module loaded
+atmel_usart_serial.0.auto: ttyS2 at MMIO 0xf801c000 (irq = 34, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.1.auto: ttyS0 at MMIO 0xf8020000 (irq = 35, base_baud = 5125000) is a ATMEL_SERIAL
+console [ttyS0] enabled
+atmel_usart_serial.2.auto: ttyS3 at MMIO 0xfc008000 (irq = 40, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.3.auto: ttyS1 at MMIO 0xfc00c000 (irq = 41, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_qspi f0024000.spi: sst26vf064b (8192 Kbytes)
+5 ofpart partitions found on MTD device f0024000.spi
+Creating 5 MTD partitions on "f0024000.spi":
+0x000000000000-0x000000010000 : "at91bootstrap"
+0x000000010000-0x0000000b0000 : "bootloader"
+0x0000000b0000-0x0000000c0000 : "bootloader env"
+0x0000000c0000-0x0000000e0000 : "device tree"
+0x0000000e0000-0x0000004e0000 : "kernel"
+atmel_spi f8000000.spi: DMA TX channel not available, SPI unable to use DMA
+atmel_spi f8000000.spi: Atmel SPI Controller using PIO only
+atmel_spi f8000000.spi: Using FIFO (16 data)
+atmel_spi f8000000.spi: Atmel SPI Controller version 0x311 at 0xf8000000 (irq 27)
+atmel_spi fc000000.spi: Using dma0chan0 (tx) and dma0chan1 (rx) for DMA transfers
+atmel_spi fc000000.spi: Using FIFO (16 data)
+atmel_spi fc000000.spi: Atmel SPI Controller version 0x311 at 0xfc000000 (irq 39)
+libphy: Fixed MDIO Bus: probed
+CAN device driver interface
+libphy: MACB_mii_bus: probed
+Micrel KSZ8081 or KSZ8091 f8008000.ethernet-ffffffff:07: attached PHY driver [Micrel KSZ8081 or KSZ8091] (mii_bus:phy_addr=f8008000.ethernet-ffffffff:07, irq=176)
+macb f8008000.ethernet eth0: Cadence GEM rev 0x00020203 at 0xf8008000 irq 28 (54:10:ec:33:ea:9a)
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-atmel: EHCI Atmel driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-atmel: OHCI Atmel driver
+usbcore: registered new interface driver usb-storage
+rtc rtc0: invalid alarm value: 1900-1-1 0:0:0
+at91_rtc f80480b0.rtc: registered as rtc0
+at91_rtc f80480b0.rtc: AT91 Real Time Clock driver.
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+AT91: Starting after user reset
+sama5d4_wdt f8048040.watchdog: initialized (timeout = 16 sec, nowayout = 0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-at91 a0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc0: SDHCI controller on a0000000.sdio-host [a0000000.sdio-host] using ADMA
+sdhci-at91 b0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc1: SDHCI controller on b0000000.sdio-host [b0000000.sdio-host] using ADMA
+ledtrig-cpu: registered to indicate activity on CPUs
+atmel_aes f002c000.aes: version: 0x500
+atmel_aes f002c000.aes: Atmel AES - Using dma0chan2, dma0chan3 for DMA transfers
+atmel_sha f0028000.sha: version: 0x510
+atmel_sha f0028000.sha: using dma0chan4 for DMA transfers
+atmel_sha f0028000.sha: Atmel SHA1/SHA256/SHA224/SHA384/SHA512
+atmel_tdes fc044000.tdes: version: 0x703
+atmel_tdes fc044000.tdes: using dma0chan5, dma0chan6 for DMA transfers
+atmel_tdes fc044000.tdes: Atmel DES/TDES
+at91-sama5d2_adc fc030000.adc: setting up trigger as external_rising
+at91-sama5d2_adc fc030000.adc: version: 800
+ip_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 10
+Segment Routing with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+can: controller area network core (rev 20170425 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20170425)
+can: broadcast manager protocol (rev 20170425 t)
+can: netlink gateway (rev 20170425) max_hops=1
+at91_i2c f8028000.i2c: can't get DMA channel, continue without DMA support
+at91_i2c f8028000.i2c: Using FIFO (16 data)
+at24 0-0050: 256 byte 24c02 EEPROM, writable, 8 bytes/write
+at91_i2c f8028000.i2c: AT91 i2c bus driver (hw version: 0x704).
+mmc1: new high speed SD card at address e624
+mmcblk1: mmc1:e624 SU02G 1.84 GiB 
+pinctrl-at91-pio4 fc038000.pinctrl: pin PA29 already requested by f8000000.spi; cannot claim for gpio_keys
+pinctrl-at91-pio4 fc038000.pinctrl: pin-29 (gpio_keys) status -22
+pinctrl-at91-pio4 fc038000.pinctrl: could not request pin 29 (PA29) from group PA29  on device atmel_pinctrl
+gpio-keys gpio_keys: Error applying setting, reverse things back
+gpio-keys: probe of gpio_keys failed with error -22
+at91_rtc f80480b0.rtc: setting system clock to 2012-01-28 15:55:11 UTC (1327766111)
+ALSA device list:
+  #0: Dummy 1
+ mmcblk1: p1 p2
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan7 for rx DMA transfers
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan8 for tx DMA transfers
+random: fast init done
+EXT4-fs (mmcblk1p2): recovery complete
+EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:2.
+devtmpfs: mounted
+Freeing unused kernel memory: 1024K
+EXT4-fs (mmcblk1p2): re-mounted. Opts: data=ordered
+mount: mounting 10.10.19.12:/home/asharma/dev/buildroot-at91/output/target/usr/bin on /root/bin failed: Network is unreachable
+Starting syslogd: OK
+Starting klogd: OK
+Populating /dev using udev: udevd[118]: starting version 3.2.7
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+udevd[118]: specified group 'kvm' unknown
+udevd[119]: starting eudev-3.2.7
+done
+Initializing random number generator... urandom_read: 1 callbacks suppressed
+random: dd: uninitialized urandom read (512 bytes read)
+done.
+Starting rngd: OK
+random: crng init done
+Starting system message bus: dbus-daemon[153]: Failed to start message bus: Could not get UID and GID for username "dbus"
+done
+Starting network: IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+OK
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+Starting dropbear sshd: OK
+Starting sshd: OK
+Starting DHCP server: FAIL
+
+Welcome to the IBUC
+ibuc login: rroooott
+
+# cc
+
+# (reverse-i-search)'': m(reverse-i-search)'m': mount bino(reverse-i-search)'mo': mount binu(reverse-i-search)'mou': mount binn(reverse-i-search)'moun': mount bint(reverse-i-search)'mount': mount bin
+# mount binmount bin
+# ccdd  bbiinn
+
+^C
+
+^C^Z^Z
+
+^\
+
+RomBOOT
+
+
+AT91Bootstrap 3.8.11 (Tue Jul 23 14:20:53 PDT 2019)
+
+SD/MMC: Image: Read file u-boot.bin to 0x23f00000
+MMC: ADMA supported
+SD: Card Capacity: Standard
+SD: Specification Version 3.0X
+SD/MMC: Done to load image
+<debug_uart> 
+
+U-Boot 2018.07-linux4sam_6.0 (Jul 23 2019 - 14:21:02 -0700)
+
+CPU: SAMA5D27 1G bits DDR2 SDRAM
+Crystal frequency:       24 MHz
+CPU clock        :      492 MHz
+Master clock     :      164 MHz
+DRAM:  128 MiB
+MMC:   sdio-host@a0000000: 0, sdio-host@b0000000: 1
+Loading Environment from FAT... OK
+In:    serial@f8020000
+Out:   serial@f8020000
+Err:   serial@f8020000
+Net:   eth0: ethernet@f8008000
+Hit any key to stop autoboot:  1  0 
+3920912 bytes read in 247 ms (15.1 MiB/s)
+## Loading kernel from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Linux4SAM Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x210000e0
+     Data Size:    3879200 Bytes = 3.7 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x22000000
+     Entry Point:  0x22000000
+     Hash algo:    crc32
+     Hash value:   6bc04ff1
+     Hash algo:    sha1
+     Hash value:   6de3a2a0549dd96833e9bbf0998e6e35423c46f2
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading fdt from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'base_fdt' fdt subimage
+     Description:  Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x213b332c
+     Data Size:    39685 Bytes = 38.8 KiB
+     Architecture: ARM
+     Load Address: 0x23000000
+     Hash algo:    crc32
+     Hash value:   6937a0c4
+     Hash algo:    sha1
+     Hash value:   1d1992fa75a654b87e28861801fbb8cae482435c
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading fdt from 0x213b332c to 0x23000000
+   Booting using the fdt blob at 0x23000000
+   Loading Kernel Image ... OK
+   Loading Device Tree to 27b48000, end 27b54b04 ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.14.73-linux4sam_6.0 (asharma@rmcdonald-3630) (gcc version 8.2.1 20180802 (GNU Toolchain for the A-profile Architecture 8.2-2018.11 (arm-rel-8.26))) #1 Tue Jul 23 14:36:41 PDT 2019
+CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Atmel SAMA5D27 SOM1 EK
+Memory policy: Data cache writeback
+cma: Reserved 16 MiB at 0x26800000
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists, mobility grouping on.  Total pages: 32480
+Kernel command line: console=ttyS0,115200 root=/dev/mmcblk1p2 rw rootwait rootfstype=ext4 atmel.pm_modes=standby,ulp1
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 103524K/131072K available (6144K kernel code, 259K rwdata, 1044K rodata, 1024K init, 174K bss, 11164K reserved, 16384K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc8800000 - 0xff800000   ( 880 MB)
+    lowmem  : 0xc0000000 - 0xc8000000   ( 128 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc0700000   (7136 kB)
+      .init : 0xc0900000 - 0xc0a00000   (1024 kB)
+      .data : 0xc0a00000 - 0xc0a40f70   ( 260 kB)
+       .bss : 0xc0a40f70 - 0xc0a6c7c4   ( 175 kB)
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C-310 ID prefetch enabled, offset 2 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c9, AUX_CTRL 0x36020000
+clocksource: pit: mask: 0x7ffffff max_cycles: 0x7ffffff, max_idle_ns: 11654027029 ns
+sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 21474836475000000ns
+Console: colour dummy device 80x30
+Calibrating delay loop... 326.86 BogoMIPS (lpj=1634304)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x20100000 - 0x20100060
+devtmpfs: initialized
+random: get_random_u32 called from 0xc032cbe8 with crng_init=0
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 5 rev 1
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+AT91: PM: standby: standby, suspend: ulp1
+clocksource: tcb_clksrc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 186464433812 ns
+at_xdmac f0010000.dma-controller: 16 channels, mapped at 0xc8847000
+at_xdmac f0004000.dma-controller: 16 channels, mapped at 0xc8849000
+AT91: Detected SoC family: sama5d2
+AT91: Detected SoC: sama5d27c 128MiB SiP, revision 2
+VDDANA: supplied by VDDIN_3V3
+advref: supplied by VDDANA
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+at91_i2c f8028000.i2c: could not find pctldev for node /ahb/apb/pinctrl@fc038000/i2c0_default, deferring probe
+media: Linux media interface: v0.10
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource tcb_clksrc
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+workingset: timestamp_bits=14 max_order=15 bucket_order=1
+io scheduler noop registered (default)
+io scheduler mq-deadline registered
+io scheduler kyber registered
+pinctrl-at91-pio4 fc038000.pinctrl: atmel pinctrl initialized
+brd: module loaded
+loop: module loaded
+atmel_usart_serial.0.auto: ttyS2 at MMIO 0xf801c000 (irq = 34, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.1.auto: ttyS0 at MMIO 0xf8020000 (irq = 35, base_baud = 5125000) is a ATMEL_SERIAL
+console [ttyS0] enabled
+atmel_usart_serial.2.auto: ttyS3 at MMIO 0xfc008000 (irq = 40, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.3.auto: ttyS1 at MMIO 0xfc00c000 (irq = 41, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_qspi f0024000.spi: sst26vf064b (8192 Kbytes)
+5 ofpart partitions found on MTD device f0024000.spi
+Creating 5 MTD partitions on "f0024000.spi":
+0x000000000000-0x000000010000 : "at91bootstrap"
+0x000000010000-0x0000000b0000 : "bootloader"
+0x0000000b0000-0x0000000c0000 : "bootloader env"
+0x0000000c0000-0x0000000e0000 : "device tree"
+0x0000000e0000-0x0000004e0000 : "kernel"
+atmel_spi f8000000.spi: DMA TX channel not available, SPI unable to use DMA
+atmel_spi f8000000.spi: Atmel SPI Controller using PIO only
+atmel_spi f8000000.spi: Using FIFO (16 data)
+atmel_spi f8000000.spi: Atmel SPI Controller version 0x311 at 0xf8000000 (irq 27)
+atmel_spi fc000000.spi: Using dma0chan0 (tx) and dma0chan1 (rx) for DMA transfers
+atmel_spi fc000000.spi: Using FIFO (16 data)
+atmel_spi fc000000.spi: Atmel SPI Controller version 0x311 at 0xfc000000 (irq 39)
+libphy: Fixed MDIO Bus: probed
+CAN device driver interface
+libphy: MACB_mii_bus: probed
+Micrel KSZ8081 or KSZ8091 f8008000.ethernet-ffffffff:07: attached PHY driver [Micrel KSZ8081 or KSZ8091] (mii_bus:phy_addr=f8008000.ethernet-ffffffff:07, irq=176)
+macb f8008000.ethernet eth0: Cadence GEM rev 0x00020203 at 0xf8008000 irq 28 (54:10:ec:33:ea:9a)
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-atmel: EHCI Atmel driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-atmel: OHCI Atmel driver
+usbcore: registered new interface driver usb-storage
+rtc rtc0: invalid alarm value: 1900-1-1 0:0:0
+at91_rtc f80480b0.rtc: registered as rtc0
+at91_rtc f80480b0.rtc: AT91 Real Time Clock driver.
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+AT91: Starting after user reset
+sama5d4_wdt f8048040.watchdog: initialized (timeout = 16 sec, nowayout = 0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-at91 a0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc0: SDHCI controller on a0000000.sdio-host [a0000000.sdio-host] using ADMA
+sdhci-at91 b0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc1: SDHCI controller on b0000000.sdio-host [b0000000.sdio-host] using ADMA
+ledtrig-cpu: registered to indicate activity on CPUs
+atmel_aes f002c000.aes: version: 0x500
+atmel_aes f002c000.aes: Atmel AES - Using dma0chan2, dma0chan3 for DMA transfers
+atmel_sha f0028000.sha: version: 0x510
+atmel_sha f0028000.sha: using dma0chan4 for DMA transfers
+atmel_sha f0028000.sha: Atmel SHA1/SHA256/SHA224/SHA384/SHA512
+atmel_tdes fc044000.tdes: version: 0x703
+atmel_tdes fc044000.tdes: using dma0chan5, dma0chan6 for DMA transfers
+atmel_tdes fc044000.tdes: Atmel DES/TDES
+at91-sama5d2_adc fc030000.adc: setting up trigger as external_rising
+at91-sama5d2_adc fc030000.adc: version: 800
+ip_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 10
+Segment Routing with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+can: controller area network core (rev 20170425 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20170425)
+can: broadcast manager protocol (rev 20170425 t)
+can: netlink gateway (rev 20170425) max_hops=1
+at91_i2c f8028000.i2c: can't get DMA channel, continue without DMA support
+at91_i2c f8028000.i2c: Using FIFO (16 data)
+at24 0-0050: 256 byte 24c02 EEPROM, writable, 8 bytes/write
+at91_i2c f8028000.i2c: AT91 i2c bus driver (hw version: 0x704).
+mmc1: new high speed SD card at address e624
+mmcblk1: mmc1:e624 SU02G 1.84 GiB 
+pinctrl-at91-pio4 fc038000.pinctrl: pin PA29 already requested by f8000000.spi; cannot claim for gpio_keys
+pinctrl-at91-pio4 fc038000.pinctrl: pin-29 (gpio_keys) status -22
+pinctrl-at91-pio4 fc038000.pinctrl: could not request pin 29 (PA29) from group PA29  on device atmel_pinctrl
+gpio-keys gpio_keys: Error applying setting, reverse things back
+gpio-keys: probe of gpio_keys failed with error -22
+at91_rtc f80480b0.rtc: setting system clock to 2012-01-28 15:55:41 UTC (1327766141)
+ALSA device list:
+  #0: Dummy 1
+ mmcblk1: p1 p2
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan7 for rx DMA transfers
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan8 for tx DMA transfers
+random: fast init done
+EXT4-fs (mmcblk1p2): recovery complete
+EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:2.
+devtmpfs: mounted
+Freeing unused kernel memory: 1024K
+EXT4-fs (mmcblk1p2): re-mounted. Opts: data=ordered
+mount: mounting 10.10.19.12:/home/asharma/dev/buildroot-at91/output/target/usr/bin on /root/bin failed: Network is unreachable
+Starting syslogd: OK
+Starting klogd: OK
+Populating /dev using udev: udevd[118]: starting version 3.2.7
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+udevd[118]: specified group 'kvm' unknown
+udevd[119]: starting eudev-3.2.7
+done
+Initializing random number generator... urandom_read: 1 callbacks suppressed
+random: dd: uninitialized urandom read (512 bytes read)
+done.
+Starting rngd: OK
+random: crng init done
+Starting system message bus: dbus-daemon[153]: Failed to start message bus: Could not get UID and GID for username "dbus"
+done
+Starting network: IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+OK
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+Starting dropbear sshd: OK
+Starting sshd: OK
+Starting DHCP server: FAIL
+
+Welcome to the IBUC
+ibuc login: rroooott
+
+# (reverse-i-search)'': p(reverse-i-search)'p': ping 10.10.19.12i(reverse-i-search)'pi': ping 10.10.19.12n(reverse-i-search)'pin': ping 10.10.19.12g(reverse-i-search)'ping': ping 10.10.19.12
+# ping 10.10.19.12ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=0 ttl=64 time=1.240 ms
+^C
+--- 10.10.19.12 ping statistics ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 1.240/1.240/1.240 ms
+# ccdd  mmoouunntt  bbiinn
+
+ccdd  bbiinn
+
+mount: mounting 10.10.19.12:/home/asharma/dev/buildroot-at91/output/target/usr/bin on /root/bin failed: Connection timed out
+# cd bin
+# 
+
+# 
+
+# llss
+
+# ping ^C
+# (reverse-i-search)'': (reverse-i-search)'p': ping 10.10.19.12(reverse-i-search)'pi': ping 10.10.19.12(reverse-i-search)'pin': ping 10.10.19.12(reverse-i-search)'ping': ping 10.10.19.12# ping 10.10.19.12ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=0 ttl=64 time=0.805 ms
+64 bytes from 10.10.19.12: seq=1 ttl=64 time=0.814 ms
+^C
+--- 10.10.19.12 ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss
+round-trip min/avg/max = 0.805/0.809/0.814 ms
+# 
+# ls
+# cd wdpwd
+/root/bin
+# cd 
+# (reverse-i-search)'': (reverse-i-search)'m': mount bin(reverse-i-search)'mo': mount bin(reverse-i-search)'mou': mount bin(reverse-i-search)'moun': mount bin(reverse-i-search)'mount': mount bin# mount binmount bin
+# cd bin
+# (reverse-i-search)'': (reverse-i-search)'.': ping 10.10.19.12(reverse-i-search)'./': ./core-ibuc(reverse-i-search)'./c': ./core-ibuc(reverse-i-search)'./co': ./core-ibuc# ./core-ibuc./core-ibuc
+IBUC Core
+Timer ID: 205144
+Ethernet init
+Cfg and /etc/network/interface IP match
+Cfg and /etc/network/interface Gateway match
+cfg mask=a0a0a01, if_ip=ffff0000admin=2337
+CPE=1234
+IBUC>
+CIA
+CIA=10.10.19.20
+IBUC>
+CIG
+CIG=10.10.10.1
+IBUC>
+CIM
+CIG=10.10.10.1
+IBUC>
+RomBOOT
+
+
+AT91Bootstrap 3.8.11 (Tue Jul 23 14:20:53 PDT 2019)
+
+SD/MMC: Image: Read file u-boot.bin to 0x23f00000
+MMC: ADMA supported
+SD: Card Capacity: Standard
+SD: Specification Version 3.0X
+SD/MMC: Done to load image
+<debug_uart> 
+
+U-Boot 2018.07-linux4sam_6.0 (Jul 23 2019 - 14:21:02 -0700)
+
+CPU: SAMA5D27 1G bits DDR2 SDRAM
+Crystal frequency:       24 MHz
+CPU clock        :      492 MHz
+Master clock     :      164 MHz
+DRAM:  128 MiB
+MMC:   sdio-host@a0000000: 0, sdio-host@b0000000: 1
+Loading Environment from FAT... OK
+In:    serial@f8020000
+Out:   serial@f8020000
+Err:   serial@f8020000
+Net:   eth0: ethernet@f8008000
+Hit any key to stop autoboot:  1  0 
+3920912 bytes read in 247 ms (15.1 MiB/s)
+## Loading kernel from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Linux4SAM Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x210000e0
+     Data Size:    3879200 Bytes = 3.7 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x22000000
+     Entry Point:  0x22000000
+     Hash algo:    crc32
+     Hash value:   6bc04ff1
+     Hash algo:    sha1
+     Hash value:   6de3a2a0549dd96833e9bbf0998e6e35423c46f2
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading fdt from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'base_fdt' fdt subimage
+     Description:  Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x213b332c
+     Data Size:    39685 Bytes = 38.8 KiB
+     Architecture: ARM
+     Load Address: 0x23000000
+     Hash algo:    crc32
+     Hash value:   6937a0c4
+     Hash algo:    sha1
+     Hash value:   1d1992fa75a654b87e28861801fbb8cae482435c
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading fdt from 0x213b332c to 0x23000000
+   Booting using the fdt blob at 0x23000000
+   Loading Kernel Image ... OK
+   Loading Device Tree to 27b48000, end 27b54b04 ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.14.73-linux4sam_6.0 (asharma@rmcdonald-3630) (gcc version 8.2.1 20180802 (GNU Toolchain for the A-profile Architecture 8.2-2018.11 (arm-rel-8.26))) #1 Tue Jul 23 14:36:41 PDT 2019
+CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Atmel SAMA5D27 SOM1 EK
+Memory policy: Data cache writeback
+cma: Reserved 16 MiB at 0x26800000
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists, mobility grouping on.  Total pages: 32480
+Kernel command line: console=ttyS0,115200 root=/dev/mmcblk1p2 rw rootwait rootfstype=ext4 atmel.pm_modes=standby,ulp1
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 103524K/131072K available (6144K kernel code, 259K rwdata, 1044K rodata, 1024K init, 174K bss, 11164K reserved, 16384K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc8800000 - 0xff800000   ( 880 MB)
+    lowmem  : 0xc0000000 - 0xc8000000   ( 128 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc0700000   (7136 kB)
+      .init : 0xc0900000 - 0xc0a00000   (1024 kB)
+      .data : 0xc0a00000 - 0xc0a40f70   ( 260 kB)
+       .bss : 0xc0a40f70 - 0xc0a6c7c4   ( 175 kB)
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C-310 ID prefetch enabled, offset 2 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c9, AUX_CTRL 0x36020000
+clocksource: pit: mask: 0x7ffffff max_cycles: 0x7ffffff, max_idle_ns: 11654027029 ns
+sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 21474836475000000ns
+Console: colour dummy device 80x30
+Calibrating delay loop... 326.86 BogoMIPS (lpj=1634304)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x20100000 - 0x20100060
+devtmpfs: initialized
+random: get_random_u32 called from 0xc032cbe8 with crng_init=0
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 5 rev 1
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+AT91: PM: standby: standby, suspend: ulp1
+clocksource: tcb_clksrc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 186464433812 ns
+at_xdmac f0010000.dma-controller: 16 channels, mapped at 0xc8847000
+at_xdmac f0004000.dma-controller: 16 channels, mapped at 0xc8849000
+AT91: Detected SoC family: sama5d2
+AT91: Detected SoC: sama5d27c 128MiB SiP, revision 2
+VDDANA: supplied by VDDIN_3V3
+advref: supplied by VDDANA
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+at91_i2c f8028000.i2c: could not find pctldev for node /ahb/apb/pinctrl@fc038000/i2c0_default, deferring probe
+media: Linux media interface: v0.10
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource tcb_clksrc
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+workingset: timestamp_bits=14 max_order=15 bucket_order=1
+io scheduler noop registered (default)
+io scheduler mq-deadline registered
+io scheduler kyber registered
+pinctrl-at91-pio4 fc038000.pinctrl: atmel pinctrl initialized
+brd: module loaded
+loop: module loaded
+atmel_usart_serial.0.auto: ttyS2 at MMIO 0xf801c000 (irq = 34, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.1.auto: ttyS0 at MMIO 0xf8020000 (irq = 35, base_baud = 5125000) is a ATMEL_SERIAL
+console [ttyS0] enabled
+atmel_usart_serial.2.auto: ttyS3 at MMIO 0xfc008000 (irq = 40, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.3.auto: ttyS1 at MMIO 0xfc00c000 (irq = 41, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_qspi f0024000.spi: sst26vf064b (8192 Kbytes)
+5 ofpart partitions found on MTD device f0024000.spi
+Creating 5 MTD partitions on "f0024000.spi":
+0x000000000000-0x000000010000 : "at91bootstrap"
+0x000000010000-0x0000000b0000 : "bootloader"
+0x0000000b0000-0x0000000c0000 : "bootloader env"
+0x0000000c0000-0x0000000e0000 : "device tree"
+0x0000000e0000-0x0000004e0000 : "kernel"
+atmel_spi f8000000.spi: DMA TX channel not available, SPI unable to use DMA
+atmel_spi f8000000.spi: Atmel SPI Controller using PIO only
+atmel_spi f8000000.spi: Using FIFO (16 data)
+atmel_spi f8000000.spi: Atmel SPI Controller version 0x311 at 0xf8000000 (irq 27)
+atmel_spi fc000000.spi: Using dma0chan0 (tx) and dma0chan1 (rx) for DMA transfers
+atmel_spi fc000000.spi: Using FIFO (16 data)
+atmel_spi fc000000.spi: Atmel SPI Controller version 0x311 at 0xfc000000 (irq 39)
+libphy: Fixed MDIO Bus: probed
+CAN device driver interface
+libphy: MACB_mii_bus: probed
+Micrel KSZ8081 or KSZ8091 f8008000.ethernet-ffffffff:07: attached PHY driver [Micrel KSZ8081 or KSZ8091] (mii_bus:phy_addr=f8008000.ethernet-ffffffff:07, irq=176)
+macb f8008000.ethernet eth0: Cadence GEM rev 0x00020203 at 0xf8008000 irq 28 (54:10:ec:33:ea:9a)
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-atmel: EHCI Atmel driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-atmel: OHCI Atmel driver
+usbcore: registered new interface driver usb-storage
+rtc rtc0: invalid alarm value: 1900-1-1 0:0:0
+at91_rtc f80480b0.rtc: registered as rtc0
+at91_rtc f80480b0.rtc: AT91 Real Time Clock driver.
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+AT91: Starting after user reset
+sama5d4_wdt f8048040.watchdog: initialized (timeout = 16 sec, nowayout = 0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-at91 a0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc0: SDHCI controller on a0000000.sdio-host [a0000000.sdio-host] using ADMA
+sdhci-at91 b0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc1: SDHCI controller on b0000000.sdio-host [b0000000.sdio-host] using ADMA
+ledtrig-cpu: registered to indicate activity on CPUs
+atmel_aes f002c000.aes: version: 0x500
+atmel_aes f002c000.aes: Atmel AES - Using dma0chan2, dma0chan3 for DMA transfers
+atmel_sha f0028000.sha: version: 0x510
+atmel_sha f0028000.sha: using dma0chan4 for DMA transfers
+atmel_sha f0028000.sha: Atmel SHA1/SHA256/SHA224/SHA384/SHA512
+atmel_tdes fc044000.tdes: version: 0x703
+atmel_tdes fc044000.tdes: using dma0chan5, dma0chan6 for DMA transfers
+atmel_tdes fc044000.tdes: Atmel DES/TDES
+at91-sama5d2_adc fc030000.adc: setting up trigger as external_rising
+at91-sama5d2_adc fc030000.adc: version: 800
+ip_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 10
+Segment Routing with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+can: controller area network core (rev 20170425 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20170425)
+can: broadcast manager protocol (rev 20170425 t)
+can: netlink gateway (rev 20170425) max_hops=1
+at91_i2c f8028000.i2c: can't get DMA channel, continue without DMA support
+at91_i2c f8028000.i2c: Using FIFO (16 data)
+at24 0-0050: 256 byte 24c02 EEPROM, writable, 8 bytes/write
+at91_i2c f8028000.i2c: AT91 i2c bus driver (hw version: 0x704).
+mmc1: new high speed SD card at address e624
+mmcblk1: mmc1:e624 SU02G 1.84 GiB 
+pinctrl-at91-pio4 fc038000.pinctrl: pin PA29 already requested by f8000000.spi; cannot claim for gpio_keys
+pinctrl-at91-pio4 fc038000.pinctrl: pin-29 (gpio_keys) status -22
+pinctrl-at91-pio4 fc038000.pinctrl: could not request pin 29 (PA29) from group PA29  on device atmel_pinctrl
+gpio-keys gpio_keys: Error applying setting, reverse things back
+gpio-keys: probe of gpio_keys failed with error -22
+at91_rtc f80480b0.rtc: setting system clock to 2012-01-28 15:59:54 UTC (1327766394)
+ALSA device list:
+  #0: Dummy 1
+ mmcblk1: p1 p2
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan7 for rx DMA transfers
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan8 for tx DMA transfers
+random: fast init done
+EXT4-fs (mmcblk1p2): recovery complete
+EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:2.
+devtmpfs: mounted
+Freeing unused kernel memory: 1024K
+EXT4-fs (mmcblk1p2): re-mounted. Opts: data=ordered
+mount: mounting 10.10.19.12:/home/asharma/dev/buildroot-at91/output/target/usr/bin on /root/bin failed: Network is unreachable
+Starting syslogd: OK
+Starting klogd: OK
+Populating /dev using udev: udevd[118]: starting version 3.2.7
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+udevd[118]: specified group 'kvm' unknown
+udevd[119]: starting eudev-3.2.7
+done
+Initializing random number generator... urandom_read: 1 callbacks suppressed
+random: dd: uninitialized urandom read (512 bytes read)
+done.
+Starting rngd: OK
+random: crng init done
+Starting system message bus: dbus-daemon[153]: Failed to start message bus: Could not get UID and GID for username "dbus"
+done
+Starting network: IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+OK
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+Starting dropbear sshd: OK
+Starting sshd: OK
+Starting DHCP server: FAIL
+
+Welcome to the IBUC
+ibuc login: rroooott
+
+# (reverse-i-search)'': (reverse-i-search)'p': pwd(reverse-i-search)'pi': ping 10.10.19.12(reverse-i-search)'pin': ping 10.10.19.12(reverse-i-search)'ping': ping 10.10.19.12# ping 10.10.19.12ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=0 ttl=64 time=1.472 ms
+^C
+--- 10.10.19.12 ping statistics ---
+2 packets transmitted, 1 packets received, 50% packet loss
+round-trip min/avg/max = 1.472/1.472/1.472 ms
+# cd (reverse-i-search)'': (reverse-i-search)'m': mount bin(reverse-i-search)'mo': mount bin(reverse-i-search)'mou': mount bin(reverse-i-search)'moun': mount bin(reverse-i-search)'mount': mount bin# mount binmount bin
+c^H
+mount: mounting 10.10.19.12:/home/asharma/dev/buildroot-at91/output/target/usr/bin on /root/bin failed: Connection timed out
+# c
+# # mount bin
+# cd bin
+# ls
+[                                   lat_sig
+[[                                  lat_syscall
+ab                                  lat_tcp
+apachectl                           lat_udp
+apxs                                lat_unix
+ar                                  lat_unix_connect
+arpaname                            less
+asc2log                             libevdev-tweak-device
+aserver                             libinput
+awk                                 line
+basename                            lmdd
+bc                                  lmhttp
+bccmd                               log2asc
+bcmserver                           log2long
+bluemoon                            logger
+bluetoothctl                        logname
+btattach                            logresolve
+btgatt-server                       loop_o
+btmon                               lrz
+bunzip2                             lsiio
+bw_file_rd                          lsof
+bw_mem                              lspci
+bw_mmap_rd                          lsscsi
+bw_pipe                             lsusb
+bw_tcp                              lsz
+bw_unix                             lua
+bzcat                               luac
+cairo-sphinx                        lzcat
+can-calc-bit-timing                 lzma
+canbusload                          lzopcat
+candump                             md5sum
+canfdtest                           mdig
+cangen                              memsize
+cangw                               mesg
+canlogserver                        mhz
+canplayer                           microcom
+cansend                             mkfifo
+cansniffer                          mkpasswd
+checkgid                            modeprint
+chrt                                modetest
+chvt                                mouse-dpi-tool
+ciptool                             mpg123
+cksum                               mpg123-id3dump
+clear                               mpg123-strip
+cmp                                 mpicalc
+core-ibuc                           mpris-proxy
+core_ibuc                           msleep
+crontab                             mtdev-test
+cut                                 mv6tool
+dbclient                            named-rrchecker
+dbmmanage                           nano
+dbus-cleanup-sockets                net-snmp-create-v3-user
+dbus-daemon                         nl
+dbus-launch                         node
+dbus-monitor                        nohup
+dbus-run-session                    npm
+dbus-send                           nproc
+dbus-test-tool                      npx
+dbus-update-activation-environment  nslookup
+dbus-uuidgen                        od
+dc                                  openvt
+ddcmon                              out123
+deallocvt                           p9bit_example
+decode-dimms                        par_mem
+decode-edid                         par_ops
+decode-vaio                         passwd
+delv                                paste
+diff                                patch
+dirname                             pcregrep
+disk                                pcretest
+dos2unix                            phytool
+drmdevice                           planes
+dropbearconvert                     printf
+dropbearkey                         proptest
+du                                  python
+dumpsexp                            python2
+e2cp                                python2.7
+e2ln                                rb
+e2ls                                rctest
+e2mkdir                             readlink
+e2mv                                realpath
+e2rm                                render
+e2tail                              renice
+easy_install                        reset
+easy_install-2.7                    resize
+egrep                               rfcomm
+eject                               rngtest
+enough                              rotatelogs
+env                                 rview
+envvars                             rvim
+envvars-std                         rx
+evtest                              rz
+ex                                  sb
+expr                                scp
+factor                              screenlog.0
+fallocate                           sdptool
+fb-test                             senda_example
+fb-test-offset                      seq
+fb-test-perf                        setfattr
+fb-test-rect                        setip-ibuc
+fc-cache                            setkeycodes
+fc-cat                              setserial
+fc-conflist                         setsid
+fc-list                             sftp
+fc-match                            sha1sum
+fc-pattern                          sha256sum
+fc-query                            sha3sum
+fc-scan                             sha512sum
+fc-validate                         shred
+fcgistarter                         slcan_attach
+fgrep                               slcand
+file                                slcanpty
+find                                sort
+flock                               spi-config
+flushdisk                           spi-pipe
+fold                                ssh
+free                                ssh-add
+fuser                               ssh-agent
+gapplication                        ssh-copy-id
+gatttool                            ssh-keygen
+gcore                               ssh-keyscan
+gdb                                 strace
+gdbserver                           strace-log-merge
+gdbus                               stream
+gio                                 strings
+gio-querymodules                    svc
+gpg-error                           svok
+gpgrt-config                        swupdate
+grab                                sx
+grep                                sz
+gresource                           tail
+gsettings                           tee
+hciattach                           telnet
+hciconfig                           test
+hcidump                             testj1939
+hcitool                             tftp
+head                                time
+hello                               timeout
+hex2hcd                             timer-ibuc
+hexdump                             timing_o
+hexedit                             tlb
+hmac256                             top
+hostapd_cli                         touchpad-edge-detector
+hostid                              tr
+htcacheclean                        traceroute
+htdbm                               tree
+htdigest                            truncate
+htpasswd                            ts_calibrate
+httpd                               ts_conf
+httxt2dbm                           ts_finddev
+id                                  ts_harvest
+iio_event_monitor                   ts_print
+iio_generic_buffer                  ts_print_mt
+install                             ts_print_raw
+ipcrm                               ts_test
+ipcs                                ts_test_mt
+iperf3                              ts_uinput
+iptables-xml                        ts_verify
+isotpdump                           tty
+isotpperf                           udevadm
+isotprecv                           uniq
+isotpsend                           unix2dos
+isotpserver                         unlink
+isotpsniffer                        unlzma
+isotptun                            unlzop
+jacd                                unxz
+jspy                                unzip
+jsr                                 uptime
+killall                             usbhid-dump
+kms-steal-crtc                      user_example
+kms-universal-planes                uudecode
+kmstest                             uuencode
+l2ping                              vbltest
+l2test                              view
+last                                vim
+lat_connect                         vimdiff
+lat_ctx                             vlock
+lat_fcntl                           w
+lat_fifo                            wc
+lat_fs                              wget
+lat_http                            which
+lat_mem_rd                          who
+lat_mmap                            whoami
+lat_ops                             xargs
+lat_pagefault                       xmlwf
+lat_pipe                            xxd
+lat_proc                            xz
+lat_rpc                             xzcat
+lat_select                          yes
+lat_sem
+# ./core# ./core-# ./core-ibuc 
+IBUC Core
+Timer ID: 205144
+Ethernet init
+Cfg and /etc/network/interface IP match
+Cfg and /etc/network/interface Gateway match
+cfg mask=a0a0a01, if_ip=ffff0000admin=2337
+CPE
+error=Please enter valid password
+IBUC>
+CPE=1234
+IBUC>
+CIA
+CIA=10.10.19.20
+IBUC>
+CIG
+CIG=10.10.10.1
+IBUC>
+GIM
+error=invalid command
+IBUC>
+CIM
+CIM=0.0.0.0
+IBUC>
+CIM=255.255.0.0
+CIM=255.255.0.0
+IBUC>
+CIM
+CIM=255.255.0.0
+IBUC>
+RomBOOT
+
+
+AT91Bootstrap 3.8.11 (Tue Jul 23 14:20:53 PDT 2019)
+
+SD/MMC: Image: Read file u-boot.bin to 0x23f00000
+MMC: ADMA supported
+SD: Card Capacity: Standard
+SD: Specification Version 3.0X
+SD/MMC: Done to load image
+<debug_uart> 
+
+U-Boot 2018.07-linux4sam_6.0 (Jul 23 2019 - 14:21:02 -0700)
+
+CPU: SAMA5D27 1G bits DDR2 SDRAM
+Crystal frequency:       24 MHz
+CPU clock        :      492 MHz
+Master clock     :      164 MHz
+DRAM:  128 MiB
+MMC:   sdio-host@a0000000: 0, sdio-host@b0000000: 1
+Loading Environment from FAT... OK
+In:    serial@f8020000
+Out:   serial@f8020000
+Err:   serial@f8020000
+Net:   eth0: ethernet@f8008000
+Hit any key to stop autoboot:  1  0 
+3920912 bytes read in 247 ms (15.1 MiB/s)
+## Loading kernel from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Linux4SAM Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x210000e0
+     Data Size:    3879200 Bytes = 3.7 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x22000000
+     Entry Point:  0x22000000
+     Hash algo:    crc32
+     Hash value:   6bc04ff1
+     Hash algo:    sha1
+     Hash value:   6de3a2a0549dd96833e9bbf0998e6e35423c46f2
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading fdt from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'base_fdt' fdt subimage
+     Description:  Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x213b332c
+     Data Size:    39685 Bytes = 38.8 KiB
+     Architecture: ARM
+     Load Address: 0x23000000
+     Hash algo:    crc32
+     Hash value:   6937a0c4
+     Hash algo:    sha1
+     Hash value:   1d1992fa75a654b87e28861801fbb8cae482435c
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading fdt from 0x213b332c to 0x23000000
+   Booting using the fdt blob at 0x23000000
+   Loading Kernel Image ... OK
+   Loading Device Tree to 27b48000, end 27b54b04 ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.14.73-linux4sam_6.0 (asharma@rmcdonald-3630) (gcc version 8.2.1 20180802 (GNU Toolchain for the A-profile Architecture 8.2-2018.11 (arm-rel-8.26))) #1 Tue Jul 23 14:36:41 PDT 2019
+CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Atmel SAMA5D27 SOM1 EK
+Memory policy: Data cache writeback
+cma: Reserved 16 MiB at 0x26800000
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists, mobility grouping on.  Total pages: 32480
+Kernel command line: console=ttyS0,115200 root=/dev/mmcblk1p2 rw rootwait rootfstype=ext4 atmel.pm_modes=standby,ulp1
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 103524K/131072K available (6144K kernel code, 259K rwdata, 1044K rodata, 1024K init, 174K bss, 11164K reserved, 16384K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc8800000 - 0xff800000   ( 880 MB)
+    lowmem  : 0xc0000000 - 0xc8000000   ( 128 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc0700000   (7136 kB)
+      .init : 0xc0900000 - 0xc0a00000   (1024 kB)
+      .data : 0xc0a00000 - 0xc0a40f70   ( 260 kB)
+       .bss : 0xc0a40f70 - 0xc0a6c7c4   ( 175 kB)
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C-310 ID prefetch enabled, offset 2 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c9, AUX_CTRL 0x36020000
+clocksource: pit: mask: 0x7ffffff max_cycles: 0x7ffffff, max_idle_ns: 11654027029 ns
+sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 21474836475000000ns
+Console: colour dummy device 80x30
+Calibrating delay loop... 326.86 BogoMIPS (lpj=1634304)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x20100000 - 0x20100060
+devtmpfs: initialized
+random: get_random_u32 called from 0xc032cbe8 with crng_init=0
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 5 rev 1
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+AT91: PM: standby: standby, suspend: ulp1
+clocksource: tcb_clksrc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 186464433812 ns
+at_xdmac f0010000.dma-controller: 16 channels, mapped at 0xc8847000
+at_xdmac f0004000.dma-controller: 16 channels, mapped at 0xc8849000
+AT91: Detected SoC family: sama5d2
+AT91: Detected SoC: sama5d27c 128MiB SiP, revision 2
+VDDANA: supplied by VDDIN_3V3
+advref: supplied by VDDANA
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+at91_i2c f8028000.i2c: could not find pctldev for node /ahb/apb/pinctrl@fc038000/i2c0_default, deferring probe
+media: Linux media interface: v0.10
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource tcb_clksrc
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+workingset: timestamp_bits=14 max_order=15 bucket_order=1
+io scheduler noop registered (default)
+io scheduler mq-deadline registered
+io scheduler kyber registered
+pinctrl-at91-pio4 fc038000.pinctrl: atmel pinctrl initialized
+brd: module loaded
+loop: module loaded
+atmel_usart_serial.0.auto: ttyS2 at MMIO 0xf801c000 (irq = 34, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.1.auto: ttyS0 at MMIO 0xf8020000 (irq = 35, base_baud = 5125000) is a ATMEL_SERIAL
+console [ttyS0] enabled
+atmel_usart_serial.2.auto: ttyS3 at MMIO 0xfc008000 (irq = 40, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.3.auto: ttyS1 at MMIO 0xfc00c000 (irq = 41, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_qspi f0024000.spi: sst26vf064b (8192 Kbytes)
+5 ofpart partitions found on MTD device f0024000.spi
+Creating 5 MTD partitions on "f0024000.spi":
+0x000000000000-0x000000010000 : "at91bootstrap"
+0x000000010000-0x0000000b0000 : "bootloader"
+0x0000000b0000-0x0000000c0000 : "bootloader env"
+0x0000000c0000-0x0000000e0000 : "device tree"
+0x0000000e0000-0x0000004e0000 : "kernel"
+atmel_spi f8000000.spi: DMA TX channel not available, SPI unable to use DMA
+atmel_spi f8000000.spi: Atmel SPI Controller using PIO only
+atmel_spi f8000000.spi: Using FIFO (16 data)
+atmel_spi f8000000.spi: Atmel SPI Controller version 0x311 at 0xf8000000 (irq 27)
+atmel_spi fc000000.spi: Using dma0chan0 (tx) and dma0chan1 (rx) for DMA transfers
+atmel_spi fc000000.spi: Using FIFO (16 data)
+atmel_spi fc000000.spi: Atmel SPI Controller version 0x311 at 0xfc000000 (irq 39)
+libphy: Fixed MDIO Bus: probed
+CAN device driver interface
+libphy: MACB_mii_bus: probed
+Micrel KSZ8081 or KSZ8091 f8008000.ethernet-ffffffff:07: attached PHY driver [Micrel KSZ8081 or KSZ8091] (mii_bus:phy_addr=f8008000.ethernet-ffffffff:07, irq=176)
+macb f8008000.ethernet eth0: Cadence GEM rev 0x00020203 at 0xf8008000 irq 28 (54:10:ec:33:ea:9a)
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-atmel: EHCI Atmel driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-atmel: OHCI Atmel driver
+usbcore: registered new interface driver usb-storage
+rtc rtc0: invalid alarm value: 1900-1-1 0:0:0
+at91_rtc f80480b0.rtc: registered as rtc0
+at91_rtc f80480b0.rtc: AT91 Real Time Clock driver.
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+AT91: Starting after user reset
+sama5d4_wdt f8048040.watchdog: initialized (timeout = 16 sec, nowayout = 0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-at91 a0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc0: SDHCI controller on a0000000.sdio-host [a0000000.sdio-host] using ADMA
+sdhci-at91 b0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc1: SDHCI controller on b0000000.sdio-host [b0000000.sdio-host] using ADMA
+ledtrig-cpu: registered to indicate activity on CPUs
+atmel_aes f002c000.aes: version: 0x500
+atmel_aes f002c000.aes: Atmel AES - Using dma0chan2, dma0chan3 for DMA transfers
+atmel_sha f0028000.sha: version: 0x510
+atmel_sha f0028000.sha: using dma0chan4 for DMA transfers
+atmel_sha f0028000.sha: Atmel SHA1/SHA256/SHA224/SHA384/SHA512
+atmel_tdes fc044000.tdes: version: 0x703
+atmel_tdes fc044000.tdes: using dma0chan5, dma0chan6 for DMA transfers
+atmel_tdes fc044000.tdes: Atmel DES/TDES
+at91-sama5d2_adc fc030000.adc: setting up trigger as external_rising
+at91-sama5d2_adc fc030000.adc: version: 800
+ip_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 10
+Segment Routing with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+can: controller area network core (rev 20170425 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20170425)
+can: broadcast manager protocol (rev 20170425 t)
+can: netlink gateway (rev 20170425) max_hops=1
+at91_i2c f8028000.i2c: can't get DMA channel, continue without DMA support
+at91_i2c f8028000.i2c: Using FIFO (16 data)
+at24 0-0050: 256 byte 24c02 EEPROM, writable, 8 bytes/write
+at91_i2c f8028000.i2c: AT91 i2c bus driver (hw version: 0x704).
+mmc1: new high speed SD card at address e624
+mmcblk1: mmc1:e624 SU02G 1.84 GiB 
+pinctrl-at91-pio4 fc038000.pinctrl: pin PA29 already requested by f8000000.spi; cannot claim for gpio_keys
+pinctrl-at91-pio4 fc038000.pinctrl: pin-29 (gpio_keys) status -22
+pinctrl-at91-pio4 fc038000.pinctrl: could not request pin 29 (PA29) from group PA29  on device atmel_pinctrl
+gpio-keys gpio_keys: Error applying setting, reverse things back
+gpio-keys: probe of gpio_keys failed with error -22
+at91_rtc f80480b0.rtc: setting system clock to 2012-01-28 16:02:32 UTC (1327766552)
+ALSA device list:
+  #0: Dummy 1
+ mmcblk1: p1 p2
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan7 for rx DMA transfers
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan8 for tx DMA transfers
+random: fast init done
+EXT4-fs (mmcblk1p2): recovery complete
+EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:2.
+devtmpfs: mounted
+Freeing unused kernel memory: 1024K
+EXT4-fs (mmcblk1p2): re-mounted. Opts: data=ordered
+mount: mounting 10.10.19.12:/home/asharma/dev/buildroot-at91/output/target/usr/bin on /root/bin failed: Network is unreachable
+Starting syslogd: OK
+Starting klogd: OK
+Populating /dev using udev: udevd[118]: starting version 3.2.7
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+udevd[118]: specified group 'kvm' unknown
+udevd[119]: starting eudev-3.2.7
+done
+Initializing random number generator... urandom_read: 1 callbacks suppressed
+random: dd: uninitialized urandom read (512 bytes read)
+done.
+Starting rngd: OK
+random: crng init done
+Starting system message bus: dbus-daemon[153]: Failed to start message bus: Could not get UID and GID for username "dbus"
+done
+Starting network: IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+OK
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+Starting dropbear sshd: OK
+Starting sshd: OK
+Starting DHCP server: FAIL
+
+Welcome to the IBUC
+ibuc login: o root
+# ls
+bin         interfaces  ttyS0
+# (reverse-i-search)'': (reverse-i-search)'p': ping 10.10.19.12(reverse-i-search)'pi': ping 10.10.19.12(reverse-i-search)'pin': ping 10.10.19.12(reverse-i-search)'ping': ping 10.10.19.12# ping 10.10.19.12ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=0 ttl=64 time=1.232 ms
+^C
+--- 10.10.19.12 ping statistics ---
+34 packets transmitted, 1 packets received, 97% packet loss
+round-trip min/avg/max = 1.232/1.232/1.232 ms
+# # ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+^C
+--- 10.10.19.12 ping statistics ---
+5 packets transmitted, 0 packets received, 100% packet loss
+# # ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=1 ttl=64 time=0.973 ms
+64 bytes from 10.10.19.12: seq=2 ttl=64 time=0.894 ms
+^C
+--- 10.10.19.12 ping statistics ---
+3 packets transmitted, 2 packets received, 33% packet loss
+round-trip min/avg/max = 0.894/0.933/0.973 ms
+# (reverse-i-search)'': (reverse-i-search)'m': mount bin(reverse-i-search)'mo': mount bin(reverse-i-search)'mou': mount bin(reverse-i-search)'moun': mount bin# mount binmount bin
+# cd bin
+# (reverse-i-search)'': (reverse-i-search)'.': ping 10.10.19.12(reverse-i-search)'./': ./core-ibuc # ./core-ibuc ./core-ibuc 
+IBUC Core
+Timer ID: 205144
+Ethernet init
+Cfg and /etc/network/interface IP match
+Cfg and /etc/network/interface Gateway match
+cfg mask=a0a0a01, if_ip=ffff0000admin=2337
+CPE=1234
+IBUC>
+CIA
+CIA=10.10.19.20
+IBUC>
+CIG
+CIG=10.10.10.1
+IBUC>
+CIM
+CIM=255.255.0.0
+IBUC>
+RomBOOT
+
+
+AT91Bootstrap 3.8.11 (Tue Jul 23 14:20:53 PDT 2019)
+
+SD/MMC: Image: Read file u-boot.bin to 0x23f00000
+MMC: ADMA supported
+SD: Card Capacity: Standard
+SD: Specification Version 3.0X
+SD/MMC: Done to load image
+<debug_uart> 
+
+U-Boot 2018.07-linux4sam_6.0 (Jul 23 2019 - 14:21:02 -0700)
+
+CPU: SAMA5D27 1G bits DDR2 SDRAM
+Crystal frequency:       24 MHz
+CPU clock        :      492 MHz
+Master clock     :      164 MHz
+DRAM:  128 MiB
+MMC:   sdio-host@a0000000: 0, sdio-host@b0000000: 1
+Loading Environment from FAT... OK
+In:    serial@f8020000
+Out:   serial@f8020000
+Err:   serial@f8020000
+Net:   eth0: ethernet@f8008000
+Hit any key to stop autoboot:  1  0 
+3920912 bytes read in 246 ms (15.2 MiB/s)
+## Loading kernel from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Linux4SAM Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x210000e0
+     Data Size:    3879200 Bytes = 3.7 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x22000000
+     Entry Point:  0x22000000
+     Hash algo:    crc32
+     Hash value:   6bc04ff1
+     Hash algo:    sha1
+     Hash value:   6de3a2a0549dd96833e9bbf0998e6e35423c46f2
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading fdt from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'base_fdt' fdt subimage
+     Description:  Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x213b332c
+     Data Size:    39685 Bytes = 38.8 KiB
+     Architecture: ARM
+     Load Address: 0x23000000
+     Hash algo:    crc32
+     Hash value:   6937a0c4
+     Hash algo:    sha1
+     Hash value:   1d1992fa75a654b87e28861801fbb8cae482435c
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading fdt from 0x213b332c to 0x23000000
+   Booting using the fdt blob at 0x23000000
+   Loading Kernel Image ... OK
+   Loading Device Tree to 27b48000, end 27b54b04 ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.14.73-linux4sam_6.0 (asharma@rmcdonald-3630) (gcc version 8.2.1 20180802 (GNU Toolchain for the A-profile Architecture 8.2-2018.11 (arm-rel-8.26))) #1 Tue Jul 23 14:36:41 PDT 2019
+CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Atmel SAMA5D27 SOM1 EK
+Memory policy: Data cache writeback
+cma: Reserved 16 MiB at 0x26800000
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists, mobility grouping on.  Total pages: 32480
+Kernel command line: console=ttyS0,115200 root=/dev/mmcblk1p2 rw rootwait rootfstype=ext4 atmel.pm_modes=standby,ulp1
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 103524K/131072K available (6144K kernel code, 259K rwdata, 1044K rodata, 1024K init, 174K bss, 11164K reserved, 16384K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc8800000 - 0xff800000   ( 880 MB)
+    lowmem  : 0xc0000000 - 0xc8000000   ( 128 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc0700000   (7136 kB)
+      .init : 0xc0900000 - 0xc0a00000   (1024 kB)
+      .data : 0xc0a00000 - 0xc0a40f70   ( 260 kB)
+       .bss : 0xc0a40f70 - 0xc0a6c7c4   ( 175 kB)
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C-310 ID prefetch enabled, offset 2 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c9, AUX_CTRL 0x36020000
+clocksource: pit: mask: 0x7ffffff max_cycles: 0x7ffffff, max_idle_ns: 11654027029 ns
+sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 21474836475000000ns
+Console: colour dummy device 80x30
+Calibrating delay loop... 326.86 BogoMIPS (lpj=1634304)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x20100000 - 0x20100060
+devtmpfs: initialized
+random: get_random_u32 called from 0xc032cbe8 with crng_init=0
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 5 rev 1
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+AT91: PM: standby: standby, suspend: ulp1
+clocksource: tcb_clksrc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 186464433812 ns
+at_xdmac f0010000.dma-controller: 16 channels, mapped at 0xc8847000
+at_xdmac f0004000.dma-controller: 16 channels, mapped at 0xc8849000
+AT91: Detected SoC family: sama5d2
+AT91: Detected SoC: sama5d27c 128MiB SiP, revision 2
+VDDANA: supplied by VDDIN_3V3
+advref: supplied by VDDANA
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+at91_i2c f8028000.i2c: could not find pctldev for node /ahb/apb/pinctrl@fc038000/i2c0_default, deferring probe
+media: Linux media interface: v0.10
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource tcb_clksrc
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+workingset: timestamp_bits=14 max_order=15 bucket_order=1
+io scheduler noop registered (default)
+io scheduler mq-deadline registered
+io scheduler kyber registered
+pinctrl-at91-pio4 fc038000.pinctrl: atmel pinctrl initialized
+brd: module loaded
+loop: module loaded
+atmel_usart_serial.0.auto: ttyS2 at MMIO 0xf801c000 (irq = 34, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.1.auto: ttyS0 at MMIO 0xf8020000 (irq = 35, base_baud = 5125000) is a ATMEL_SERIAL
+console [ttyS0] enabled
+atmel_usart_serial.2.auto: ttyS3 at MMIO 0xfc008000 (irq = 40, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.3.auto: ttyS1 at MMIO 0xfc00c000 (irq = 41, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_qspi f0024000.spi: sst26vf064b (8192 Kbytes)
+5 ofpart partitions found on MTD device f0024000.spi
+Creating 5 MTD partitions on "f0024000.spi":
+0x000000000000-0x000000010000 : "at91bootstrap"
+0x000000010000-0x0000000b0000 : "bootloader"
+0x0000000b0000-0x0000000c0000 : "bootloader env"
+0x0000000c0000-0x0000000e0000 : "device tree"
+0x0000000e0000-0x0000004e0000 : "kernel"
+atmel_spi f8000000.spi: DMA TX channel not available, SPI unable to use DMA
+atmel_spi f8000000.spi: Atmel SPI Controller using PIO only
+atmel_spi f8000000.spi: Using FIFO (16 data)
+atmel_spi f8000000.spi: Atmel SPI Controller version 0x311 at 0xf8000000 (irq 27)
+atmel_spi fc000000.spi: Using dma0chan0 (tx) and dma0chan1 (rx) for DMA transfers
+atmel_spi fc000000.spi: Using FIFO (16 data)
+atmel_spi fc000000.spi: Atmel SPI Controller version 0x311 at 0xfc000000 (irq 39)
+libphy: Fixed MDIO Bus: probed
+CAN device driver interface
+libphy: MACB_mii_bus: probed
+Micrel KSZ8081 or KSZ8091 f8008000.ethernet-ffffffff:07: attached PHY driver [Micrel KSZ8081 or KSZ8091] (mii_bus:phy_addr=f8008000.ethernet-ffffffff:07, irq=176)
+macb f8008000.ethernet eth0: Cadence GEM rev 0x00020203 at 0xf8008000 irq 28 (54:10:ec:33:ea:9a)
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-atmel: EHCI Atmel driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-atmel: OHCI Atmel driver
+usbcore: registered new interface driver usb-storage
+rtc rtc0: invalid alarm value: 1900-1-1 0:0:0
+at91_rtc f80480b0.rtc: registered as rtc0
+at91_rtc f80480b0.rtc: AT91 Real Time Clock driver.
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+AT91: Starting after user reset
+sama5d4_wdt f8048040.watchdog: initialized (timeout = 16 sec, nowayout = 0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-at91 a0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc0: SDHCI controller on a0000000.sdio-host [a0000000.sdio-host] using ADMA
+sdhci-at91 b0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc1: SDHCI controller on b0000000.sdio-host [b0000000.sdio-host] using ADMA
+ledtrig-cpu: registered to indicate activity on CPUs
+atmel_aes f002c000.aes: version: 0x500
+atmel_aes f002c000.aes: Atmel AES - Using dma0chan2, dma0chan3 for DMA transfers
+atmel_sha f0028000.sha: version: 0x510
+atmel_sha f0028000.sha: using dma0chan4 for DMA transfers
+atmel_sha f0028000.sha: Atmel SHA1/SHA256/SHA224/SHA384/SHA512
+atmel_tdes fc044000.tdes: version: 0x703
+atmel_tdes fc044000.tdes: using dma0chan5, dma0chan6 for DMA transfers
+atmel_tdes fc044000.tdes: Atmel DES/TDES
+at91-sama5d2_adc fc030000.adc: setting up trigger as external_rising
+at91-sama5d2_adc fc030000.adc: version: 800
+ip_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 10
+Segment Routing with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+can: controller area network core (rev 20170425 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20170425)
+can: broadcast manager protocol (rev 20170425 t)
+can: netlink gateway (rev 20170425) max_hops=1
+at91_i2c f8028000.i2c: can't get DMA channel, continue without DMA support
+at91_i2c f8028000.i2c: Using FIFO (16 data)
+at24 0-0050: 256 byte 24c02 EEPROM, writable, 8 bytes/write
+at91_i2c f8028000.i2c: AT91 i2c bus driver (hw version: 0x704).
+mmc1: new high speed SD card at address e624
+mmcblk1: mmc1:e624 SU02G 1.84 GiB 
+pinctrl-at91-pio4 fc038000.pinctrl: pin PA29 already requested by f8000000.spi; cannot claim for gpio_keys
+pinctrl-at91-pio4 fc038000.pinctrl: pin-29 (gpio_keys) status -22
+pinctrl-at91-pio4 fc038000.pinctrl: could not request pin 29 (PA29) from group PA29  on device atmel_pinctrl
+gpio-keys gpio_keys: Error applying setting, reverse things back
+gpio-keys: probe of gpio_keys failed with error -22
+at91_rtc f80480b0.rtc: setting system clock to 2012-01-28 16:05:26 UTC (1327766726)
+ALSA device list:
+  #0: Dummy 1
+ mmcblk1: p1 p2
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan7 for rx DMA transfers
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan8 for tx DMA transfers
+random: fast init done
+EXT4-fs (mmcblk1p2): recovery complete
+EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:2.
+devtmpfs: mounted
+Freeing unused kernel memory: 1024K
+EXT4-fs (mmcblk1p2): re-mounted. Opts: data=ordered
+mount: mounting 10.10.19.12:/home/asharma/dev/buildroot-at91/output/target/usr/bin on /root/bin failed: Network is unreachable
+Starting syslogd: OK
+Starting klogd: OK
+Populating /dev using udev: udevd[118]: starting version 3.2.7
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+udevd[118]: specified group 'kvm' unknown
+udevd[119]: starting eudev-3.2.7
+done
+Initializing random number generator... urandom_read: 1 callbacks suppressed
+random: dd: uninitialized urandom read (512 bytes read)
+done.
+Starting rngd: OK
+random: crng init done
+Starting system message bus: dbus-daemon[153]: Failed to start message bus: Could not get UID and GID for username "dbus"
+done
+Starting network: IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+OK
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+Starting dropbear sshd: OK
+Starting sshd: OK
+Starting DHCP server: FAIL
+
+Welcome to the IBUC
+ibuc login: rroooott
+
+# 
+# ls
+bin         interfaces  ttyS0
+# (reverse-i-search)'': (reverse-i-search)'p': ping 10.10.19.12(reverse-i-search)'pi': ping 10.10.19.12(reverse-i-search)'pin': ping 10.10.19.12(reverse-i-search)'ping': ping 10.10.19.12# ping 10.10.19.12ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=0 ttl=64 time=1.427 ms
+^C
+--- 10.10.19.12 ping statistics ---
+19 packets transmitted, 1 packets received, 94% packet loss
+round-trip min/avg/max = 1.427/1.427/1.427 ms
+# ifdown eth0
+# # ifdown eth0# ping 10.10.19.12# lsifup eth0
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+# # ifup eth0# ifdown eth0# ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=0 ttl=64 time=1.248 ms
+64 bytes from 10.10.19.12: seq=1 ttl=64 time=0.804 ms
+64 bytes from 10.10.19.12: seq=2 ttl=64 time=0.897 ms
+^C
+--- 10.10.19.12 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.804/0.983/1.248 ms
+# cd bin(reverse-i-search)'': (reverse-i-search)'m': mount bin(reverse-i-search)'mo': mount bin(reverse-i-search)'mou': mount bin(reverse-i-search)'moun': mount bin(reverse-i-search)'mount': mount bin(reverse-i-search)'mount ': mount bin(reverse-i-search)'mount b': mount bin(reverse-i-search)'mount bi': mount bin(reverse-i-search)'mount bin': mount bin# mount binmount bin
+# cd bin
+# ,././core-iubbic
+-sh: ./core-ibic: not found
+# # ./core-ibic# ./core-ibuc 
+IBUC Core
+Timer ID: 205144
+Ethernet init
+Cfg and /etc/network/interface IP match
+Cfg and /etc/network/interface Gateway match
+Cfg and /etc/network/interface netmask match
+admin=2337
+error=Please enter valid password
+IBUC>
+error=Please enter valid password
+IBUC>
+error=Please enter valid password
+IBUC>
+error=Please enter valid password
+IBUC>
+error=Please enter valid password
+IBUC>
+error=Please enter valid password
+IBUC>
+CPE=1234
+IBUC>
+C10
+C10=0
+IBUC>
+C4V
+C4V=1
+IBUC>
+CAS
+CAS=T0write() of 4 bytes failed!
+0a20,M0x0000
+IBUC>
+CC1
+error=invalid command
+IBUC>
+
+IBUC>
+
+IBUC>
+CIA
+CIA=10.10.19.20
+IBUC>
+CAS
+CAS=T0x0a20,M0x0000
+IBUC>
+CC1
+error=invalid command
+IBUC>
+CC1
+error=invalid command
+IBUC>
+CCM
+CCM=Undefined,Undefined
+IBUC>
+CCS
+CCS=FW IBR v5.23, Aug 16 2019 15:35:56
+IBUC>
+
+error=invalid command
+IBUC>
+RomBOOT
+
+
+AT91Bootstrap 3.8.11 (Tue Jul 23 14:20:53 PDT 2019)
+
+SD/MMC: Image: Read file u-boot.bin to 0x23f00000
+MMC: ADMA supported
+SD: Card Capacity: Standard
+SD: Specification Version 3.0X
+SD/MMC: Done to load image
+<debug_uart> 
+
+U-Boot 2018.07-linux4sam_6.0 (Jul 23 2019 - 14:21:02 -0700)
+
+CPU: SAMA5D27 1G bits DDR2 SDRAM
+Crystal frequency:       24 MHz
+CPU clock        :      492 MHz
+Master clock     :      164 MHz
+DRAM:  128 MiB
+MMC:   sdio-host@a0000000: 0, sdio-host@b0000000: 1
+Loading Environment from FAT... OK
+In:    serial@f8020000
+Out:   serial@f8020000
+Err:   serial@f8020000
+Net:   eth0: ethernet@f8008000
+Hit any key to stop autoboot:  1  0 
+3920912 bytes read in 246 ms (15.2 MiB/s)
+## Loading kernel from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Linux4SAM Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x210000e0
+     Data Size:    3879200 Bytes = 3.7 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x22000000
+     Entry Point:  0x22000000
+     Hash algo:    crc32
+     Hash value:   6bc04ff1
+     Hash algo:    sha1
+     Hash value:   6de3a2a0549dd96833e9bbf0998e6e35423c46f2
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading fdt from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'base_fdt' fdt subimage
+     Description:  Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x213b332c
+     Data Size:    39685 Bytes = 38.8 KiB
+     Architecture: ARM
+     Load Address: 0x23000000
+     Hash algo:    crc32
+     Hash value:   6937a0c4
+     Hash algo:    sha1
+     Hash value:   1d1992fa75a654b87e28861801fbb8cae482435c
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading fdt from 0x213b332c to 0x23000000
+   Booting using the fdt blob at 0x23000000
+   Loading Kernel Image ... OK
+   Loading Device Tree to 27b48000, end 27b54b04 ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.14.73-linux4sam_6.0 (asharma@rmcdonald-3630) (gcc version 8.2.1 20180802 (GNU Toolchain for the A-profile Architecture 8.2-2018.11 (arm-rel-8.26))) #1 Tue Jul 23 14:36:41 PDT 2019
+CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Atmel SAMA5D27 SOM1 EK
+Memory policy: Data cache writeback
+cma: Reserved 16 MiB at 0x26800000
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists, mobility grouping on.  Total pages: 32480
+Kernel command line: console=ttyS0,115200 root=/dev/mmcblk1p2 rw rootwait rootfstype=ext4 atmel.pm_modes=standby,ulp1
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 103524K/131072K available (6144K kernel code, 259K rwdata, 1044K rodata, 1024K init, 174K bss, 11164K reserved, 16384K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc8800000 - 0xff800000   ( 880 MB)
+    lowmem  : 0xc0000000 - 0xc8000000   ( 128 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc0700000   (7136 kB)
+      .init : 0xc0900000 - 0xc0a00000   (1024 kB)
+      .data : 0xc0a00000 - 0xc0a40f70   ( 260 kB)
+       .bss : 0xc0a40f70 - 0xc0a6c7c4   ( 175 kB)
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C-310 ID prefetch enabled, offset 2 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c9, AUX_CTRL 0x36020000
+clocksource: pit: mask: 0x7ffffff max_cycles: 0x7ffffff, max_idle_ns: 11654027029 ns
+sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 21474836475000000ns
+Console: colour dummy device 80x30
+Calibrating delay loop... 326.86 BogoMIPS (lpj=1634304)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x20100000 - 0x20100060
+devtmpfs: initialized
+random: get_random_u32 called from 0xc032cbe8 with crng_init=0
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 5 rev 1
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+AT91: PM: standby: standby, suspend: ulp1
+clocksource: tcb_clksrc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 186464433812 ns
+at_xdmac f0010000.dma-controller: 16 channels, mapped at 0xc8847000
+at_xdmac f0004000.dma-controller: 16 channels, mapped at 0xc8849000
+AT91: Detected SoC family: sama5d2
+AT91: Detected SoC: sama5d27c 128MiB SiP, revision 2
+VDDANA: supplied by VDDIN_3V3
+advref: supplied by VDDANA
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+at91_i2c f8028000.i2c: could not find pctldev for node /ahb/apb/pinctrl@fc038000/i2c0_default, deferring probe
+media: Linux media interface: v0.10
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource tcb_clksrc
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+workingset: timestamp_bits=14 max_order=15 bucket_order=1
+io scheduler noop registered (default)
+io scheduler mq-deadline registered
+io scheduler kyber registered
+pinctrl-at91-pio4 fc038000.pinctrl: atmel pinctrl initialized
+brd: module loaded
+loop: module loaded
+atmel_usart_serial.0.auto: ttyS2 at MMIO 0xf801c000 (irq = 34, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.1.auto: ttyS0 at MMIO 0xf8020000 (irq = 35, base_baud = 5125000) is a ATMEL_SERIAL
+console [ttyS0] enabled
+atmel_usart_serial.2.auto: ttyS3 at MMIO 0xfc008000 (irq = 40, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.3.auto: ttyS1 at MMIO 0xfc00c000 (irq = 41, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_qspi f0024000.spi: sst26vf064b (8192 Kbytes)
+5 ofpart partitions found on MTD device f0024000.spi
+Creating 5 MTD partitions on "f0024000.spi":
+0x000000000000-0x000000010000 : "at91bootstrap"
+0x000000010000-0x0000000b0000 : "bootloader"
+0x0000000b0000-0x0000000c0000 : "bootloader env"
+0x0000000c0000-0x0000000e0000 : "device tree"
+0x0000000e0000-0x0000004e0000 : "kernel"
+atmel_spi f8000000.spi: DMA TX channel not available, SPI unable to use DMA
+atmel_spi f8000000.spi: Atmel SPI Controller using PIO only
+atmel_spi f8000000.spi: Using FIFO (16 data)
+atmel_spi f8000000.spi: Atmel SPI Controller version 0x311 at 0xf8000000 (irq 27)
+atmel_spi fc000000.spi: Using dma0chan0 (tx) and dma0chan1 (rx) for DMA transfers
+atmel_spi fc000000.spi: Using FIFO (16 data)
+atmel_spi fc000000.spi: Atmel SPI Controller version 0x311 at 0xfc000000 (irq 39)
+libphy: Fixed MDIO Bus: probed
+CAN device driver interface
+libphy: MACB_mii_bus: probed
+Micrel KSZ8081 or KSZ8091 f8008000.ethernet-ffffffff:07: attached PHY driver [Micrel KSZ8081 or KSZ8091] (mii_bus:phy_addr=f8008000.ethernet-ffffffff:07, irq=176)
+macb f8008000.ethernet eth0: Cadence GEM rev 0x00020203 at 0xf8008000 irq 28 (54:10:ec:33:ea:9a)
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-atmel: EHCI Atmel driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-atmel: OHCI Atmel driver
+usbcore: registered new interface driver usb-storage
+rtc rtc0: invalid alarm value: 1900-1-1 0:0:0
+at91_rtc f80480b0.rtc: registered as rtc0
+at91_rtc f80480b0.rtc: AT91 Real Time Clock driver.
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+AT91: Starting after user reset
+sama5d4_wdt f8048040.watchdog: initialized (timeout = 16 sec, nowayout = 0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-at91 a0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc0: SDHCI controller on a0000000.sdio-host [a0000000.sdio-host] using ADMA
+sdhci-at91 b0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc1: SDHCI controller on b0000000.sdio-host [b0000000.sdio-host] using ADMA
+ledtrig-cpu: registered to indicate activity on CPUs
+atmel_aes f002c000.aes: version: 0x500
+atmel_aes f002c000.aes: Atmel AES - Using dma0chan2, dma0chan3 for DMA transfers
+atmel_sha f0028000.sha: version: 0x510
+atmel_sha f0028000.sha: using dma0chan4 for DMA transfers
+atmel_sha f0028000.sha: Atmel SHA1/SHA256/SHA224/SHA384/SHA512
+atmel_tdes fc044000.tdes: version: 0x703
+atmel_tdes fc044000.tdes: using dma0chan5, dma0chan6 for DMA transfers
+atmel_tdes fc044000.tdes: Atmel DES/TDES
+at91-sama5d2_adc fc030000.adc: setting up trigger as external_rising
+at91-sama5d2_adc fc030000.adc: version: 800
+ip_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 10
+Segment Routing with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+can: controller area network core (rev 20170425 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20170425)
+can: broadcast manager protocol (rev 20170425 t)
+can: netlink gateway (rev 20170425) max_hops=1
+at91_i2c f8028000.i2c: can't get DMA channel, continue without DMA support
+at91_i2c f8028000.i2c: Using FIFO (16 data)
+at24 0-0050: 256 byte 24c02 EEPROM, writable, 8 bytes/write
+at91_i2c f8028000.i2c: AT91 i2c bus driver (hw version: 0x704).
+pinctrl-at91-pio4 fc038000.pinctrl: pin PA29 already requested by f8000000.spi; cannot claim for gpio_keys
+pinctrl-at91-pio4 fc038000.pinctrl: pin-29 (gpio_keys) status -22
+pinctrl-at91-pio4 fc038000.pinctrl: could not request pin 29 (PA29) from group PA29  on device atmel_pinctrl
+gpio-keys gpio_keys: Error applying setting, reverse things back
+gpio-keys: probe of gpio_keys failed with error -22
+at91_rtc f80480b0.rtc: setting system clock to 2012-01-28 16:23:51 UTC (1327767831)
+ALSA device list:
+  #0: Dummy 1
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan7 for rx DMA transfers
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan8 for tx DMA transfers
+mmc1: new high speed SD card at address e624
+mmcblk1: mmc1:e624 SU02G 1.84 GiB 
+ mmcblk1: p1 p2
+random: fast init done
+EXT4-fs (mmcblk1p2): recovery complete
+EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:2.
+devtmpfs: mounted
+Freeing unused kernel memory: 1024K
+EXT4-fs (mmcblk1p2): re-mounted. Opts: data=ordered
+mount: mounting 10.10.19.12:/home/asharma/dev/buildroot-at91/output/target/usr/bin on /root/bin failed: Network is unreachable
+Starting syslogd: OK
+Starting klogd: OK
+Populating /dev using udev: udevd[118]: starting version 3.2.7
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+udevd[118]: specified group 'kvm' unknown
+udevd[119]: starting eudev-3.2.7
+done
+Initializing random number generator... urandom_read: 1 callbacks suppressed
+random: dd: uninitialized urandom read (512 bytes read)
+done.
+Starting rngd: OK
+random: crng init done
+Starting system message bus: dbus-daemon[153]: Failed to start message bus: Could not get UID and GID for username "dbus"
+done
+Starting network: IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+OK
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+Starting dropbear sshd: OK
+Starting sshd: OK
+Starting DHCP server: FAIL
+
+Welcome to the IBUC
+ibuc login: RROOOOTT
+
+Password: 
+Login incorrect
+ibuc login: root
+# cd (reverse-i-search)'': (reverse-i-search)'p': ping 10.10.19.12(reverse-i-search)'pi': ping 10.10.19.12(reverse-i-search)'pin': ping 10.10.19.12(reverse-i-search)'ping': ping 10.10.19.12# ping 10.10.19.12ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=0 ttl=64 time=1.538 ms
+^C
+--- 10.10.19.12 ping statistics ---
+2 packets transmitted, 1 packets received, 50% packet loss
+round-trip min/avg/max = 1.538/1.538/1.538 ms
+# ifdown eth0
+# ifup eth0
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+# # ifup eth0# ifdown eth0# ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=0 ttl=64 time=1.332 ms
+
+^C
+--- 10.10.19.12 ping statistics ---
+15 packets transmitted, 1 packets received, 93% packet loss
+round-trip min/avg/max = 1.332/1.332/1.332 ms
+# # ping 10.10.19.12# ifup eth0# ifdown eth0
+# # ifdown eth0# ping 10.10.19.12# ifup eth0
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+# dmes# dmesg 
+Booting Linux on physical CPU 0x0
+Linux version 4.14.73-linux4sam_6.0 (asharma@rmcdonald-3630) (gcc version 8.2.1 20180802 (GNU Toolchain for the A-profile Architecture 8.2-2018.11 (arm-rel-8.26))) #1 Tue Jul 23 14:36:41 PDT 2019
+CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Atmel SAMA5D27 SOM1 EK
+Memory policy: Data cache writeback
+cma: Reserved 16 MiB at 0x26800000
+On node 0 totalpages: 32768
+free_area_init_node: node 0, pgdat c0a3f894, node_mem_map c7ed2000
+  Normal zone: 288 pages used for memmap
+  Normal zone: 0 pages reserved
+  Normal zone: 32768 pages, LIFO batch:7
+CPU: All CPU(s) started in SVC mode.
+pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+pcpu-alloc: [0] 0 
+Built 1 zonelists, mobility grouping on.  Total pages: 32480
+Kernel command line: console=ttyS0,115200 root=/dev/mmcblk1p2 rw rootwait rootfstype=ext4 atmel.pm_modes=standby,ulp1
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 103524K/131072K available (6144K kernel code, 259K rwdata, 1044K rodata, 1024K init, 174K bss, 11164K reserved, 16384K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc8800000 - 0xff800000   ( 880 MB)
+    lowmem  : 0xc0000000 - 0xc8000000   ( 128 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc0700000   (7136 kB)
+      .init : 0xc0900000 - 0xc0a00000   (1024 kB)
+      .data : 0xc0a00000 - 0xc0a40f70   ( 260 kB)
+       .bss : 0xc0a40f70 - 0xc0a6c7c4   ( 175 kB)
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C-310 ID prefetch enabled, offset 2 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c9, AUX_CTRL 0x36020000
+clocksource: pit: mask: 0x7ffffff max_cycles: 0x7ffffff, max_idle_ns: 11654027029 ns
+sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 21474836475000000ns
+Console: colour dummy device 80x30
+Calibrating delay loop... 326.86 BogoMIPS (lpj=1634304)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x20100000 - 0x20100060
+devtmpfs: initialized
+random: get_random_u32 called from 0xc032cbe8 with crng_init=0
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 5 rev 1
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+AT91: PM: standby: standby, suspend: ulp1
+AT91: mode = 0x20401, ploarity = 0400
+tcb_clksrc: tc0 at 10.750 MHz
+clocksource: tcb_clksrc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 186464433812 ns
+at_xdmac f0010000.dma-controller: 16 channels, mapped at 0xc8847000
+at_xdmac f0004000.dma-controller: 16 channels, mapped at 0xc8849000
+AT91: Detected SoC family: sama5d2
+AT91: Detected SoC: sama5d27c 128MiB SiP, revision 2
+VDDANA: supplied by VDDIN_3V3
+advref: supplied by VDDANA
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+at91_i2c f8028000.i2c: could not find pctldev for node /ahb/apb/pinctrl@fc038000/i2c0_default, deferring probe
+media: Linux media interface: v0.10
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource tcb_clksrc
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+workingset: timestamp_bits=14 max_order=15 bucket_order=1
+io scheduler noop registered (default)
+io scheduler mq-deadline registered
+io scheduler kyber registered
+pinctrl-at91-pio4 fc038000.pinctrl: atmel pinctrl initialized
+brd: module loaded
+loop: module loaded
+atmel_usart_serial.0.auto: ttyS2 at MMIO 0xf801c000 (irq = 34, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.1.auto: ttyS0 at MMIO 0xf8020000 (irq = 35, base_baud = 5125000) is a ATMEL_SERIAL
+console [ttyS0] enabled
+atmel_usart_serial.2.auto: ttyS3 at MMIO 0xfc008000 (irq = 40, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.3.auto: ttyS1 at MMIO 0xfc00c000 (irq = 41, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_qspi f0024000.spi: sst26vf064b (8192 Kbytes)
+5 ofpart partitions found on MTD device f0024000.spi
+Creating 5 MTD partitions on "f0024000.spi":
+0x000000000000-0x000000010000 : "at91bootstrap"
+0x000000010000-0x0000000b0000 : "bootloader"
+0x0000000b0000-0x0000000c0000 : "bootloader env"
+0x0000000c0000-0x0000000e0000 : "device tree"
+0x0000000e0000-0x0000004e0000 : "kernel"
+atmel_spi f8000000.spi: DMA TX channel not available, SPI unable to use DMA
+atmel_spi f8000000.spi: Atmel SPI Controller using PIO only
+atmel_spi f8000000.spi: Using FIFO (16 data)
+atmel_spi f8000000.spi: Atmel SPI Controller version 0x311 at 0xf8000000 (irq 27)
+atmel_spi fc000000.spi: Using dma0chan0 (tx) and dma0chan1 (rx) for DMA transfers
+atmel_spi fc000000.spi: Using FIFO (16 data)
+atmel_spi fc000000.spi: Atmel SPI Controller version 0x311 at 0xfc000000 (irq 39)
+libphy: Fixed MDIO Bus: probed
+CAN device driver interface
+libphy: MACB_mii_bus: probed
+Micrel KSZ8081 or KSZ8091 f8008000.ethernet-ffffffff:07: attached PHY driver [Micrel KSZ8081 or KSZ8091] (mii_bus:phy_addr=f8008000.ethernet-ffffffff:07, irq=176)
+macb f8008000.ethernet eth0: Cadence GEM rev 0x00020203 at 0xf8008000 irq 28 (54:10:ec:33:ea:9a)
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-atmel: EHCI Atmel driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-atmel: OHCI Atmel driver
+usbcore: registered new interface driver usb-storage
+rtc rtc0: invalid alarm value: 1900-1-1 0:0:0
+at91_rtc f80480b0.rtc: registered as rtc0
+at91_rtc f80480b0.rtc: AT91 Real Time Clock driver.
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+AT91: Starting after user reset
+sama5d4_wdt f8048040.watchdog: initialized (timeout = 16 sec, nowayout = 0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-at91 a0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc0: SDHCI controller on a0000000.sdio-host [a0000000.sdio-host] using ADMA
+sdhci-at91 b0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc1: SDHCI controller on b0000000.sdio-host [b0000000.sdio-host] using ADMA
+ledtrig-cpu: registered to indicate activity on CPUs
+atmel_aes f002c000.aes: version: 0x500
+atmel_aes f002c000.aes: Atmel AES - Using dma0chan2, dma0chan3 for DMA transfers
+atmel_sha f0028000.sha: version: 0x510
+atmel_sha f0028000.sha: using dma0chan4 for DMA transfers
+atmel_sha f0028000.sha: Atmel SHA1/SHA256/SHA224/SHA384/SHA512
+atmel_tdes fc044000.tdes: version: 0x703
+atmel_tdes fc044000.tdes: using dma0chan5, dma0chan6 for DMA transfers
+atmel_tdes fc044000.tdes: Atmel DES/TDES
+at91-sama5d2_adc fc030000.adc: setting up trigger as external_rising
+at91-sama5d2_adc fc030000.adc: version: 800
+ip_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 10
+Segment Routing with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+can: controller area network core (rev 20170425 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20170425)
+can: broadcast manager protocol (rev 20170425 t)
+can: netlink gateway (rev 20170425) max_hops=1
+at91_i2c f8028000.i2c: can't get DMA channel, continue without DMA support
+at91_i2c f8028000.i2c: Using FIFO (16 data)
+at24 0-0050: 256 byte 24c02 EEPROM, writable, 8 bytes/write
+at91_i2c f8028000.i2c: AT91 i2c bus driver (hw version: 0x704).
+pinctrl-at91-pio4 fc038000.pinctrl: pin PA29 already requested by f8000000.spi; cannot claim for gpio_keys
+pinctrl-at91-pio4 fc038000.pinctrl: pin-29 (gpio_keys) status -22
+pinctrl-at91-pio4 fc038000.pinctrl: could not request pin 29 (PA29) from group PA29  on device atmel_pinctrl
+gpio-keys gpio_keys: Error applying setting, reverse things back
+gpio-keys: probe of gpio_keys failed with error -22
+at91_rtc f80480b0.rtc: setting system clock to 2012-01-28 16:23:51 UTC (1327767831)
+ALSA device list:
+  #0: Dummy 1
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan7 for rx DMA transfers
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan8 for tx DMA transfers
+mmc1: new high speed SD card at address e624
+mmcblk1: mmc1:e624 SU02G 1.84 GiB 
+ mmcblk1: p1 p2
+random: fast init done
+EXT4-fs (mmcblk1p2): recovery complete
+EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:2.
+devtmpfs: mounted
+Freeing unused kernel memory: 1024K
+EXT4-fs (mmcblk1p2): re-mounted. Opts: data=ordered
+udevd[118]: starting version 3.2.7
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+udevd[118]: specified group 'kvm' unknown
+udevd[119]: starting eudev-3.2.7
+urandom_read: 1 callbacks suppressed
+random: dd: uninitialized urandom read (512 bytes read)
+random: crng init done
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+# 
+# 
+# 
+# # dmesg # ifup eth0# ifdown eth0# ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=0 ttl=64 time=1.156 ms
+^C
+--- 10.10.19.12 ping statistics ---
+11 packets transmitted, 1 packets received, 90% packet loss
+round-trip min/avg/max = 1.156/1.156/1.156 ms
+# # ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+^C
+--- 10.10.19.12 ping statistics ---
+21 packets transmitted, 0 packets received, 100% packet loss
+# # ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+^C
+--- 10.10.19.12 ping statistics ---
+3 packets transmitted, 0 packets received, 100% packet loss
+# # ping 10.10.19.12# dmesg # ifup eth0# ifdown eth0
+# # ifdown eth0# ping 10.10.19.12# dmesg # ifup eth0
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+# # ifup eth0# ifdown eth0# ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=0 ttl=64 time=1.164 ms
+^C
+--- 10.10.19.12 ping statistics ---
+5 packets transmitted, 1 packets received, 80% packet loss
+round-trip min/avg/max = 1.164/1.164/1.164 ms
+# route -a
+route: invalid option -- 'a'
+Usage: route [-nNvee] [-FC] [<AF>]           List kernel routing tables
+       route [-v] [-FC] {add|del|flush} ...  Modify routing table for AF.
+
+       route {-h|--help} [<AF>]              Detailed usage syntax for specified AF.
+       route {-V|--version}                  Display version/author and exit.
+
+        -v, --verbose            be verbose
+        -n, --numeric            don't resolve names
+        -e, --extend             display other/more information
+        -F, --fib                display Forwarding Information Base (default)
+        -C, --cache              display routing cache instead of FIB
+
+  <AF>=Use -4, -6, '-A <af>' or '--<af>'; default: inet
+  List of possible address families (which support routing):
+    inet (DARPA Internet) inet6 (IPv6) ax25 (AMPR AX.25) 
+    netrom (AMPR NET/ROM) ipx (Novell IPX) ddp (Appletalk DDP) 
+    x25 (CCITT X.25) 
+# # route -a
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         10.10.10.1      0.0.0.0         UG    0      0        0 eth0
+10.10.0.0       0.0.0.0         255.255.0.0     U     0      0        0 eth0
+# # route # route -a# ping 10.10.19.12# ifup eth0
+ifup: interface eth0 already configured
+# 
+# # ifup eth0# route # route -a# ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=15 ttl=64 time=0.996 ms
+64 bytes from 10.10.19.12: seq=16 ttl=64 time=0.780 ms
+64 bytes from 10.10.19.12: seq=17 ttl=64 time=0.761 ms
+64 bytes from 10.10.19.12: seq=18 ttl=64 time=0.762 ms
+^C
+--- 10.10.19.12 ping statistics ---
+19 packets transmitted, 4 packets received, 78% packet loss
+round-trip min/avg/max = 0.761/0.824/0.996 ms
+# ls
+bin         interfaces  ttyS0
+# mount bin
+# cd bin
+# ./core# ./core-uibuc
+IBUC Core
+Timer ID: 205144
+Ethernet init
+Cfg and /etc/network/interface IP match
+Cfg and /etc/network/interface Gateway match
+Cfg and /etc/network/interface netmask match
+admin=2337
+error=Please enter valid password
+IBUC>
+IBUC>
+CCS=FW IBR v1.0, Aug 19 2019 10:44:31
+IBUC>
+AC Current=0.00 Amps
+IBUC>
+IBUC>
+IBUC>
+IBUC>
+IBUC>
+CIA=10.10.19.20
+IBUC>
+CIS=0
+IBUC>
+CIS=1
+IBUC>
+CIS=1
+IBUC>
+CIS=0write() of 4 bytes failed!
+
+IBUC>
+CIS=0
+IBUC>
+CLE=1
+IBUC>
+error=invalid command
+IBUC>
+HELP
+error=invalid command
+IBUC>
+CPE
+GET is not valid with CPE
+IBUC>
+CIA
+CIA=10.10.19.20
+IBUC>
+HELP
+error=invalid command
+IBUC>
+HLP
+ATL - Get Minimum/Maximum Temperature Celsius(min, max, entries)
+C10 - Get 10 MHz Alarm(1-Owrite() of 4 bytes failed!
+, 0-Alarm)
+C4A - Get/Set RS485/FSK Address(Legacy 1-15, ASCII 1-254)
+C4D - Get/Set RS485/FSK Response Delay(1-255ms)
+C4M - Get/Set RS485/FSK Message Protocol(0-ASCII, 1-Legacy)
+C4R - Get/Set RS485 Baud Rate(1200,400, 4800, 9600, 19200, 38400, 57600, 115200)
+C4V - Get/Set Response Information(0-Terse, 1-Verbose)
+CAS - Get Current Alarms(CAS=1 for detailed strings)write() of 4 bytes failed!
+
+CBT - Get/Set Burst Timeout(0 to 300 seconds)
+CCM - Get Model and Serial Number(Model, Serial)
+CCS - Get Firmware Revision
+CFD - Get Total System Hours
+CIA - Get/Set IP Address(XXX.XXX.XXX.XXX)
+CIC - Set SNMP Communities(public,private,trap)
+CID - Get AC/DC Current Consumption(Amps)
+CIG - Get/Set IP Gateway(XXX.XXX.XXX.XXX)
+CIH1 - Get/Set Trap Host 1 IP Address(XXX.XXX.XXX.XXX)
+CIH2 - Get/Set Trap write() of 4 bytes failed!
+ost 2 IP Address(XXX.XXX.XXX.XXX)
+CIM - Get/Set Subnet Mask(XXX.XXX.XXX.XXX)
+CIS - Get/Set SNMP(0-Disable, 1-SNMPV1, 2-SNMPV2c)
+CIT1 - Get/Set SNMP Trap Host 1(0-Disable, 1-Enable)
+CIT2 - Get/Set SNwrite() of 4 bytes failed!
+P Trap Host 2(0-Disable, 1-Enable)
+CLE - Get/Set External LED(0-Disable, 1-Enable)
+CM1 - Get/Set Minor Alarm Mask
+CM2 - Get/Set Major Alarm Mask
+CMS - Get/Set Alarm Suppression Mask
+COI - Get BUC Information String
+COX - Get Internal Temperature(Celsius)
+CPE - Enter Password(1-65535)
+CPL - Get Private Label String
+CPS - Set Password(1-65535)
+CPT - Get/Set Password Timeout(1-65535 minutes)write() of 4 bytes failed!
+CRT - Get/Set 10MHz Trim(0 to 255) if equipped
+CSF - Get/Set AC 50Hz Correction(0=60Hz, 1=50Hz)
+CTI - Get Internal 10MHz Install state(0=Not Installed, 1=Installed)
+CTM - Get/Set System Time(MM/DD/YYYY hh:mm:ss)
+CTV - Get DRO Tune Volts(Volts DC)
+CVD - Get Power Supply Voltage(Volts AC/DC)
+CWR - Get/Set Web Refresh Rate(0-No Refresh, 1-3600 seconds)
+CZZ - Reboot Firmware
+DCN - Disconnect Telnetwrite() of 4 bytes failed!
+
+DRO - Get the DRO Voltage Log
+EHI - Get Event Log
+EHZ - Clear Event Log
+EKO - Get/Set Command Echo(0-No Echo, 1-Echo)
+HELP - Display Help Screen
+NTP - IP Address of NTP Server
+PGM - Get/write() of 4 bytes failed!
+et F/W Upgrade Stored File
+SHL - Display Statistics Log
+SHP - Get/Set Statistics period(1-1440 minutes)
+SHZ - Clear Statistics Log
+TAH - Get/Set Tx Output High Threshold(RP+1 to RP-20 dB)
+TALwrite() of 4 bytes failed!
+- Get/Set Tx Output Low Threshold(RP+1 to RP-20 dB)
+TAS - Get/Set Tx Simulated Alarm(0-Disable, 1-Enable)
+TAZ - Get/Set Tx Alarm Suppression(0-Disable, 1-Enable)
+TBH - Get/Set Tx Input High Threshold(-60 twrite() of 4 bytes failed!
+ -15 dBm)
+TBL - Get/Set Tx Input Low Threshold(-60 to -15 dBm)
+TBT - Get/Set Tx Output Burst Threshold(RP+1 to RP-20 dB)
+TDT - Get Tx Input Power Level(dBm)
+TFB - Get Tx Frequency Band
+TFI - Get Spwrite() of 4 bytes failed!
+ctral Inversion(0-No Inversion, 1-Inverted)
+TFR - Get/Set Power Monitor Frequency(MHz)
+TGC - Get/Set Gain Mode(0-Open Loop, 1-ALC, 2-AGC)
+TGL - Get Gain/Level Targets(gain target, level targewrite() of 4 bytes failed!
+)
+TGR - Get/Reset Tx Gain Control(TGR=0 Resets to 0)
+TPM - Get/Set Power Monitor Type(0-Continuous, 1-Burst)
+TPO - Get Tx Output Power(dBm)
+TPT - Get/Set Tx Gain Attenuator(0.0-30.0 dB)
+TSD - Get/Set Tx Powerup Transmit Delay(0-500 seconds)
+TSP - Get/Set Tx Powerup Transmit State(0-Off, 1-On)
+TST - Get/Set Tx Output(0-Disable, 1-Enable)
+TTS - Get/Set Shutdown for High Temperature(0-Disable, 1-Enable)
+TTT - Get Total Transmit Hours
+TZO - Get/Set Timezone Offset(GMT+14 to GMT-12)
+
+Redundant Commands:
+BAE - Get Redundant Configuration(0-Not Redundant, 1 Redundant)
+BAM - Get/Set Switching Mode(0-Reverting, 1-NonRewrite() of 4 bytes failed!
+erting)
+BAP - Get Position on Waveguide Switch(0-A, 1-B)
+BCL - Enable/Disable Configuration Cloning(0-Disabled, 1-Enabled)
+BRM - Hot/Warm Standby(0-Hot, 1-Warm)
+BSM - Get/Set Switching Type(0-Manual, 1-Automatic)
+BST - Get System Status
+BSW - Get/Set Waveguide Switch Position(0-A, 1-B)
+CIB - Get/Set Other BUC IP Address(XXX.XXX.XXX.XXX)
+OPI - Get/
+IBUC>
+HLP
+ATL - Get Minimum/Maximum Temperature Celsius(min, max, entries)
+C10 - Get 10 MHz Alarm(1-OK, 0-Alarm)
+C4A - Get/Set RS485/FSK Address(Legacy 1-15, ASCII 1-254)
+C4D - Get/Set RS485/FSK Response Delay(1-255ms)
+C4M - Get/Set RS485/FSK Message Protocol(0-ASCII, 1-Legacy)
+C4R - Get/Set RS485 Baud Rate(1200,400, 4800, 9600, 19200, 38400, 57600, write() of 4 bytes failed!
+15200)
+C4V - Get/Set Response Information(0-Terse, 1-Verbose)
+CAS - Get Current Alarms(CAS=1 for detailed strings)
+CBT - Get/Set Burst Timeout(0 to 300 seconds)
+CCM - Get Model and Serial Number(Model, Serial)
+CCS - Get Firmware Revision
+CFD - Get Total System Hours
+CIA - Get/Set IP Address(XXX.XXX.XXX.XXX)
+CIC - Set SNMP Communities(public,private,trap)
+CID - Get AC/DC Current Cwrite() of 4 bytes failed!
+nsumption(Amps)
+CIG - Get/Set IP Gateway(XXX.XXX.XXX.XXX)
+CIH1 - Get/Set Trap Host 1 IP Address(XXX.XXX.XXX.XXX)
+CIH2 - Get/Set Trap Host 2 IP Address(XXX.XXX.XXX.XXX)
+CIM - Get/Set Subnet Mask(XXX.XXX.XXXwrite() of 4 bytes failed!
+XXX)
+CIS - Get/Set SNMP(0-Disable, 1-SNMPV1, 2-SNMPV2c)
+CIT1 - Get/Set SNMP Trap Host 1(0-Disable, 1-Enable)
+CIT2 - Get/Set SNMP Trap Host 2(0-Disable, 1-Enable)
+CLE - Get/Set External LED(0-Disable, 1-Enable)
+CM1 - Get/Set Minor Alarm Mask
+CM2 - Get/Set Major Alarm Mask
+CMS - Get/Set Alarm Suppression Mask
+COIwrite() of 4 bytes failed!
+- Get BUC Information String
+COX - Get Internal Temperature(Celsius)
+CPE - Enter Password(1-65535)
+CPL - Get Private Label String
+CPS - Set Password(1-65535)
+CPT - Get/Set Password Timeout(1-65535 minutes)
+CRT - Get/Set 10MHz Trim(0 to 255) if equipped
+CSF - Get/Set AC 50Hz Correction(0=60Hz, 1=50Hz)
+CTI - Get Internal 10MHz Install state(0=Not Installed, 1=Installed)
+CTM - Get/Set System Time(MM/DD/YYYY hh:mm:ss)
+CTV - Get DRO Tune Volts(Volts DC)
+CVD - Get Power Supply Voltage(Volts AC/DC)
+CWR - Get/Set Web Refresh Rate(0-No Refresh, 1-3600 seconds)
+CZZ - Reboot Firmware
+DCN - Diwrite() of 4 bytes failed!
+connect Telnet
+DRO - Get the DRO Voltage Log
+EHI - Get Event Log
+EHZ - Clear Event Log
+EKO - Get/Set Command Echo(0-No Echo, 1-Echo)
+HELP - Display Help Screen
+NTP - IP Address of NTP Server
+PGM - Get/Swrite() of 4 bytes failed!
+t F/W Upgrade Stored File
+SHL - Display Statistics Log
+SHP - Get/Set Statistics period(1-1440 minutes)
+SHZ - Clear Statistics Log
+TAH - Get/Set Tx Output High Threshold(RP+1 to RP-20 dwrite() of 4 bytes failed!
+)
+TAL - Get/Set Tx Output Low Threshold(RP+1 to RP-20 dB)
+TAS - Get/Set Tx Simulated Alarm(0-Disable, 1-Enable)
+TAZ - Get/Set Tx Alarm Suppression(0-Disable, 1-Enable)
+TBH - Get/Set Tx Input High Threshold(-60 to -15 dBm)
+TBL - Get/Set Tx Input Low Threshold(-60 to -15 dBm)
+TBT - Get/Set Tx Output Burst Threshold(RP+1 to RP-20 dB)
+TDT - Get Tx Input Power Level(dBm)
+TFB - Get Tx Frequency Band
+TFI - Get Spectral Inversion(0-No Inversionwrite() of 4 bytes failed!
+ 1-Inverted)
+TFR - Get/Set Power Monitor Frequency(MHz)
+TGC - Get/Set Gain Mode(0-Open Loop, 1-ALC, 2-AGC)
+TGL - Get Gain/Level Targets(gain target, level target)
+TGR - Get/Reset Tx Gain Control(TGR=0 Resets to 0)
+TPM - Get/Set Power Monitor Type(0-Continuous, 1-Burst)
+TPO - Get Tx Output Power(dBm)
+TPT - Get/Set Tx Gain Attenuator(0.0-write() of 4 bytes failed!
+0.0 dB)
+TSD - Get/Set Tx Powerup Transmit Delay(0-500 seconds)
+TSP - Get/Set Tx Powerup Transmit State(0-Off, 1-On)
+TST - Get/Set Tx Output(0-Disable, 1-Enable)
+TTS - Get/Set Shutdown for High Temperature(0-Disable, 1-Enable)
+TTT - Get Total Transmit Hours
+TZO - Get/Set Timezone Offset(GMT+14 to GMT-12)
+
+Redundant Commands:
+BAE - Get Redundant Configuration(0-Not Redundant, 1 Redundant)
+BAM - Get/Set Switching Mode(0-Reverting, 1-NonReverting)
+BAP - Get Position on Waveguide Switch(0-A, 1-B)
+BCL - Enable/Disable Configuration Cloning(0-Disabled, 1-Enabled)
+BRM - Hot/Warm Standby(0-Hot, 1-Warm)
+BSM - Get/Set Switching Type(0-Manual, 1-Automatic)
+BST - Get System Status
+BSW - Get/Set Waveguide Switch Position(0-A, 1-B)
+CIB - Get/Set Other BUC IP Address(XXX.XXX.XXX.XXX)
+OPI - Get/Set Other BUC Public IP Address(XXX.XXX.XXX.XXX)
+IBUC>
+CCM
+CCM=Undefined,Undefined
+IBUC>
+CFD
+TOTAL HRS = 73
+IBUC>
+CPL
+CPL=Undefined
+IBUC>
+CTM
+CPL=Undefined
+IBUC>
+
+error=invalid command
+IBUC>
+RomBOOT
+
+
+AT91Bootstrap 3.8.11 (Tue Jul 23 14:20:53 PDT 2019)
+
+SD/MMC: Image: Read file u-boot.bin to 0x23f00000
+MMC: ADMA supported
+SD: Card Capacity: Standard
+SD: Specification Version 3.0X
+SD/MMC: Done to load image
+<debug_uart> 
+
+U-Boot 2018.07-linux4sam_6.0 (Jul 23 2019 - 14:21:02 -0700)
+
+CPU: SAMA5D27 1G bits DDR2 SDRAM
+Crystal frequency:       24 MHz
+CPU clock        :      492 MHz
+Master clock     :      164 MHz
+DRAM:  128 MiB
+MMC:   sdio-host@a0000000: 0, sdio-host@b0000000: 1
+Loading Environment from FAT... OK
+In:    serial@f8020000
+Out:   serial@f8020000
+Err:   serial@f8020000
+Net:   eth0: ethernet@f8008000
+Hit any key to stop autoboot:  1  0 
+3920912 bytes read in 245 ms (15.3 MiB/s)
+## Loading kernel from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Linux4SAM Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x210000e0
+     Data Size:    3879200 Bytes = 3.7 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x22000000
+     Entry Point:  0x22000000
+     Hash algo:    crc32
+     Hash value:   6bc04ff1
+     Hash algo:    sha1
+     Hash value:   6de3a2a0549dd96833e9bbf0998e6e35423c46f2
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading fdt from FIT Image at 21000000 ...
+   Using 'kernel_dtb' configuration
+   Trying 'base_fdt' fdt subimage
+     Description:  Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x213b332c
+     Data Size:    39685 Bytes = 38.8 KiB
+     Architecture: ARM
+     Load Address: 0x23000000
+     Hash algo:    crc32
+     Hash value:   6937a0c4
+     Hash algo:    sha1
+     Hash value:   1d1992fa75a654b87e28861801fbb8cae482435c
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading fdt from 0x213b332c to 0x23000000
+   Booting using the fdt blob at 0x23000000
+   Loading Kernel Image ... OK
+   Loading Device Tree to 27b48000, end 27b54b04 ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.14.73-linux4sam_6.0 (asharma@rmcdonald-3630) (gcc version 8.2.1 20180802 (GNU Toolchain for the A-profile Architecture 8.2-2018.11 (arm-rel-8.26))) #1 Tue Jul 23 14:36:41 PDT 2019
+CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Atmel SAMA5D27 SOM1 EK
+Memory policy: Data cache writeback
+cma: Reserved 16 MiB at 0x26800000
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists, mobility grouping on.  Total pages: 32480
+Kernel command line: console=ttyS0,115200 root=/dev/mmcblk1p2 rw rootwait rootfstype=ext4 atmel.pm_modes=standby,ulp1
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 103524K/131072K available (6144K kernel code, 259K rwdata, 1044K rodata, 1024K init, 174K bss, 11164K reserved, 16384K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc8800000 - 0xff800000   ( 880 MB)
+    lowmem  : 0xc0000000 - 0xc8000000   ( 128 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc0700000   (7136 kB)
+      .init : 0xc0900000 - 0xc0a00000   (1024 kB)
+      .data : 0xc0a00000 - 0xc0a40f70   ( 260 kB)
+       .bss : 0xc0a40f70 - 0xc0a6c7c4   ( 175 kB)
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C-310 ID prefetch enabled, offset 2 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c9, AUX_CTRL 0x36020000
+clocksource: pit: mask: 0x7ffffff max_cycles: 0x7ffffff, max_idle_ns: 11654027029 ns
+sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 21474836475000000ns
+Console: colour dummy device 80x30
+Calibrating delay loop... 326.86 BogoMIPS (lpj=1634304)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x20100000 - 0x20100060
+devtmpfs: initialized
+random: get_random_u32 called from 0xc032cbe8 with crng_init=0
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 5 rev 1
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+AT91: PM: standby: standby, suspend: ulp1
+clocksource: tcb_clksrc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 186464433812 ns
+at_xdmac f0010000.dma-controller: 16 channels, mapped at 0xc8847000
+at_xdmac f0004000.dma-controller: 16 channels, mapped at 0xc8849000
+AT91: Detected SoC family: sama5d2
+AT91: Detected SoC: sama5d27c 128MiB SiP, revision 2
+VDDANA: supplied by VDDIN_3V3
+advref: supplied by VDDANA
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+at91_i2c f8028000.i2c: could not find pctldev for node /ahb/apb/pinctrl@fc038000/i2c0_default, deferring probe
+media: Linux media interface: v0.10
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource tcb_clksrc
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+workingset: timestamp_bits=14 max_order=15 bucket_order=1
+io scheduler noop registered (default)
+io scheduler mq-deadline registered
+io scheduler kyber registered
+pinctrl-at91-pio4 fc038000.pinctrl: atmel pinctrl initialized
+brd: module loaded
+loop: module loaded
+atmel_usart_serial.0.auto: ttyS2 at MMIO 0xf801c000 (irq = 34, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.1.auto: ttyS0 at MMIO 0xf8020000 (irq = 35, base_baud = 5125000) is a ATMEL_SERIAL
+console [ttyS0] enabled
+atmel_usart_serial.2.auto: ttyS3 at MMIO 0xfc008000 (irq = 40, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_usart_serial.3.auto: ttyS1 at MMIO 0xfc00c000 (irq = 41, base_baud = 5125000) is a ATMEL_SERIAL
+atmel_qspi f0024000.spi: sst26vf064b (8192 Kbytes)
+5 ofpart partitions found on MTD device f0024000.spi
+Creating 5 MTD partitions on "f0024000.spi":
+0x000000000000-0x000000010000 : "at91bootstrap"
+0x000000010000-0x0000000b0000 : "bootloader"
+0x0000000b0000-0x0000000c0000 : "bootloader env"
+0x0000000c0000-0x0000000e0000 : "device tree"
+0x0000000e0000-0x0000004e0000 : "kernel"
+atmel_spi f8000000.spi: DMA TX channel not available, SPI unable to use DMA
+atmel_spi f8000000.spi: Atmel SPI Controller using PIO only
+atmel_spi f8000000.spi: Using FIFO (16 data)
+atmel_spi f8000000.spi: Atmel SPI Controller version 0x311 at 0xf8000000 (irq 27)
+atmel_spi fc000000.spi: Using dma0chan0 (tx) and dma0chan1 (rx) for DMA transfers
+atmel_spi fc000000.spi: Using FIFO (16 data)
+atmel_spi fc000000.spi: Atmel SPI Controller version 0x311 at 0xfc000000 (irq 39)
+libphy: Fixed MDIO Bus: probed
+CAN device driver interface
+libphy: MACB_mii_bus: probed
+Micrel KSZ8081 or KSZ8091 f8008000.ethernet-ffffffff:07: attached PHY driver [Micrel KSZ8081 or KSZ8091] (mii_bus:phy_addr=f8008000.ethernet-ffffffff:07, irq=176)
+macb f8008000.ethernet eth0: Cadence GEM rev 0x00020203 at 0xf8008000 irq 28 (54:10:ec:33:ea:9a)
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-atmel: EHCI Atmel driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-atmel: OHCI Atmel driver
+usbcore: registered new interface driver usb-storage
+rtc rtc0: invalid alarm value: 1900-1-1 0:0:0
+at91_rtc f80480b0.rtc: registered as rtc0
+at91_rtc f80480b0.rtc: AT91 Real Time Clock driver.
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+AT91: Starting after user reset
+sama5d4_wdt f8048040.watchdog: initialized (timeout = 16 sec, nowayout = 0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-at91 a0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc0: SDHCI controller on a0000000.sdio-host [a0000000.sdio-host] using ADMA
+sdhci-at91 b0000000.sdio-host: update clk mul to 39 as gck rate is 480000000 Hz
+mmc1: SDHCI controller on b0000000.sdio-host [b0000000.sdio-host] using ADMA
+ledtrig-cpu: registered to indicate activity on CPUs
+atmel_aes f002c000.aes: version: 0x500
+atmel_aes f002c000.aes: Atmel AES - Using dma0chan2, dma0chan3 for DMA transfers
+atmel_sha f0028000.sha: version: 0x510
+atmel_sha f0028000.sha: using dma0chan4 for DMA transfers
+atmel_sha f0028000.sha: Atmel SHA1/SHA256/SHA224/SHA384/SHA512
+atmel_tdes fc044000.tdes: version: 0x703
+atmel_tdes fc044000.tdes: using dma0chan5, dma0chan6 for DMA transfers
+atmel_tdes fc044000.tdes: Atmel DES/TDES
+at91-sama5d2_adc fc030000.adc: setting up trigger as external_rising
+at91-sama5d2_adc fc030000.adc: version: 800
+ip_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 10
+Segment Routing with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+can: controller area network core (rev 20170425 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20170425)
+can: broadcast manager protocol (rev 20170425 t)
+can: netlink gateway (rev 20170425) max_hops=1
+at91_i2c f8028000.i2c: can't get DMA channel, continue without DMA support
+at91_i2c f8028000.i2c: Using FIFO (16 data)
+at24 0-0050: 256 byte 24c02 EEPROM, writable, 8 bytes/write
+at91_i2c f8028000.i2c: AT91 i2c bus driver (hw version: 0x704).
+mmc1: new high speed SD card at address e624
+mmcblk1: mmc1:e624 SU02G 1.84 GiB 
+pinctrl-at91-pio4 fc038000.pinctrl: pin PA29 already requested by f8000000.spi; cannot claim for gpio_keys
+pinctrl-at91-pio4 fc038000.pinctrl: pin-29 (gpio_keys) status -22
+pinctrl-at91-pio4 fc038000.pinctrl: could not request pin 29 (PA29) from group PA29  on device atmel_pinctrl
+gpio-keys gpio_keys: Error applying setting, reverse things back
+gpio-keys: probe of gpio_keys failed with error -22
+at91_rtc f80480b0.rtc: setting system clock to 2012-01-28 19:49:00 UTC (1327780140)
+ALSA device list:
+  #0: Dummy 1
+ mmcblk1: p1 p2
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan7 for rx DMA transfers
+atmel_usart_serial atmel_usart_serial.1.auto: using dma0chan8 for tx DMA transfers
+random: fast init done
+EXT4-fs (mmcblk1p2): recovery complete
+EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:2.
+devtmpfs: mounted
+Freeing unused kernel memory: 1024K
+EXT4-fs (mmcblk1p2): re-mounted. Opts: data=ordered
+mount: mounting 10.10.19.12:/home/asharma/dev/buildroot-at91/output/target/usr/bin on /root/bin failed: Network is unreachable
+Starting syslogd: OK
+Starting klogd: OK
+Populating /dev using udev: udevd[118]: starting version 3.2.7
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+random: udevd: uninitialized urandom read (16 bytes read)
+udevd[118]: specified group 'kvm' unknown
+udevd[119]: starting eudev-3.2.7
+done
+Initializing random number generator... urandom_read: 1 callbacks suppressed
+random: dd: uninitialized urandom read (512 bytes read)
+done.
+Starting rngd: random: crng init done
+OK
+Starting system message bus: dbus-daemon[153]: Failed to start message bus: Could not get UID and GID for username "dbus"
+done
+Starting network: IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+OK
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+Starting dropbear sshd: OK
+Starting sshd: OK
+Starting DHCP server: FAIL
+
+Welcome to the IBUC
+ibuc login: rroooott
+
+# 
+# ls
+bin         interfaces  ttyS0
+# (reverse-i-search)'': (reverse-i-search)'i': ./core-ibuc(reverse-i-search)'if': ifup eth0# ifup eth0ifup eth0
+ifup: interface eth0 already configured
+# # ifup eth0 eth0 eth0d eth0o eth0w eth0n eth0 eth0
+# # ifdown eth0# ifup eth0
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+macb f8008000.ethernet eth0: link up (100/Full)
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+# 
+# 
+# 
+# # ifup eth0# ifdown eth0# ifup eth0# ls# ./core-ibuc^C
+# (reverse-i-search)'': (reverse-i-search)'p': ifup eth0(reverse-i-search)'pi': ping 10.10.19.12(reverse-i-search)'pin': ping 10.10.19.12(reverse-i-search)'ping': ping 10.10.19.12# ping 10.10.19.12ping 10.10.19.12
+PING 10.10.19.12 (10.10.19.12): 56 data bytes
+64 bytes from 10.10.19.12: seq=0 ttl=64 time=1.530 ms
+64 bytes from 10.10.19.12: seq=41 ttl=64 time=0.939 ms
+64 bytes from 10.10.19.12: seq=42 ttl=64 time=0.801 ms
+64 bytes from 10.10.19.12: seq=43 ttl=64 time=0.926 ms
+64 bytes from 10.10.19.12: seq=44 ttl=64 time=0.901 ms
+64 bytes from 10.10.19.12: seq=45 ttl=64 time=0.807 ms
+64 bytes from 10.10.19.12: seq=46 ttl=64 time=0.651 ms
+64 bytes from 10.10.19.12: seq=47 ttl=64 time=0.750 ms
+64 bytes from 10.10.19.12: seq=48 ttl=64 time=0.746 ms
+64 bytes from 10.10.19.12: seq=49 ttl=64 time=0.788 ms
+64 bytes from 10.10.19.12: seq=50 ttl=64 time=0.762 ms
+64 bytes from 10.10.19.12: seq=51 ttl=64 time=0.883 ms
+64 bytes from 10.10.19.12: seq=52 ttl=64 time=0.814 ms
+64 bytes from 10.10.19.12: seq=53 ttl=64 time=0.888 ms
+64 bytes from 10.10.19.12: seq=54 ttl=64 time=0.777 ms
+64 bytes from 10.10.19.12: seq=55 ttl=64 time=0.706 ms
+64 bytes from 10.10.19.12: seq=56 ttl=64 time=0.903 ms
+64 bytes from 10.10.19.12: seq=57 ttl=64 time=0.595 ms
+64 bytes from 10.10.19.12: seq=58 ttl=64 time=0.806 ms
+64 bytes from 10.10.19.12: seq=59 ttl=64 time=0.822 ms
+64 bytes from 10.10.19.12: seq=60 ttl=64 time=0.848 ms
+64 bytes from 10.10.19.12: seq=61 ttl=64 time=0.857 ms
+64 bytes from 10.10.19.12: seq=62 ttl=64 time=0.915 ms
+64 bytes from 10.10.19.12: seq=63 ttl=64 time=0.804 ms
+64 bytes from 10.10.19.12: seq=64 ttl=64 time=0.654 ms
+64 bytes from 10.10.19.12: seq=65 ttl=64 time=0.659 ms
+64 bytes from 10.10.19.12: seq=66 ttl=64 time=0.844 ms
+64 bytes from 10.10.19.12: seq=67 ttl=64 time=0.790 ms
+64 bytes from 10.10.19.12: seq=68 ttl=64 time=0.879 ms
+64 bytes from 10.10.19.12: seq=69 ttl=64 time=0.872 ms
+64 bytes from 10.10.19.12: seq=70 ttl=64 time=0.786 ms
+64 bytes from 10.10.19.12: seq=71 ttl=64 time=0.667 ms
+64 bytes from 10.10.19.12: seq=72 ttl=64 time=0.789 ms
+^C
+--- 10.10.19.12 ping statistics ---
+73 packets transmitted, 33 packets received, 54% packet loss
+round-trip min/avg/max = 0.595/0.823/1.530 ms
+# ls
+bin         interfaces  ttyS0
+# (reverse-i-search)'': (reverse-i-search)'m': mount bin(reverse-i-search)'mo': mount bin(reverse-i-search)'mou': mount bin(reverse-i-search)'moun': mount bin# mount binmount bin
+# cd bin
+# date
+Sat Jan 28 19:50:45 UTC 2012
+# date
+Sat Jan 28 19:50:50 UTC 2012
+# date
+Sat Jan 28 19:50:52 UTC 2012
+# 
+# sl
+-sh: sl: not found
+# ls
+[                                   lat_sig
+[[                                  lat_syscall
+ab                                  lat_tcp
+apachectl                           lat_udp
+apxs                                lat_unix
+ar                                  lat_unix_connect
+arpaname                            less
+asc2log                             libevdev-tweak-device
+aserver                             libinput
+awk                                 line
+basename                            lmdd
+bc                                  lmhttp
+bccmd                               log2asc
+bcmserver                           log2long
+bluemoon                            logger
+bluetoothctl                        logname
+btattach                            logresolve
+btgatt-server                       loop_o
+btmon                               lrz
+bunzip2                             lsiio
+bw_file_rd                          lsof
+bw_mem                              lspci
+bw_mmap_rd                          lsscsi
+bw_pipe                             lsusb
+bw_tcp                              lsz
+bw_unix                             lua
+bzcat                               luac
+cairo-sphinx                        lzcat
+can-calc-bit-timing                 lzma
+canbusload                          lzopcat
+candump                             md5sum
+canfdtest                           mdig
+cangen                              memsize
+cangw                               mesg
+canlogserver                        mhz
+canplayer                           microcom
+cansend                             mkfifo
+cansniffer                          mkpasswd
+checkgid                            modeprint
+chrt                                modetest
+chvt                                mouse-dpi-tool
+ciptool                             mpg123
+cksum                               mpg123-id3dump
+clear                               mpg123-strip
+cmp                                 mpicalc
+core-ibuc                           mpris-proxy
+core_ibuc                           msleep
+crontab                             mtdev-test
+cut                                 mv6tool
+dbclient                            named-rrchecker
+dbmmanage                           nano
+dbus-cleanup-sockets                net-snmp-create-v3-user
+dbus-daemon                         nl
+dbus-launch                         node
+dbus-monitor                        nohup
+dbus-run-session                    npm
+dbus-send                           nproc
+dbus-test-tool                      npx
+dbus-update-activation-environment  nslookup
+dbus-uuidgen                        od
+dc                                  openvt
+ddcmon                              out123
+deallocvt                           p9bit_example
+decode-dimms                        par_mem
+decode-edid                         par_ops
+decode-vaio                         passwd
+delv                                paste
+diff                                patch
+dirname                             pcregrep
+disk                                pcretest
+dos2unix                            phytool
+drmdevice                           planes
+dropbearconvert                     printf
+dropbearkey                         proptest
+du                                  python
+dumpsexp                            python2
+e2cp                                python2.7
+e2ln                                rb
+e2ls                                rctest
+e2mkdir                             readlink
+e2mv                                realpath
+e2rm                                render
+e2tail                              renice
+easy_install                        reset
+easy_install-2.7                    resize
+egrep                               rfcomm
+eject                               rngtest
+enough                              rotatelogs
+env                                 rview
+envvars                             rvim
+envvars-std                         rx
+evtest                              rz
+ex                                  sb
+expr                                scp
+factor                              screenlog.0
+fallocate                           sdptool
+fb-test                             senda_example
+fb-test-offset                      seq
+fb-test-perf                        setfattr
+fb-test-rect                        setip-ibuc
+fc-cache                            setkeycodes
+fc-cat                              setserial
+fc-conflist                         setsid
+fc-list                             sftp
+fc-match                            sha1sum
+fc-pattern                          sha256sum
+fc-query                            sha3sum
+fc-scan                             sha512sum
+fc-validate                         shred
+fcgistarter                         slcan_attach
+fgrep                               slcand
+file                                slcanpty
+find                                sort
+flock                               spi-config
+flushdisk                           spi-pipe
+fold                                ssh
+free                                ssh-add
+fuser                               ssh-agent
+gapplication                        ssh-copy-id
+gatttool                            ssh-keygen
+gcore                               ssh-keyscan
+gdb                                 strace
+gdbserver                           strace-log-merge
+gdbus                               stream
+gio                                 strings
+gio-querymodules                    svc
+gpg-error                           svok
+gpgrt-config                        swupdate
+grab                                sx
+grep                                sz
+gresource                           tail
+gsettings                           tee
+hciattach                           telnet
+hciconfig                           test
+hcidump                             testj1939
+hcitool                             tftp
+head                                time
+hello                               timeout
+hex2hcd                             timer-ibuc
+hexdump                             timing_o
+hexedit                             tlb
+hmac256                             top
+hostapd_cli                         touchpad-edge-detector
+hostid                              tr
+htcacheclean                        traceroute
+htdbm                               tree
+htdigest                            truncate
+htpasswd                            ts_calibrate
+httpd                               ts_conf
+httxt2dbm                           ts_finddev
+id                                  ts_harvest
+iio_event_monitor                   ts_print
+iio_generic_buffer                  ts_print_mt
+install                             ts_print_raw
+ipcrm                               ts_test
+ipcs                                ts_test_mt
+iperf3                              ts_uinput
+iptables-xml                        ts_verify
+isotpdump                           tty
+isotpperf                           udevadm
+isotprecv                           uniq
+isotpsend                           unix2dos
+isotpserver                         unlink
+isotpsniffer                        unlzma
+isotptun                            unlzop
+jacd                                unxz
+jspy                                unzip
+jsr                                 uptime
+killall                             usbhid-dump
+kms-steal-crtc                      user_example
+kms-universal-planes                uudecode
+kmstest                             uuencode
+l2ping                              vbltest
+l2test                              view
+last                                vim
+lat_connect                         vimdiff
+lat_ctx                             vlock
+lat_fcntl                           w
+lat_fifo                            wc
+lat_fs                              wget
+lat_http                            which
+lat_mem_rd                          who
+lat_mmap                            whoami
+lat_ops                             xargs
+lat_pagefault                       xmlwf
+lat_pipe                            xxd
+lat_proc                            xz
+lat_rpc                             xzcat
+lat_select                          yes
+lat_sem
+# 
+# 
+# 
+# 
+# clear
+# ls
+[                                   lat_sig
+[[                                  lat_syscall
+ab                                  lat_tcp
+apachectl                           lat_udp
+apxs                                lat_unix
+ar                                  lat_unix_connect
+arpaname                            less
+asc2log                             libevdev-tweak-device
+aserver                             libinput
+awk                                 line
+basename                            lmdd
+bc                                  lmhttp
+bccmd                               log2asc
+bcmserver                           log2long
+bluemoon                            logger
+bluetoothctl                        logname
+btattach                            logresolve
+btgatt-server                       loop_o
+btmon                               lrz
+bunzip2                             lsiio
+bw_file_rd                          lsof
+bw_mem                              lspci
+bw_mmap_rd                          lsscsi
+bw_pipe                             lsusb
+bw_tcp                              lsz
+bw_unix                             lua
+bzcat                               luac
+cairo-sphinx                        lzcat
+can-calc-bit-timing                 lzma
+canbusload                          lzopcat
+candump                             md5sum
+canfdtest                           mdig
+cangen                              memsize
+cangw                               mesg
+canlogserver                        mhz
+canplayer                           microcom
+cansend                             mkfifo
+cansniffer                          mkpasswd
+checkgid                            modeprint
+chrt                                modetest
+chvt                                mouse-dpi-tool
+ciptool                             mpg123
+cksum                               mpg123-id3dump
+clear                               mpg123-strip
+cmp                                 mpicalc
+core-ibuc                           mpris-proxy
+core_ibuc                           msleep
+crontab                             mtdev-test
+cut                                 mv6tool
+dbclient                            named-rrchecker
+dbmmanage                           nano
+dbus-cleanup-sockets                net-snmp-create-v3-user
+dbus-daemon                         nl
+dbus-launch                         node
+dbus-monitor                        nohup
+dbus-run-session                    npm
+dbus-send                           nproc
+dbus-test-tool                      npx
+dbus-update-activation-environment  nslookup
+dbus-uuidgen                        od
+dc                                  openvt
+ddcmon                              out123
+deallocvt                           p9bit_example
+decode-dimms                        par_mem
+decode-edid                         par_ops
+decode-vaio                         passwd
+delv                                paste
+diff                                patch
+dirname                             pcregrep
+disk                                pcretest
+dos2unix                            phytool
+drmdevice                           planes
+dropbearconvert                     printf
+dropbearkey                         proptest
+du                                  python
+dumpsexp                            python2
+e2cp                                python2.7
+e2ln                                rb
+e2ls                                rctest
+e2mkdir                             readlink
+e2mv                                realpath
+e2rm                                render
+e2tail                              renice
+easy_install                        reset
+easy_install-2.7                    resize
+egrep                               rfcomm
+eject                               rngtest
+enough                              rotatelogs
+env                                 rview
+envvars                             rvim
+envvars-std                         rx
+evtest                              rz
+ex                                  sb
+expr                                scp
+factor                              screenlog.0
+fallocate                           sdptool
+fb-test                             senda_example
+fb-test-offset                      seq
+fb-test-perf                        setfattr
+fb-test-rect                        setip-ibuc
+fc-cache                            setkeycodes
+fc-cat                              setserial
+fc-conflist                         setsid
+fc-list                             sftp
+fc-match                            sha1sum
+fc-pattern                          sha256sum
+fc-query                            sha3sum
+fc-scan                             sha512sum
+fc-validate                         shred
+fcgistarter                         slcan_attach
+fgrep                               slcand
+file                                slcanpty
+find                                sort
+flock                               spi-config
+flushdisk                           spi-pipe
+fold                                ssh
+free                                ssh-add
+fuser                               ssh-agent
+gapplication                        ssh-copy-id
+gatttool                            ssh-keygen
+gcore                               ssh-keyscan
+gdb                                 strace
+gdbserver                           strace-log-merge
+gdbus                               stream
+gio                                 strings
+gio-querymodules                    svc
+gpg-error                           svok
+gpgrt-config                        swupdate
+grab                                sx
+grep                                sz
+gresource                           tail
+gsettings                           tee
+hciattach                           telnet
+hciconfig                           test
+hcidump                             testj1939
+hcitool                             tftp
+head                                time
+hello                               timeout
+hex2hcd                             timer-ibuc
+hexdump                             timing_o
+hexedit                             tlb
+hmac256                             top
+hostapd_cli                         touchpad-edge-detector
+hostid                              tr
+htcacheclean                        traceroute
+htdbm                               tree
+htdigest                            truncate
+htpasswd                            ts_calibrate
+httpd                               ts_conf
+httxt2dbm                           ts_finddev
+id                                  ts_harvest
+iio_event_monitor                   ts_print
+iio_generic_buffer                  ts_print_mt
+install                             ts_print_raw
+ipcrm                               ts_test
+ipcs                                ts_test_mt
+iperf3                              ts_uinput
+iptables-xml                        ts_verify
+isotpdump                           tty
+isotpperf                           udevadm
+isotprecv                           uniq
+isotpsend                           unix2dos
+isotpserver                         unlink
+isotpsniffer                        unlzma
+isotptun                            unlzop
+jacd                                unxz
+jspy                                unzip
+jsr                                 uptime
+killall                             usbhid-dump
+kms-steal-crtc                      user_example
+kms-universal-planes                uudecode
+kmstest                             uuencode
+l2ping                              vbltest
+l2test                              view
+last                                vim
+lat_connect                         vimdiff
+lat_ctx                             vlock
+lat_fcntl                           w
+lat_fifo                            wc
+lat_fs                              wget
+lat_http                            which
+lat_mem_rd                          who
+lat_mmap                            whoami
+lat_ops                             xargs
+lat_pagefault                       xmlwf
+lat_pipe                            xxd
+lat_proc                            xz
+lat_rpc                             xzcat
+lat_select                          yes
+lat_sem
+# 
+# 
+# 
+# date
+Sat Jan 28 19:51:05 UTC 2012
+# # date
+Sat Jan 28 19:51:06 UTC 2012
+# # date
+Sat Jan 28 19:51:08 UTC 2012
+# # date
+Sat Jan 28 19:51:09 UTC 2012
+# # date
+Sat Jan 28 19:51:10 UTC 2012
+# # date
+Sat Jan 28 19:51:11 UTC 2012
+# # date
+Sat Jan 28 19:51:12 UTC 2012
+# # date
+Sat Jan 28 19:51:13 UTC 2012
+# # date
+Sat Jan 28 19:51:14 UTC 2012
+# # date
+Sat Jan 28 19:51:14 UTC 2012
+# # date
+Sat Jan 28 19:51:15 UTC 2012
+# # date
+Sat Jan 28 19:51:16 UTC 2012
+# 
+# /li# /lib# /lib/li# /lib/libc# /lib/libc.# /lib/libc.so.6 
+GNU C Library (GNU Toolchain for the A-profile Architecture 8.2-2018.11 (arm-rel-8.26)) stable release version 2.28.
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+Compiled by GNU CC version 8.2.1 20180802.
+libc ABIs: UNIQUE ABSOLUTE
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/libc/bugs.html>.
+# 

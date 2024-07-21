@@ -1,0 +1,17 @@
+ 
+v1 1 0
+vi1 1 2 dc 0
+vi2 1 3 dc 0
+r1 2 4 100
+r2 3 4 250
+vi3 4 5 dc 0
+vi4 4 6 dc 0
+r3 5 0 350
+r4 6 0 200
+
+.dc v1 24 24 1
+.print dc v(2,4) v(3,4) v(5,0) v(6,0)
+.print dc i(vi1) i(vi2) i(vi3) i(vi4)
+.end
+
+

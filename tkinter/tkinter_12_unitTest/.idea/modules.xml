@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../python_02_range/.idea/python_02_range.iml" filepath="$PROJECT_DIR$/../python_02_range/.idea/python_02_range.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../python_03_views_parse/.idea/python_03_views_parse.iml" filepath="$PROJECT_DIR$/../python_03_views_parse/.idea/python_03_views_parse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../python_04_dict_for_loop/.idea/python_04_dict_for_loop.iml" filepath="$PROJECT_DIR$/../python_04_dict_for_loop/.idea/python_04_dict_for_loop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../python_05_datetime/.idea/python_05_datetime.iml" filepath="$PROJECT_DIR$/../python_05_datetime/.idea/python_05_datetime.iml" />
+      <module fileurl="file://$USER_HOME$/dev/quickquote/.idea/quickquote.iml" filepath="$USER_HOME$/dev/quickquote/.idea/quickquote.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tkinter_12_unitTest.iml" filepath="$PROJECT_DIR$/.idea/tkinter_12_unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tkinter_14_userCreator/.idea/tkinter_14_userCreator.iml" filepath="$PROJECT_DIR$/../tkinter_14_userCreator/.idea/tkinter_14_userCreator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tkinter_15_cal_table_parser/.idea/tkinter_15_cal_table_parser.iml" filepath="$PROJECT_DIR$/../tkinter_15_cal_table_parser/.idea/tkinter_15_cal_table_parser.iml" />
+      <module fileurl="file://$USER_HOME$/eclipse-workspace/tkinter_programming_book/.idea/tkinter_programming_book.iml" filepath="$USER_HOME$/eclipse-workspace/tkinter_programming_book/.idea/tkinter_programming_book.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/ibuc_linux/tests/02_system/python/tools/modules/.idea/modules.iml" filepath="$USER_HOME$/ibuc_linux/tests/02_system/python/tools/modules/.idea/modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/python_09_decibel_calc.iml" filepath="$PROJECT_DIR$/.idea/python_09_decibel_calc.iml" />
+    </modules>
+  </component>
+</project>
