@@ -10,3 +10,5 @@ It refers to
 `#include "bcm2708-rpi.dtsi"`
 
 These files are useful
+
+This SOC is later on named as BCM2835. Dont be confused. They are one and only one thing.
