@@ -1,4 +1,4 @@
-obj-m += hello_platform.o
+obj-m += ledRGB_rpi_platform.o
 KERNEL_DIR ?= $(HOME)/ext_ssd/rpi/buildroot/output/build/linux-custom/
 HOSTTOOLS=$(HOME)/ext_ssd/rpi/buildroot/output/host/bin/
 
