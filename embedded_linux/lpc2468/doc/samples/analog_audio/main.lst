@@ -1,0 +1,1417 @@
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 1
+
+
+   1              		.code	16
+   2              		.file	"main.c"
+   3              		.section	.debug_abbrev,"",%progbits
+   4              	.Ldebug_abbrev0:
+   5              		.section	.debug_info,"",%progbits
+   6              	.Ldebug_info0:
+   7              		.section	.debug_line,"",%progbits
+   8              	.Ldebug_line0:
+   9 0000 B2000000 		.text
+   9      02003400 
+   9      00000201 
+   9      FB0E0D00 
+   9      01010101 
+  10              	.Ltext0:
+  11              		.section	.rodata.str1.4,"aMS",%progbits,1
+  12              		.align	2
+  13              	.LC2:
+  14 0000 0A2A2A2A 		.ascii	"\012***********************************************"
+  14      2A2A2A2A 
+  14      2A2A2A2A 
+  14      2A2A2A2A 
+  14      2A2A2A2A 
+  15 0030 2A2A2A2A 		.ascii	"****\000"
+  15      00
+  16 0035 000000   		.align	2
+  17              	.LC4:
+  18 0038 0A2A2020 		.ascii	"\012*                                              "
+  18      20202020 
+  18      20202020 
+  18      20202020 
+  18      20202020 
+  19 0068 2020202A 		.ascii	"   *\000"
+  19      00
+  20 006d 000000   		.align	2
+  21              	.LC6:
+  22 0070 0A2A2054 		.ascii	"\012* Test program for LPC2478 OEM Board...        "
+  22      65737420 
+  22      70726F67 
+  22      72616D20 
+  22      666F7220 
+  23 00a0 2020202A 		.ascii	"   *\000"
+  23      00
+  24 00a5 000000   		.align	2
+  25              	.LC8:
+  26 00a8 0A2A2028 		.ascii	"\012* (C) Embedded Artists 2008                    "
+  26      43292045 
+  26      6D626564 
+  26      64656420 
+  26      41727469 
+  27 00d8 2020202A 		.ascii	"   *\000"
+  27      00
+  28 00dd 000000   		.align	2
+  29              	.LC10:
+  30 00e0 0A2A2054 		.ascii	"\012* Test - Analog Audio                          "
+  30      65737420 
+  30      2D20416E 
+  30      616C6F67 
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 2
+
+
+  30      20417564 
+  31 0110 2020202A 		.ascii	"   *\000"
+  31      00
+  32 0115 000000   		.align	2
+  33              	.LC12:
+  34 0118 0A2A2A2A 		.ascii	"\012***********************************************"
+  34      2A2A2A2A 
+  34      2A2A2A2A 
+  34      2A2A2A2A 
+  34      2A2A2A2A 
+  35 0148 2A2A2A2A 		.ascii	"****\012\000"
+  35      0A00
+  36 014e 0000     		.align	2
+  37              	.LC15:
+  38 0150 0A455252 		.ascii	"\012ERROR not a RIFF file!\012\000"
+  38      4F52206E 
+  38      6F742061 
+  38      20524946 
+  38      46206669 
+  39 0169 000000   		.align	2
+  40              	.LC17:
+  41 016c 0A455252 		.ascii	"\012ERROR not a WAV file!\012\000"
+  41      4F52206E 
+  41      6F742061 
+  41      20574156 
+  41      2066696C 
+  42              		.align	2
+  43              	.LC19:
+  44 0184 0A455252 		.ascii	"\012ERROR no 'fmt ' tag found!\012\000"
+  44      4F52206E 
+  44      6F202766 
+  44      6D742027 
+  44      20746167 
+  45 01a1 000000   		.align	2
+  46              	.LC21:
+  47 01a4 0A496E66 		.ascii	"\012Info: 'fmt ' chunk size = %d (0x%x)\000"
+  47      6F3A2027 
+  47      666D7420 
+  47      27206368 
+  47      756E6B20 
+  48 01c9 000000   		.align	2
+  49              	.LC23:
+  50 01cc 0A496E66 		.ascii	"\012Info: format tag = %d (1=no compression)\000"
+  50      6F3A2066 
+  50      6F726D61 
+  50      74207461 
+  50      67203D20 
+  51 01f6 0000     		.align	2
+  52              	.LC25:
+  53 01f8 0A496E66 		.ascii	"\012Info: audio channels = %d\000"
+  53      6F3A2061 
+  53      7564696F 
+  53      20636861 
+  53      6E6E656C 
+  54 0213 00       		.align	2
+  55              	.LC27:
+  56 0214 0A496E66 		.ascii	"\012Info: samples per second = %d\000"
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 3
+
+
+  56      6F3A2073 
+  56      616D706C 
+  56      65732070 
+  56      65722073 
+  57 0233 00       		.align	2
+  58              	.LC29:
+  59 0234 0A496E66 		.ascii	"\012Info: bytes per second = %d\000"
+  59      6F3A2062 
+  59      79746573 
+  59      20706572 
+  59      20736563 
+  60 0251 000000   		.align	2
+  61              	.LC31:
+  62 0254 0A496E66 		.ascii	"\012Info: byte alignment = %d\000"
+  62      6F3A2062 
+  62      79746520 
+  62      616C6967 
+  62      6E6D656E 
+  63 026f 00       		.align	2
+  64              	.LC33:
+  65 0270 0A496E66 		.ascii	"\012Info: bits per sample = %d\000"
+  65      6F3A2062 
+  65      69747320 
+  65      70657220 
+  65      73616D70 
+  66              		.align	2
+  67              	.LC35:
+  68 028c 0A455252 		.ascii	"\012ERROR no 'data' tag found!\012\000"
+  68      4F52206E 
+  68      6F202764 
+  68      61746127 
+  68      20746167 
+  69              		.global	__divsi3
+  70 02a9 000000   		.align	2
+  71              	.LC37:
+  72 02ac 0A496E66 		.ascii	"\012Info: Number of samples = %d (0x%x)\012\012\000"
+  72      6F3A204E 
+  72      756D6265 
+  72      72206F66 
+  72      2073616D 
+  73              		.global	__udivsi3
+  74 02d3 00       		.align	2
+  75              	.LC39:
+  76 02d4 0A50322E 		.ascii	"\012P2.10 pressed!\000"
+  76      31302070 
+  76      72657373 
+  76      65642100 
+  77              		.text
+  78              		.align	2
+  79              		.global	main
+  80              		.code 16
+  81              		.thumb_func
+  82              		.type	main, %function
+  83              	main:
+  84              	.LFB3:
+  85              		.file 1 "main.c"
+   1:main.c        **** /******************************************************************************
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 4
+
+
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright:
+   4:main.c        ****  *    (C) 2000 - 2008 Embedded Artists AB
+   5:main.c        ****  *
+   6:main.c        ****  * Description:
+   7:main.c        ****  *
+   8:main.c        ****  *****************************************************************************/
+   9:main.c        **** 
+  10:main.c        **** #include <general.h>
+  11:main.c        **** #include <printf_P.h>
+  12:main.c        **** #include <ea_init.h>
+  13:main.c        **** #include <lpc246x.h>
+  14:main.c        **** 
+  15:main.c        **** extern char wavSound[];
+  16:main.c        **** 
+  17:main.c        **** tU32 wavSoundSize();
+  18:main.c        **** 
+  19:main.c        **** static void udelay( unsigned int delayInUs )
+  20:main.c        **** {
+  21:main.c        ****   /*
+  22:main.c        ****    * setup timer #1 for delay
+  23:main.c        ****    */
+  24:main.c        ****   T1TCR = 0x02;          //stop and reset timer
+  25:main.c        ****   T1PR  = 0x00;          //set prescaler to zero
+  26:main.c        ****   T1MR0 = (((long)delayInUs-1) * (long)Fpclk/1000) / 1000;
+  27:main.c        ****   T1IR  = 0xff;          //reset all interrrupt flags
+  28:main.c        ****   T1MCR = 0x04;          //stop timer on match
+  29:main.c        ****   T1TCR = 0x01;          //start timer
+  30:main.c        ****   
+  31:main.c        ****   //wait until delay time has elapsed
+  32:main.c        ****   while (T1TCR & 0x01)
+  33:main.c        ****     ;
+  34:main.c        **** }
+  35:main.c        **** 
+  36:main.c        **** /*****************************************************************************
+  37:main.c        ****  *
+  38:main.c        ****  * Description:
+  39:main.c        ****  *
+  40:main.c        ****  ****************************************************************************/
+  41:main.c        **** int main(void)
+  42:main.c        **** {
+  86              		.loc 1 42 0
+  87 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  88              	.LCFI0:
+  89 0002 81B0     		sub	sp, sp, #4
+  90              	.LCFI1:
+  43:main.c        ****   short* pData = NULL;
+  44:main.c        ****   tU32 size = 0;
+  45:main.c        ****   tU32 cnt = 0;
+  46:main.c        ****   tU32 samples = 0;
+  47:main.c        ****   tU32 numSamples;
+  48:main.c        ****   tU32 sampleRate;
+  49:main.c        ****   tU16 usDelay;
+  50:main.c        **** 
+  51:main.c        ****   eaInit();
+  91              		.loc 1 51 0
+  92 0004 FFF7FEFF 		bl	eaInit
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 5
+
+
+  52:main.c        **** 
+  53:main.c        ****   printf("\n***************************************************");
+  93              		.loc 1 53 0
+  94 0008 8548     		ldr	r0, .L34
+  95 000a FFF7FEFF 		bl	simplePrintf
+  54:main.c        ****   printf("\n*                                                 *");
+  96              		.loc 1 54 0
+  97 000e 854C     		ldr	r4, .L34+4
+  98 0010 201C     		mov	r0, r4
+  99 0012 FFF7FEFF 		bl	simplePrintf
+  55:main.c        ****   printf("\n* Test program for LPC2478 OEM Board...           *");
+ 100              		.loc 1 55 0
+ 101 0016 8448     		ldr	r0, .L34+8
+ 102 0018 FFF7FEFF 		bl	simplePrintf
+  56:main.c        ****   printf("\n* (C) Embedded Artists 2008                       *");
+ 103              		.loc 1 56 0
+ 104 001c 8348     		ldr	r0, .L34+12
+ 105 001e FFF7FEFF 		bl	simplePrintf
+  57:main.c        ****   printf("\n*                                                 *");
+ 106              		.loc 1 57 0
+ 107 0022 201C     		mov	r0, r4
+ 108 0024 FFF7FEFF 		bl	simplePrintf
+  58:main.c        ****   printf("\n* Test - Analog Audio                             *");
+ 109              		.loc 1 58 0
+ 110 0028 8148     		ldr	r0, .L34+16
+ 111 002a FFF7FEFF 		bl	simplePrintf
+  59:main.c        ****   printf("\n*                                                 *");
+ 112              		.loc 1 59 0
+ 113 002e 201C     		mov	r0, r4
+ 114 0030 FFF7FEFF 		bl	simplePrintf
+  60:main.c        ****   printf("\n***************************************************\n");
+ 115              		.loc 1 60 0
+ 116 0034 7F48     		ldr	r0, .L34+20
+ 117 0036 FFF7FEFF 		bl	simplePrintf
+  61:main.c        **** 
+  62:main.c        ****   //Initialize DAC: AOUT = P0.26
+  63:main.c        ****   PINSEL1 &= ~0x00300000;
+ 118              		.loc 1 63 0
+ 119 003a 7F49     		ldr	r1, .L34+24
+ 120 003c 7F4A     		ldr	r2, .L34+28
+ 121 003e 0B68     		ldr	r3, [r1]
+ 122 0040 1340     		and	r3, r3, r2
+ 123 0042 0B60     		str	r3, [r1]
+  64:main.c        ****   PINSEL1 |=  0x00200000;
+ 124              		.loc 1 64 0
+ 125 0044 8023     		mov	r3, #128
+ 126 0046 0A68     		ldr	r2, [r1]
+ 127 0048 9B03     		lsl	r3, r3, #14
+ 128 004a 1A43     		orr	r2, r2, r3
+ 129 004c 0A60     		str	r2, [r1]
+  65:main.c        **** 
+  66:main.c        ****   pData = (short*)&wavSound[0];
+ 130              		.loc 1 66 0
+ 131 004e 7C4D     		ldr	r5, .L34+32
+ 132              	.LVL0:
+  67:main.c        ****   size = wavSoundSize();
+ 133              		.loc 1 67 0
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 6
+
+
+ 134 0050 FFF7FEFF 		bl	wavSoundSize
+  68:main.c        **** 
+  69:main.c        ****   //check if RIFF file ("RIFF" at beginning of file)
+  70:main.c        ****   if ((pData[0] != 0x4952) || (pData[1] != 0x4646))
+ 135              		.loc 1 70 0
+ 136 0054 0021     		mov	r1, #0
+ 137 0056 6A5E     		ldrsh	r2, [r5, r1]
+ 138 0058 7A4B     		ldr	r3, .L34+36
+ 139              		.loc 1 67 0
+ 140 005a 061C     		mov	r6, r0
+ 141              	.LVL1:
+ 142              		.loc 1 70 0
+ 143 005c 9A42     		cmp	r2, r3
+ 144 005e 04D1     		bne	.L2
+ 145 0060 0223     		mov	r3, #2
+ 146 0062 EA5E     		ldrsh	r2, [r5, r3]
+ 147 0064 784B     		ldr	r3, .L34+40
+ 148 0066 9A42     		cmp	r2, r3
+ 149 0068 01D0     		beq	.L4
+ 150              	.L2:
+  71:main.c        ****   {
+  72:main.c        ****     printf("\nERROR not a RIFF file!\n");
+ 151              		.loc 1 72 0
+ 152 006a 7848     		ldr	r0, .L34+44
+ 153 006c 6DE0     		b	.L33
+ 154              	.L4:
+  73:main.c        ****     return -1;
+  74:main.c        ****   }
+  75:main.c        ****   //check if WAV file ("WAVE" at beginning of file)
+  76:main.c        ****   if ((pData[4] != 0x4157) || (pData[5] != 0x4556))
+ 155              		.loc 1 76 0
+ 156 006e 0821     		mov	r1, #8
+ 157 0070 6A5E     		ldrsh	r2, [r5, r1]
+ 158 0072 774B     		ldr	r3, .L34+48
+ 159 0074 9A42     		cmp	r2, r3
+ 160 0076 04D1     		bne	.L6
+ 161 0078 0A23     		mov	r3, #10
+ 162 007a EA5E     		ldrsh	r2, [r5, r3]
+ 163 007c 754B     		ldr	r3, .L34+52
+ 164 007e 9A42     		cmp	r2, r3
+ 165 0080 01D0     		beq	.L8
+ 166              	.L6:
+  77:main.c        ****   {
+  78:main.c        ****     printf("\nERROR not a WAV file!\n");
+ 167              		.loc 1 78 0
+ 168 0082 7548     		ldr	r0, .L34+56
+ 169 0084 61E0     		b	.L33
+ 170              	.L8:
+  79:main.c        ****     return -1;
+  80:main.c        ****   }
+  81:main.c        ****   //check if 'fmt ' tag
+  82:main.c        ****   if ((pData[6] != 0x6D66) || (pData[7] != 0x2074))
+ 171              		.loc 1 82 0
+ 172 0086 0C21     		mov	r1, #12
+ 173 0088 6A5E     		ldrsh	r2, [r5, r1]
+ 174 008a 744B     		ldr	r3, .L34+60
+ 175 008c 9A42     		cmp	r2, r3
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 7
+
+
+ 176 008e 04D1     		bne	.L9
+ 177 0090 0E23     		mov	r3, #14
+ 178 0092 EA5E     		ldrsh	r2, [r5, r3]
+ 179 0094 724B     		ldr	r3, .L34+64
+ 180 0096 9A42     		cmp	r2, r3
+ 181 0098 01D0     		beq	.L11
+ 182              	.L9:
+  83:main.c        ****   {
+  84:main.c        ****     printf("\nERROR no 'fmt ' tag found!\n");
+ 183              		.loc 1 84 0
+ 184 009a 7248     		ldr	r0, .L34+68
+ 185 009c 55E0     		b	.L33
+ 186              	.L11:
+  85:main.c        ****     return -1;
+  86:main.c        ****   }
+  87:main.c        ****   //printf info about WAV file ("WAVE" at beginning of file)
+  88:main.c        ****   printf("\nInfo: 'fmt ' chunk size = %d (0x%x)", pData[8] + 256*256*pData[9], pData[8] + 256*256*p
+ 187              		.loc 1 88 0
+ 188 009e 1221     		mov	r1, #18
+ 189 00a0 6A5E     		ldrsh	r2, [r5, r1]
+ 190 00a2 1021     		mov	r1, #16
+ 191 00a4 6B5E     		ldrsh	r3, [r5, r1]
+ 192 00a6 1204     		lsl	r2, r2, #16
+ 193 00a8 D218     		add	r2, r2, r3
+ 194 00aa 111C     		mov	r1, r2
+ 195 00ac 6E48     		ldr	r0, .L34+72
+ 196 00ae FFF7FEFF 		bl	simplePrintf
+  89:main.c        ****   printf("\nInfo: format tag = %d (1=no compression)", pData[10]);
+ 197              		.loc 1 89 0
+ 198 00b2 1422     		mov	r2, #20
+ 199 00b4 A95E     		ldrsh	r1, [r5, r2]
+ 200 00b6 6D48     		ldr	r0, .L34+76
+ 201 00b8 FFF7FEFF 		bl	simplePrintf
+  90:main.c        ****   printf("\nInfo: audio channels = %d", pData[11]);
+ 202              		.loc 1 90 0
+ 203 00bc 1623     		mov	r3, #22
+ 204 00be E95E     		ldrsh	r1, [r5, r3]
+ 205 00c0 6B48     		ldr	r0, .L34+80
+ 206 00c2 FFF7FEFF 		bl	simplePrintf
+  91:main.c        ****   printf("\nInfo: samples per second = %d", pData[12] + 256*256*pData[13]);
+ 207              		.loc 1 91 0
+ 208 00c6 1A22     		mov	r2, #26
+ 209 00c8 A95E     		ldrsh	r1, [r5, r2]
+ 210 00ca 1822     		mov	r2, #24
+ 211 00cc AB5E     		ldrsh	r3, [r5, r2]
+ 212 00ce 0904     		lsl	r1, r1, #16
+ 213 00d0 C918     		add	r1, r1, r3
+ 214 00d2 6848     		ldr	r0, .L34+84
+ 215 00d4 FFF7FEFF 		bl	simplePrintf
+  92:main.c        ****   sampleRate = pData[12] + 256*256*pData[13];
+ 216              		.loc 1 92 0
+ 217 00d8 2B8B     		ldrh	r3, [r5, #24]
+  93:main.c        ****   printf("\nInfo: bytes per second = %d", pData[14] + 256*256*pData[15]);
+ 218              		.loc 1 93 0
+ 219 00da 1E22     		mov	r2, #30
+ 220 00dc A95E     		ldrsh	r1, [r5, r2]
+ 221              		.loc 1 92 0
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 8
+
+
+ 222 00de 0093     		str	r3, [sp]
+ 223              		.loc 1 93 0
+ 224 00e0 1C22     		mov	r2, #28
+ 225 00e2 AB5E     		ldrsh	r3, [r5, r2]
+ 226 00e4 0904     		lsl	r1, r1, #16
+ 227 00e6 C918     		add	r1, r1, r3
+ 228 00e8 6348     		ldr	r0, .L34+88
+ 229              		.loc 1 92 0
+ 230 00ea 6F8B     		ldrh	r7, [r5, #26]
+ 231              		.loc 1 93 0
+ 232 00ec FFF7FEFF 		bl	simplePrintf
+  94:main.c        ****   printf("\nInfo: byte alignment = %d", pData[16]);
+ 233              		.loc 1 94 0
+ 234 00f0 2023     		mov	r3, #32
+ 235 00f2 E95E     		ldrsh	r1, [r5, r3]
+ 236 00f4 6148     		ldr	r0, .L34+92
+ 237 00f6 FFF7FEFF 		bl	simplePrintf
+  95:main.c        ****   printf("\nInfo: bits per sample = %d", pData[17]);
+ 238              		.loc 1 95 0
+ 239 00fa 2222     		mov	r2, #34
+ 240 00fc A95E     		ldrsh	r1, [r5, r2]
+ 241 00fe 6048     		ldr	r0, .L34+96
+ 242 0100 FFF7FEFF 		bl	simplePrintf
+  96:main.c        **** 
+  97:main.c        ****   //search for 'data' tag
+  98:main.c        ****   cnt = 10 + pData[8]/2;
+ 243              		.loc 1 98 0
+ 244 0104 1023     		mov	r3, #16
+ 245 0106 EA5E     		ldrsh	r2, [r5, r3]
+ 246 0108 D30F     		lsr	r3, r2, #31
+ 247 010a 9B18     		add	r3, r3, r2
+ 248 010c 5B10     		asr	r3, r3, #1
+ 249 010e 181C     		mov	r0, r3
+ 250              	.LVL2:
+ 251              		.loc 1 89 0
+ 252 0110 2C1C     		mov	r4, r5
+ 253              		.loc 1 42 0
+ 254 0112 5B00     		lsl	r3, r3, #1
+ 255              		.loc 1 89 0
+ 256 0114 1434     		add	r4, r4, #20
+ 257              		.loc 1 42 0
+ 258 0116 1A1C     		mov	r2, r3
+ 259              		.loc 1 98 0
+ 260 0118 0A30     		add	r0, r0, #10
+ 261              		.loc 1 42 0
+ 262 011a 1432     		add	r2, r2, #20
+ 263 011c 1919     		add	r1, r3, r4
+ 264 011e 00E0     		b	.L12
+ 265              	.L13:
+  99:main.c        ****   while((pData[cnt] != 0x6164) && (pData[cnt+1] != 0x6174) && (cnt<size/2))
+ 100:main.c        ****     cnt++;
+ 266              		.loc 1 100 0
+ 267 0120 0130     		add	r0, r0, #1
+ 268              	.L12:
+ 269 0122 141C     		mov	r4, r2
+ 270              		.loc 1 99 0
+ 271 0124 0023     		mov	r3, #0
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 9
+
+
+ 272 0126 CA5E     		ldrsh	r2, [r1, r3]
+ 273 0128 564B     		ldr	r3, .L34+100
+ 274 012a 9A42     		cmp	r2, r3
+ 275 012c 09D0     		beq	.L14
+ 276 012e 0223     		mov	r3, #2
+ 277 0130 CA5E     		ldrsh	r2, [r1, r3]
+ 278 0132 554B     		ldr	r3, .L34+104
+ 279 0134 9A42     		cmp	r2, r3
+ 280 0136 04D0     		beq	.L14
+ 281 0138 7308     		lsr	r3, r6, #1
+ 282 013a A21C     		add	r2, r4, #2
+ 283 013c 0231     		add	r1, r1, #2
+ 284 013e 9842     		cmp	r0, r3
+ 285 0140 EED3     		bcc	.L13
+ 286              	.L14:
+ 101:main.c        **** 
+ 102:main.c        ****   if (cnt >= size/2)
+ 287              		.loc 1 102 0
+ 288 0142 7308     		lsr	r3, r6, #1
+ 289 0144 9842     		cmp	r0, r3
+ 290 0146 08D3     		bcc	.L17
+ 103:main.c        ****   {
+ 104:main.c        ****     printf("\nERROR no 'data' tag found!\n");
+ 291              		.loc 1 104 0
+ 292 0148 5048     		ldr	r0, .L34+108
+ 293              	.LVL3:
+ 294              	.L33:
+ 295 014a FFF7FEFF 		bl	simplePrintf
+ 105:main.c        ****     return -1;
+ 106:main.c        ****   }  
+ 107:main.c        ****   //get data (i.e., sample size)
+ 108:main.c        ****   numSamples = (pData[cnt+2] + 256*256*pData[cnt+3]) / (pData[17]/8);
+ 109:main.c        ****   printf("\nInfo: Number of samples = %d (0x%x)\n\n", numSamples, numSamples);
+ 110:main.c        ****   
+ 111:main.c        ****   DACR = 0x7fc0;
+ 112:main.c        ****       
+ 113:main.c        ****   cnt++;
+ 114:main.c        ****   samples = 0;
+ 115:main.c        ****   usDelay = 1000000/ sampleRate + 1;
+ 116:main.c        **** 
+ 117:main.c        ****   while(1)
+ 118:main.c        ****   {
+ 119:main.c        ****     samples = 0;
+ 120:main.c        ****     cnt = 11 + pData[8]/2;
+ 121:main.c        ****   
+ 122:main.c        ****     while(samples++ < numSamples)
+ 123:main.c        ****     {
+ 124:main.c        ****       tS32 val;
+ 125:main.c        ****       
+ 126:main.c        ****       val = pData[cnt++];
+ 127:main.c        ****       DACR = ((val + 0x7fff) & 0xffc0); // |  //actual value to output
+ 128:main.c        ****   
+ 129:main.c        ****       udelay(usDelay);
+ 130:main.c        ****     }
+ 131:main.c        ****     while ((FIO2PIN & 0x00000400))
+ 132:main.c        ****     {
+ 133:main.c        ****     }
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 10
+
+
+ 134:main.c        ****     printf("\nP2.10 pressed!");
+ 135:main.c        ****   }
+ 136:main.c        ****   
+ 137:main.c        ****   return 0;
+ 138:main.c        **** }
+ 296              		.loc 1 138 0
+ 297 014e 0120     		mov	r0, #1
+ 298 0150 4042     		neg	r0, r0
+ 299 0152 01B0     		add	sp, sp, #4
+ 300              		@ sp needed for prologue
+ 301              	.LVL4:
+ 302              	.LVL5:
+ 303 0154 F0BC     		pop	{r4, r5, r6, r7}
+ 304 0156 02BC     		pop	{r1}
+ 305 0158 0847     		bx	r1
+ 306              	.LVL6:
+ 307              	.L17:
+ 308              		.loc 1 108 0
+ 309 015a 2B19     		add	r3, r5, r4
+ 310 015c 0621     		mov	r1, #6
+ 311 015e 5A5E     		ldrsh	r2, [r3, r1]
+ 312 0160 0421     		mov	r1, #4
+ 313 0162 5B5E     		ldrsh	r3, [r3, r1]
+ 314 0164 1204     		lsl	r2, r2, #16
+ 315 0166 D018     		add	r0, r2, r3
+ 316              	.LVL7:
+ 317 0168 494A     		ldr	r2, .L34+112
+ 318 016a 0023     		mov	r3, #0
+ 319 016c D15E     		ldrsh	r1, [r2, r3]
+ 320 016e 0029     		cmp	r1, #0
+ 321 0170 00DA     		bge	.L19
+ 322 0172 0731     		add	r1, r1, #7
+ 323              	.L19:
+ 324 0174 C910     		asr	r1, r1, #3
+ 325 0176 FFF7FEFF 		bl	__divsi3
+ 326 017a 051C     		mov	r5, r0
+ 327              	.LVL8:
+ 328              		.loc 1 109 0
+ 329 017c 291C     		mov	r1, r5
+ 330 017e 4548     		ldr	r0, .L34+116
+ 331 0180 2A1C     		mov	r2, r5
+ 332 0182 FFF7FEFF 		bl	simplePrintf
+ 333              		.loc 1 111 0
+ 334 0186 444A     		ldr	r2, .L34+120
+ 335 0188 444B     		ldr	r3, .L34+124
+ 336 018a 1A60     		str	r2, [r3]
+ 337              	.LBB5:
+ 338              	.LBB6:
+ 339              	.LBB8:
+ 340              		.loc 1 26 0
+ 341 018c 009A     		ldr	r2, [sp]
+ 342 018e 1304     		lsl	r3, r2, #16
+ 343 0190 1B14     		asr	r3, r3, #16
+ 344 0192 3904     		lsl	r1, r7, #16
+ 345 0194 C918     		add	r1, r1, r3
+ 346 0196 4248     		ldr	r0, .L34+128
+ 347 0198 FFF7FEFF 		bl	__udivsi3
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 11
+
+
+ 348 019c 0130     		add	r0, r0, #1
+ 349 019e 0004     		lsl	r0, r0, #16
+ 350 01a0 000C     		lsr	r0, r0, #16
+ 351 01a2 0301     		lsl	r3, r0, #4
+ 352 01a4 1B1A     		sub	r3, r3, r0
+ 353 01a6 1801     		lsl	r0, r3, #4
+ 354 01a8 C01A     		sub	r0, r0, r3
+ 355 01aa 3E4B     		ldr	r3, .L34+132
+ 356 01ac C001     		lsl	r0, r0, #7
+ 357 01ae FA21     		mov	r1, #250
+ 358 01b0 C018     		add	r0, r0, r3
+ 359 01b2 8900     		lsl	r1, r1, #2
+ 360 01b4 FFF7FEFF 		bl	__divsi3
+ 361 01b8 061C     		mov	r6, r0
+ 362              	.LVL9:
+ 363              	.L20:
+ 364 01ba 3B49     		ldr	r1, .L34+136
+ 365 01bc 0023     		mov	r3, #0
+ 366 01be CA5E     		ldrsh	r2, [r1, r3]
+ 367 01c0 D30F     		lsr	r3, r2, #31
+ 368 01c2 9B18     		add	r3, r3, r2
+ 369 01c4 5B10     		asr	r3, r3, #1
+ 370 01c6 3949     		ldr	r1, .L34+140
+ 371 01c8 5B00     		lsl	r3, r3, #1
+ 372 01ca 5818     		add	r0, r3, r1
+ 373 01cc 0024     		mov	r4, #0
+ 374 01ce 1DE0     		b	.L21
+ 375              	.L22:
+ 376              	.LBE8:
+ 377              	.LBE6:
+ 378              		.loc 1 127 0
+ 379 01d0 0022     		mov	r2, #0
+ 380 01d2 835E     		ldrsh	r3, [r0, r2]
+ 381 01d4 3649     		ldr	r1, .L34+144
+ 382 01d6 374A     		ldr	r2, .L34+148
+ 383 01d8 5B18     		add	r3, r3, r1
+ 384 01da 1340     		and	r3, r3, r2
+ 385 01dc 2F4A     		ldr	r2, .L34+124
+ 386              	.LBB10:
+ 387              	.LBB7:
+ 388              		.loc 1 24 0
+ 389 01de 3649     		ldr	r1, .L34+152
+ 390              	.LBE7:
+ 391              	.LBE10:
+ 392              		.loc 1 127 0
+ 393 01e0 1360     		str	r3, [r2]
+ 394              	.LBB11:
+ 395              	.LBB9:
+ 396              		.loc 1 24 0
+ 397 01e2 0223     		mov	r3, #2
+ 398 01e4 0B60     		str	r3, [r1]
+ 399              		.loc 1 25 0
+ 400 01e6 354B     		ldr	r3, .L34+156
+ 401 01e8 0022     		mov	r2, #0
+ 402 01ea 1A60     		str	r2, [r3]
+ 403              		.loc 1 26 0
+ 404 01ec 0C33     		add	r3, r3, #12
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 12
+
+
+ 405 01ee 1E60     		str	r6, [r3]
+ 406              		.loc 1 27 0
+ 407 01f0 FF22     		mov	r2, #255
+ 408 01f2 183B     		sub	r3, r3, #24
+ 409 01f4 1A60     		str	r2, [r3]
+ 410              		.loc 1 28 0
+ 411 01f6 1433     		add	r3, r3, #20
+ 412 01f8 0422     		mov	r2, #4
+ 413 01fa 1A60     		str	r2, [r3]
+ 414              		.loc 1 29 0
+ 415 01fc 0123     		mov	r3, #1
+ 416 01fe 0B60     		str	r3, [r1]
+ 417              	.L23:
+ 418              		.loc 1 32 0
+ 419 0200 2D4B     		ldr	r3, .L34+152
+ 420 0202 1B68     		ldr	r3, [r3]
+ 421              	.LBE9:
+ 422 0204 DA07     		lsl	r2, r3, #31
+ 423 0206 FBD4     		bmi	.L23
+ 424 0208 0134     		add	r4, r4, #1
+ 425 020a 0230     		add	r0, r0, #2
+ 426              	.L21:
+ 427              	.LBE11:
+ 428              	.LBE5:
+ 429              		.loc 1 122 0
+ 430 020c AC42     		cmp	r4, r5
+ 431 020e DFD1     		bne	.L22
+ 432              	.L28:
+ 433              		.loc 1 131 0
+ 434 0210 2B4B     		ldr	r3, .L34+160
+ 435 0212 1B68     		ldr	r3, [r3]
+ 436 0214 5905     		lsl	r1, r3, #21
+ 437 0216 FBD4     		bmi	.L28
+ 438              		.loc 1 134 0
+ 439 0218 2A48     		ldr	r0, .L34+164
+ 440 021a FFF7FEFF 		bl	simplePrintf
+ 441 021e CCE7     		b	.L20
+ 442              	.L35:
+ 443              		.align	2
+ 444              	.L34:
+ 445 0220 00000000 		.word	.LC2
+ 446 0224 38000000 		.word	.LC4
+ 447 0228 70000000 		.word	.LC6
+ 448 022c A8000000 		.word	.LC8
+ 449 0230 E0000000 		.word	.LC10
+ 450 0234 18010000 		.word	.LC12
+ 451 0238 04C002E0 		.word	-536690684
+ 452 023c FFFFCFFF 		.word	-3145729
+ 453 0240 00000000 		.word	wavSound
+ 454 0244 52490000 		.word	18770
+ 455 0248 46460000 		.word	17990
+ 456 024c 50010000 		.word	.LC15
+ 457 0250 57410000 		.word	16727
+ 458 0254 56450000 		.word	17750
+ 459 0258 6C010000 		.word	.LC17
+ 460 025c 666D0000 		.word	28006
+ 461 0260 74200000 		.word	8308
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 13
+
+
+ 462 0264 84010000 		.word	.LC19
+ 463 0268 A4010000 		.word	.LC21
+ 464 026c CC010000 		.word	.LC23
+ 465 0270 F8010000 		.word	.LC25
+ 466 0274 14020000 		.word	.LC27
+ 467 0278 34020000 		.word	.LC29
+ 468 027c 54020000 		.word	.LC31
+ 469 0280 70020000 		.word	.LC33
+ 470 0284 64610000 		.word	24932
+ 471 0288 74610000 		.word	24948
+ 472 028c 8C020000 		.word	.LC35
+ 473 0290 22000000 		.word	wavSound+34
+ 474 0294 AC020000 		.word	.LC37
+ 475 0298 C07F0000 		.word	32704
+ 476 029c 00C006E0 		.word	-536428544
+ 477 02a0 40420F00 		.word	1000000
+ 478 02a4 808FFFFF 		.word	-28800
+ 479 02a8 10000000 		.word	wavSound+16
+ 480 02ac 16000000 		.word	wavSound+22
+ 481 02b0 FF7F0000 		.word	32767
+ 482 02b4 C0FF0000 		.word	65472
+ 483 02b8 048000E0 		.word	-536838140
+ 484 02bc 0C8000E0 		.word	-536838132
+ 485 02c0 54C0FF3F 		.word	1073725524
+ 486 02c4 D4020000 		.word	.LC39
+ 487              	.LFE3:
+ 488              		.size	main, .-main
+ 489              		.section	.debug_frame,"",%progbits
+ 490              	.Lframe0:
+ 491 0000 0C000000 		.4byte	.LECIE0-.LSCIE0
+ 492              	.LSCIE0:
+ 493 0004 FFFFFFFF 		.4byte	0xffffffff
+ 494 0008 01       		.byte	0x1
+ 495 0009 00       		.ascii	"\000"
+ 496 000a 01       		.uleb128 0x1
+ 497 000b 7C       		.sleb128 -4
+ 498 000c 0E       		.byte	0xe
+ 499 000d 0C       		.byte	0xc
+ 500 000e 0D       		.uleb128 0xd
+ 501 000f 00       		.uleb128 0x0
+ 502              		.align	2
+ 503              	.LECIE0:
+ 504              	.LSFDE0:
+ 505 0010 1C000000 		.4byte	.LEFDE0-.LASFDE0
+ 506              	.LASFDE0:
+ 507 0014 00000000 		.4byte	.Lframe0
+ 508 0018 00000000 		.4byte	.LFB3
+ 509 001c C8020000 		.4byte	.LFE3-.LFB3
+ 510 0020 42       		.byte	0x4
+ 511              		.4byte	.LCFI0-.LFB3
+ 512 0021 0E       		.byte	0xe
+ 513 0022 14       		.uleb128 0x14
+ 514 0023 84       		.byte	0x84
+ 515 0024 05       		.uleb128 0x5
+ 516 0025 85       		.byte	0x85
+ 517 0026 04       		.uleb128 0x4
+ 518 0027 86       		.byte	0x86
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 14
+
+
+ 519 0028 03       		.uleb128 0x3
+ 520 0029 87       		.byte	0x87
+ 521 002a 02       		.uleb128 0x2
+ 522 002b 8E       		.byte	0x8e
+ 523 002c 01       		.uleb128 0x1
+ 524 002d 42       		.byte	0x4
+ 525              		.4byte	.LCFI1-.LCFI0
+ 526 002e 0E       		.byte	0xe
+ 527 002f 18       		.uleb128 0x18
+ 528              		.align	2
+ 529              	.LEFDE0:
+ 530              		.text
+ 531              	.Letext0:
+ 532              		.section	.debug_loc,"",%progbits
+ 533              	.Ldebug_loc0:
+ 534              	.LLST0:
+ 535 0000 00000000 		.4byte	.LFB3-.Ltext0
+ 536 0004 02000000 		.4byte	.LCFI0-.Ltext0
+ 537 0008 0100     		.2byte	0x1
+ 538 000a 5D       		.byte	0x5d
+ 539 000b 02000000 		.4byte	.LCFI0-.Ltext0
+ 540 000f 04000000 		.4byte	.LCFI1-.Ltext0
+ 541 0013 0200     		.2byte	0x2
+ 542 0015 7D       		.byte	0x7d
+ 543 0016 14       		.sleb128 20
+ 544 0017 04000000 		.4byte	.LCFI1-.Ltext0
+ 545 001b C8020000 		.4byte	.LFE3-.Ltext0
+ 546 001f 0200     		.2byte	0x2
+ 547 0021 7D       		.byte	0x7d
+ 548 0022 18       		.sleb128 24
+ 549 0023 00000000 		.4byte	0x0
+ 550 0027 00000000 		.4byte	0x0
+ 551              	.LLST1:
+ 552 002b 50000000 		.4byte	.LVL0-.Ltext0
+ 553 002f 54010000 		.4byte	.LVL4-.Ltext0
+ 554 0033 0100     		.2byte	0x1
+ 555 0035 55       		.byte	0x55
+ 556 0036 5A010000 		.4byte	.LVL6-.Ltext0
+ 557 003a 7C010000 		.4byte	.LVL8-.Ltext0
+ 558 003e 0100     		.2byte	0x1
+ 559 0040 55       		.byte	0x55
+ 560 0041 00000000 		.4byte	0x0
+ 561 0045 00000000 		.4byte	0x0
+ 562              	.LLST2:
+ 563 0049 5C000000 		.4byte	.LVL1-.Ltext0
+ 564 004d 54010000 		.4byte	.LVL5-.Ltext0
+ 565 0051 0100     		.2byte	0x1
+ 566 0053 56       		.byte	0x56
+ 567 0054 5A010000 		.4byte	.LVL6-.Ltext0
+ 568 0058 BA010000 		.4byte	.LVL9-.Ltext0
+ 569 005c 0100     		.2byte	0x1
+ 570 005e 56       		.byte	0x56
+ 571 005f 00000000 		.4byte	0x0
+ 572 0063 00000000 		.4byte	0x0
+ 573              	.LLST3:
+ 574 0067 10010000 		.4byte	.LVL2-.Ltext0
+ 575 006b 4A010000 		.4byte	.LVL3-.Ltext0
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 15
+
+
+ 576 006f 0100     		.2byte	0x1
+ 577 0071 50       		.byte	0x50
+ 578 0072 5A010000 		.4byte	.LVL6-.Ltext0
+ 579 0076 68010000 		.4byte	.LVL7-.Ltext0
+ 580 007a 0100     		.2byte	0x1
+ 581 007c 50       		.byte	0x50
+ 582 007d 00000000 		.4byte	0x0
+ 583 0081 00000000 		.4byte	0x0
+ 584              		.file 2 "./startup/general.h"
+ 585              		.section	.debug_info
+ 586 0000 4A010000 		.4byte	0x14a
+ 587 0004 0200     		.2byte	0x2
+ 588 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 589 000a 04       		.byte	0x4
+ 590 000b 01       		.uleb128 0x1
+ 591 000c 28000000 		.4byte	.LASF15
+ 592 0010 01       		.byte	0x1
+ 593 0011 16000000 		.4byte	.LASF16
+ 594 0015 81000000 		.4byte	.LASF17
+ 595 0019 00000000 		.4byte	.Ltext0
+ 596 001d C8020000 		.4byte	.Letext0
+ 597 0021 00000000 		.4byte	.Ldebug_line0
+ 598 0025 02       		.uleb128 0x2
+ 599 0026 01       		.byte	0x1
+ 600 0027 08       		.byte	0x8
+ 601 0028 34000000 		.4byte	.LASF0
+ 602 002c 03       		.uleb128 0x3
+ 603 002d B6000000 		.4byte	.LASF2
+ 604 0031 02       		.byte	0x2
+ 605 0032 48       		.byte	0x48
+ 606 0033 37000000 		.4byte	0x37
+ 607 0037 02       		.uleb128 0x2
+ 608 0038 02       		.byte	0x2
+ 609 0039 07       		.byte	0x7
+ 610 003a 4D000000 		.4byte	.LASF1
+ 611 003e 03       		.uleb128 0x3
+ 612 003f EB000000 		.4byte	.LASF3
+ 613 0043 02       		.byte	0x2
+ 614 0044 49       		.byte	0x49
+ 615 0045 49000000 		.4byte	0x49
+ 616 0049 02       		.uleb128 0x2
+ 617 004a 04       		.byte	0x4
+ 618 004b 07       		.byte	0x7
+ 619 004c 09000000 		.4byte	.LASF4
+ 620 0050 02       		.uleb128 0x2
+ 621 0051 01       		.byte	0x1
+ 622 0052 06       		.byte	0x6
+ 623 0053 60000000 		.4byte	.LASF5
+ 624 0057 02       		.uleb128 0x2
+ 625 0058 02       		.byte	0x2
+ 626 0059 05       		.byte	0x5
+ 627 005a BB000000 		.4byte	.LASF6
+ 628 005e 03       		.uleb128 0x3
+ 629 005f 7C000000 		.4byte	.LASF7
+ 630 0063 02       		.byte	0x2
+ 631 0064 4C       		.byte	0x4c
+ 632 0065 69000000 		.4byte	0x69
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 16
+
+
+ 633 0069 04       		.uleb128 0x4
+ 634 006a 04       		.byte	0x4
+ 635 006b 05       		.byte	0x5
+ 636 006c 696E7400 		.ascii	"int\000"
+ 637 0070 05       		.uleb128 0x5
+ 638 0071 C5000000 		.4byte	.LASF18
+ 639 0075 01       		.byte	0x1
+ 640 0076 14       		.byte	0x14
+ 641 0077 01       		.byte	0x1
+ 642 0078 01       		.byte	0x1
+ 643 0079 89000000 		.4byte	0x89
+ 644 007d 06       		.uleb128 0x6
+ 645 007e DC000000 		.4byte	.LASF19
+ 646 0082 01       		.byte	0x1
+ 647 0083 13       		.byte	0x13
+ 648 0084 49000000 		.4byte	0x49
+ 649 0088 00       		.byte	0x0
+ 650 0089 07       		.uleb128 0x7
+ 651 008a 01       		.byte	0x1
+ 652 008b 42000000 		.4byte	.LASF20
+ 653 008f 01       		.byte	0x1
+ 654 0090 2A       		.byte	0x2a
+ 655 0091 01       		.byte	0x1
+ 656 0092 69000000 		.4byte	0x69
+ 657 0096 00000000 		.4byte	.LFB3
+ 658 009a C8020000 		.4byte	.LFE3
+ 659 009e 00000000 		.4byte	.LLST0
+ 660 00a2 28010000 		.4byte	0x128
+ 661 00a6 08       		.uleb128 0x8
+ 662 00a7 47000000 		.4byte	.LASF8
+ 663 00ab 01       		.byte	0x1
+ 664 00ac 2B       		.byte	0x2b
+ 665 00ad 28010000 		.4byte	0x128
+ 666 00b1 2B000000 		.4byte	.LLST1
+ 667 00b5 08       		.uleb128 0x8
+ 668 00b6 6C000000 		.4byte	.LASF9
+ 669 00ba 01       		.byte	0x1
+ 670 00bb 2C       		.byte	0x2c
+ 671 00bc 3E000000 		.4byte	0x3e
+ 672 00c0 49000000 		.4byte	.LLST2
+ 673 00c4 09       		.uleb128 0x9
+ 674 00c5 636E7400 		.ascii	"cnt\000"
+ 675 00c9 01       		.byte	0x1
+ 676 00ca 2D       		.byte	0x2d
+ 677 00cb 3E000000 		.4byte	0x3e
+ 678 00cf 67000000 		.4byte	.LLST3
+ 679 00d3 0A       		.uleb128 0xa
+ 680 00d4 CC000000 		.4byte	.LASF11
+ 681 00d8 01       		.byte	0x1
+ 682 00d9 2E       		.byte	0x2e
+ 683 00da 3E000000 		.4byte	0x3e
+ 684 00de 0B       		.uleb128 0xb
+ 685 00df 71000000 		.4byte	.LASF10
+ 686 00e3 01       		.byte	0x1
+ 687 00e4 2F       		.byte	0x2f
+ 688 00e5 3E000000 		.4byte	0x3e
+ 689 00e9 01       		.byte	0x1
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 17
+
+
+ 690 00ea 55       		.byte	0x55
+ 691 00eb 0A       		.uleb128 0xa
+ 692 00ec 1D000000 		.4byte	.LASF12
+ 693 00f0 01       		.byte	0x1
+ 694 00f1 30       		.byte	0x30
+ 695 00f2 3E000000 		.4byte	0x3e
+ 696 00f6 0A       		.uleb128 0xa
+ 697 00f7 D4000000 		.4byte	.LASF13
+ 698 00fb 01       		.byte	0x1
+ 699 00fc 31       		.byte	0x31
+ 700 00fd 2C000000 		.4byte	0x2c
+ 701 0101 0C       		.uleb128 0xc
+ 702 0102 8C010000 		.4byte	.LBB5
+ 703 0106 0C020000 		.4byte	.LBE5
+ 704 010a 0D       		.uleb128 0xd
+ 705 010b 76616C00 		.ascii	"val\000"
+ 706 010f 01       		.byte	0x1
+ 707 0110 7C       		.byte	0x7c
+ 708 0111 5E000000 		.4byte	0x5e
+ 709 0115 0E       		.uleb128 0xe
+ 710 0116 70000000 		.4byte	0x70
+ 711 011a 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 712 011e 01       		.byte	0x1
+ 713 011f 81       		.byte	0x81
+ 714 0120 0F       		.uleb128 0xf
+ 715 0121 7D000000 		.4byte	0x7d
+ 716 0125 00       		.byte	0x0
+ 717 0126 00       		.byte	0x0
+ 718 0127 00       		.byte	0x0
+ 719 0128 10       		.uleb128 0x10
+ 720 0129 04       		.byte	0x4
+ 721 012a 57000000 		.4byte	0x57
+ 722 012e 11       		.uleb128 0x11
+ 723 012f 39010000 		.4byte	0x139
+ 724 0133 39010000 		.4byte	0x139
+ 725 0137 12       		.uleb128 0x12
+ 726 0138 00       		.byte	0x0
+ 727 0139 02       		.uleb128 0x2
+ 728 013a 01       		.byte	0x1
+ 729 013b 08       		.byte	0x8
+ 730 013c E6000000 		.4byte	.LASF14
+ 731 0140 13       		.uleb128 0x13
+ 732 0141 00000000 		.4byte	.LASF21
+ 733 0145 01       		.byte	0x1
+ 734 0146 0F       		.byte	0xf
+ 735 0147 2E010000 		.4byte	0x12e
+ 736 014b 01       		.byte	0x1
+ 737 014c 01       		.byte	0x1
+ 738 014d 00       		.byte	0x0
+ 739              		.section	.debug_abbrev
+ 740 0000 01       		.uleb128 0x1
+ 741 0001 11       		.uleb128 0x11
+ 742 0002 01       		.byte	0x1
+ 743 0003 25       		.uleb128 0x25
+ 744 0004 0E       		.uleb128 0xe
+ 745 0005 13       		.uleb128 0x13
+ 746 0006 0B       		.uleb128 0xb
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 18
+
+
+ 747 0007 03       		.uleb128 0x3
+ 748 0008 0E       		.uleb128 0xe
+ 749 0009 1B       		.uleb128 0x1b
+ 750 000a 0E       		.uleb128 0xe
+ 751 000b 11       		.uleb128 0x11
+ 752 000c 01       		.uleb128 0x1
+ 753 000d 12       		.uleb128 0x12
+ 754 000e 01       		.uleb128 0x1
+ 755 000f 10       		.uleb128 0x10
+ 756 0010 06       		.uleb128 0x6
+ 757 0011 00       		.byte	0x0
+ 758 0012 00       		.byte	0x0
+ 759 0013 02       		.uleb128 0x2
+ 760 0014 24       		.uleb128 0x24
+ 761 0015 00       		.byte	0x0
+ 762 0016 0B       		.uleb128 0xb
+ 763 0017 0B       		.uleb128 0xb
+ 764 0018 3E       		.uleb128 0x3e
+ 765 0019 0B       		.uleb128 0xb
+ 766 001a 03       		.uleb128 0x3
+ 767 001b 0E       		.uleb128 0xe
+ 768 001c 00       		.byte	0x0
+ 769 001d 00       		.byte	0x0
+ 770 001e 03       		.uleb128 0x3
+ 771 001f 16       		.uleb128 0x16
+ 772 0020 00       		.byte	0x0
+ 773 0021 03       		.uleb128 0x3
+ 774 0022 0E       		.uleb128 0xe
+ 775 0023 3A       		.uleb128 0x3a
+ 776 0024 0B       		.uleb128 0xb
+ 777 0025 3B       		.uleb128 0x3b
+ 778 0026 0B       		.uleb128 0xb
+ 779 0027 49       		.uleb128 0x49
+ 780 0028 13       		.uleb128 0x13
+ 781 0029 00       		.byte	0x0
+ 782 002a 00       		.byte	0x0
+ 783 002b 04       		.uleb128 0x4
+ 784 002c 24       		.uleb128 0x24
+ 785 002d 00       		.byte	0x0
+ 786 002e 0B       		.uleb128 0xb
+ 787 002f 0B       		.uleb128 0xb
+ 788 0030 3E       		.uleb128 0x3e
+ 789 0031 0B       		.uleb128 0xb
+ 790 0032 03       		.uleb128 0x3
+ 791 0033 08       		.uleb128 0x8
+ 792 0034 00       		.byte	0x0
+ 793 0035 00       		.byte	0x0
+ 794 0036 05       		.uleb128 0x5
+ 795 0037 2E       		.uleb128 0x2e
+ 796 0038 01       		.byte	0x1
+ 797 0039 03       		.uleb128 0x3
+ 798 003a 0E       		.uleb128 0xe
+ 799 003b 3A       		.uleb128 0x3a
+ 800 003c 0B       		.uleb128 0xb
+ 801 003d 3B       		.uleb128 0x3b
+ 802 003e 0B       		.uleb128 0xb
+ 803 003f 27       		.uleb128 0x27
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 19
+
+
+ 804 0040 0C       		.uleb128 0xc
+ 805 0041 20       		.uleb128 0x20
+ 806 0042 0B       		.uleb128 0xb
+ 807 0043 01       		.uleb128 0x1
+ 808 0044 13       		.uleb128 0x13
+ 809 0045 00       		.byte	0x0
+ 810 0046 00       		.byte	0x0
+ 811 0047 06       		.uleb128 0x6
+ 812 0048 05       		.uleb128 0x5
+ 813 0049 00       		.byte	0x0
+ 814 004a 03       		.uleb128 0x3
+ 815 004b 0E       		.uleb128 0xe
+ 816 004c 3A       		.uleb128 0x3a
+ 817 004d 0B       		.uleb128 0xb
+ 818 004e 3B       		.uleb128 0x3b
+ 819 004f 0B       		.uleb128 0xb
+ 820 0050 49       		.uleb128 0x49
+ 821 0051 13       		.uleb128 0x13
+ 822 0052 00       		.byte	0x0
+ 823 0053 00       		.byte	0x0
+ 824 0054 07       		.uleb128 0x7
+ 825 0055 2E       		.uleb128 0x2e
+ 826 0056 01       		.byte	0x1
+ 827 0057 3F       		.uleb128 0x3f
+ 828 0058 0C       		.uleb128 0xc
+ 829 0059 03       		.uleb128 0x3
+ 830 005a 0E       		.uleb128 0xe
+ 831 005b 3A       		.uleb128 0x3a
+ 832 005c 0B       		.uleb128 0xb
+ 833 005d 3B       		.uleb128 0x3b
+ 834 005e 0B       		.uleb128 0xb
+ 835 005f 27       		.uleb128 0x27
+ 836 0060 0C       		.uleb128 0xc
+ 837 0061 49       		.uleb128 0x49
+ 838 0062 13       		.uleb128 0x13
+ 839 0063 11       		.uleb128 0x11
+ 840 0064 01       		.uleb128 0x1
+ 841 0065 12       		.uleb128 0x12
+ 842 0066 01       		.uleb128 0x1
+ 843 0067 40       		.uleb128 0x40
+ 844 0068 06       		.uleb128 0x6
+ 845 0069 01       		.uleb128 0x1
+ 846 006a 13       		.uleb128 0x13
+ 847 006b 00       		.byte	0x0
+ 848 006c 00       		.byte	0x0
+ 849 006d 08       		.uleb128 0x8
+ 850 006e 34       		.uleb128 0x34
+ 851 006f 00       		.byte	0x0
+ 852 0070 03       		.uleb128 0x3
+ 853 0071 0E       		.uleb128 0xe
+ 854 0072 3A       		.uleb128 0x3a
+ 855 0073 0B       		.uleb128 0xb
+ 856 0074 3B       		.uleb128 0x3b
+ 857 0075 0B       		.uleb128 0xb
+ 858 0076 49       		.uleb128 0x49
+ 859 0077 13       		.uleb128 0x13
+ 860 0078 02       		.uleb128 0x2
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 20
+
+
+ 861 0079 06       		.uleb128 0x6
+ 862 007a 00       		.byte	0x0
+ 863 007b 00       		.byte	0x0
+ 864 007c 09       		.uleb128 0x9
+ 865 007d 34       		.uleb128 0x34
+ 866 007e 00       		.byte	0x0
+ 867 007f 03       		.uleb128 0x3
+ 868 0080 08       		.uleb128 0x8
+ 869 0081 3A       		.uleb128 0x3a
+ 870 0082 0B       		.uleb128 0xb
+ 871 0083 3B       		.uleb128 0x3b
+ 872 0084 0B       		.uleb128 0xb
+ 873 0085 49       		.uleb128 0x49
+ 874 0086 13       		.uleb128 0x13
+ 875 0087 02       		.uleb128 0x2
+ 876 0088 06       		.uleb128 0x6
+ 877 0089 00       		.byte	0x0
+ 878 008a 00       		.byte	0x0
+ 879 008b 0A       		.uleb128 0xa
+ 880 008c 34       		.uleb128 0x34
+ 881 008d 00       		.byte	0x0
+ 882 008e 03       		.uleb128 0x3
+ 883 008f 0E       		.uleb128 0xe
+ 884 0090 3A       		.uleb128 0x3a
+ 885 0091 0B       		.uleb128 0xb
+ 886 0092 3B       		.uleb128 0x3b
+ 887 0093 0B       		.uleb128 0xb
+ 888 0094 49       		.uleb128 0x49
+ 889 0095 13       		.uleb128 0x13
+ 890 0096 00       		.byte	0x0
+ 891 0097 00       		.byte	0x0
+ 892 0098 0B       		.uleb128 0xb
+ 893 0099 34       		.uleb128 0x34
+ 894 009a 00       		.byte	0x0
+ 895 009b 03       		.uleb128 0x3
+ 896 009c 0E       		.uleb128 0xe
+ 897 009d 3A       		.uleb128 0x3a
+ 898 009e 0B       		.uleb128 0xb
+ 899 009f 3B       		.uleb128 0x3b
+ 900 00a0 0B       		.uleb128 0xb
+ 901 00a1 49       		.uleb128 0x49
+ 902 00a2 13       		.uleb128 0x13
+ 903 00a3 02       		.uleb128 0x2
+ 904 00a4 0A       		.uleb128 0xa
+ 905 00a5 00       		.byte	0x0
+ 906 00a6 00       		.byte	0x0
+ 907 00a7 0C       		.uleb128 0xc
+ 908 00a8 0B       		.uleb128 0xb
+ 909 00a9 01       		.byte	0x1
+ 910 00aa 11       		.uleb128 0x11
+ 911 00ab 01       		.uleb128 0x1
+ 912 00ac 12       		.uleb128 0x12
+ 913 00ad 01       		.uleb128 0x1
+ 914 00ae 00       		.byte	0x0
+ 915 00af 00       		.byte	0x0
+ 916 00b0 0D       		.uleb128 0xd
+ 917 00b1 34       		.uleb128 0x34
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 21
+
+
+ 918 00b2 00       		.byte	0x0
+ 919 00b3 03       		.uleb128 0x3
+ 920 00b4 08       		.uleb128 0x8
+ 921 00b5 3A       		.uleb128 0x3a
+ 922 00b6 0B       		.uleb128 0xb
+ 923 00b7 3B       		.uleb128 0x3b
+ 924 00b8 0B       		.uleb128 0xb
+ 925 00b9 49       		.uleb128 0x49
+ 926 00ba 13       		.uleb128 0x13
+ 927 00bb 00       		.byte	0x0
+ 928 00bc 00       		.byte	0x0
+ 929 00bd 0E       		.uleb128 0xe
+ 930 00be 1D       		.uleb128 0x1d
+ 931 00bf 01       		.byte	0x1
+ 932 00c0 31       		.uleb128 0x31
+ 933 00c1 13       		.uleb128 0x13
+ 934 00c2 55       		.uleb128 0x55
+ 935 00c3 06       		.uleb128 0x6
+ 936 00c4 58       		.uleb128 0x58
+ 937 00c5 0B       		.uleb128 0xb
+ 938 00c6 59       		.uleb128 0x59
+ 939 00c7 0B       		.uleb128 0xb
+ 940 00c8 00       		.byte	0x0
+ 941 00c9 00       		.byte	0x0
+ 942 00ca 0F       		.uleb128 0xf
+ 943 00cb 05       		.uleb128 0x5
+ 944 00cc 00       		.byte	0x0
+ 945 00cd 31       		.uleb128 0x31
+ 946 00ce 13       		.uleb128 0x13
+ 947 00cf 00       		.byte	0x0
+ 948 00d0 00       		.byte	0x0
+ 949 00d1 10       		.uleb128 0x10
+ 950 00d2 0F       		.uleb128 0xf
+ 951 00d3 00       		.byte	0x0
+ 952 00d4 0B       		.uleb128 0xb
+ 953 00d5 0B       		.uleb128 0xb
+ 954 00d6 49       		.uleb128 0x49
+ 955 00d7 13       		.uleb128 0x13
+ 956 00d8 00       		.byte	0x0
+ 957 00d9 00       		.byte	0x0
+ 958 00da 11       		.uleb128 0x11
+ 959 00db 01       		.uleb128 0x1
+ 960 00dc 01       		.byte	0x1
+ 961 00dd 49       		.uleb128 0x49
+ 962 00de 13       		.uleb128 0x13
+ 963 00df 01       		.uleb128 0x1
+ 964 00e0 13       		.uleb128 0x13
+ 965 00e1 00       		.byte	0x0
+ 966 00e2 00       		.byte	0x0
+ 967 00e3 12       		.uleb128 0x12
+ 968 00e4 21       		.uleb128 0x21
+ 969 00e5 00       		.byte	0x0
+ 970 00e6 00       		.byte	0x0
+ 971 00e7 00       		.byte	0x0
+ 972 00e8 13       		.uleb128 0x13
+ 973 00e9 34       		.uleb128 0x34
+ 974 00ea 00       		.byte	0x0
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 22
+
+
+ 975 00eb 03       		.uleb128 0x3
+ 976 00ec 0E       		.uleb128 0xe
+ 977 00ed 3A       		.uleb128 0x3a
+ 978 00ee 0B       		.uleb128 0xb
+ 979 00ef 3B       		.uleb128 0x3b
+ 980 00f0 0B       		.uleb128 0xb
+ 981 00f1 49       		.uleb128 0x49
+ 982 00f2 13       		.uleb128 0x13
+ 983 00f3 3F       		.uleb128 0x3f
+ 984 00f4 0C       		.uleb128 0xc
+ 985 00f5 3C       		.uleb128 0x3c
+ 986 00f6 0C       		.uleb128 0xc
+ 987 00f7 00       		.byte	0x0
+ 988 00f8 00       		.byte	0x0
+ 989 00f9 00       		.byte	0x0
+ 990              		.section	.debug_pubnames,"",%progbits
+ 991 0000 17000000 		.4byte	0x17
+ 992 0004 0200     		.2byte	0x2
+ 993 0006 00000000 		.4byte	.Ldebug_info0
+ 994 000a 4E010000 		.4byte	0x14e
+ 995 000e 89000000 		.4byte	0x89
+ 996 0012 6D61696E 		.ascii	"main\000"
+ 996      00
+ 997 0017 00000000 		.4byte	0x0
+ 998              		.section	.debug_aranges,"",%progbits
+ 999 0000 1C000000 		.4byte	0x1c
+ 1000 0004 0200     		.2byte	0x2
+ 1001 0006 00000000 		.4byte	.Ldebug_info0
+ 1002 000a 04       		.byte	0x4
+ 1003 000b 00       		.byte	0x0
+ 1004 000c 0000     		.2byte	0x0
+ 1005 000e 0000     		.2byte	0x0
+ 1006 0010 00000000 		.4byte	.Ltext0
+ 1007 0014 C8020000 		.4byte	.Letext0-.Ltext0
+ 1008 0018 00000000 		.4byte	0x0
+ 1009 001c 00000000 		.4byte	0x0
+ 1010              		.section	.debug_ranges,"",%progbits
+ 1011              	.Ldebug_ranges0:
+ 1012 0000 8C010000 		.4byte	.LBB6-.Ltext0
+ 1013 0004 D0010000 		.4byte	.LBE6-.Ltext0
+ 1014 0008 E2010000 		.4byte	.LBB11-.Ltext0
+ 1015 000c 0C020000 		.4byte	.LBE11-.Ltext0
+ 1016 0010 DE010000 		.4byte	.LBB10-.Ltext0
+ 1017 0014 E0010000 		.4byte	.LBE10-.Ltext0
+ 1018 0018 00000000 		.4byte	0x0
+ 1019 001c 00000000 		.4byte	0x0
+ 1020              		.section	.debug_str,"MS",%progbits,1
+ 1021              	.LASF21:
+ 1022 0000 77617653 		.ascii	"wavSound\000"
+ 1022      6F756E64 
+ 1022      00
+ 1023              	.LASF4:
+ 1024 0009 756E7369 		.ascii	"unsigned int\000"
+ 1024      676E6564 
+ 1024      20696E74 
+ 1024      00
+ 1025              	.LASF16:
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 23
+
+
+ 1026 0016 6D61696E 		.ascii	"main.c\000"
+ 1026      2E6300
+ 1027              	.LASF12:
+ 1028 001d 73616D70 		.ascii	"sampleRate\000"
+ 1028      6C655261 
+ 1028      746500
+ 1029              	.LASF15:
+ 1030 0028 474E5520 		.ascii	"GNU C 4.2.2\000"
+ 1030      4320342E 
+ 1030      322E3200 
+ 1031              	.LASF0:
+ 1032 0034 756E7369 		.ascii	"unsigned char\000"
+ 1032      676E6564 
+ 1032      20636861 
+ 1032      7200
+ 1033              	.LASF20:
+ 1034 0042 6D61696E 		.ascii	"main\000"
+ 1034      00
+ 1035              	.LASF8:
+ 1036 0047 70446174 		.ascii	"pData\000"
+ 1036      6100
+ 1037              	.LASF1:
+ 1038 004d 73686F72 		.ascii	"short unsigned int\000"
+ 1038      7420756E 
+ 1038      7369676E 
+ 1038      65642069 
+ 1038      6E7400
+ 1039              	.LASF5:
+ 1040 0060 7369676E 		.ascii	"signed char\000"
+ 1040      65642063 
+ 1040      68617200 
+ 1041              	.LASF9:
+ 1042 006c 73697A65 		.ascii	"size\000"
+ 1042      00
+ 1043              	.LASF10:
+ 1044 0071 6E756D53 		.ascii	"numSamples\000"
+ 1044      616D706C 
+ 1044      657300
+ 1045              	.LASF7:
+ 1046 007c 74533332 		.ascii	"tS32\000"
+ 1046      00
+ 1047              	.LASF17:
+ 1048 0081 2F637967 		.ascii	"/cygdrive/c/tmp/lpc2468_samples/samples/analog_audi"
+ 1048      64726976 
+ 1048      652F632F 
+ 1048      746D702F 
+ 1048      6C706332 
+ 1049 00b4 6F00     		.ascii	"o\000"
+ 1050              	.LASF2:
+ 1051 00b6 74553136 		.ascii	"tU16\000"
+ 1051      00
+ 1052              	.LASF6:
+ 1053 00bb 73686F72 		.ascii	"short int\000"
+ 1053      7420696E 
+ 1053      7400
+ 1054              	.LASF18:
+ 1055 00c5 7564656C 		.ascii	"udelay\000"
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 24
+
+
+ 1055      617900
+ 1056              	.LASF11:
+ 1057 00cc 73616D70 		.ascii	"samples\000"
+ 1057      6C657300 
+ 1058              	.LASF13:
+ 1059 00d4 75734465 		.ascii	"usDelay\000"
+ 1059      6C617900 
+ 1060              	.LASF19:
+ 1061 00dc 64656C61 		.ascii	"delayInUs\000"
+ 1061      79496E55 
+ 1061      7300
+ 1062              	.LASF14:
+ 1063 00e6 63686172 		.ascii	"char\000"
+ 1063      00
+ 1064              	.LASF3:
+ 1065 00eb 74553332 		.ascii	"tU32\000"
+ 1065      00
+ 1066              		.ident	"GCC: (GNU) 4.2.2"
+ARM GAS  /cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s 			page 25
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+/cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s:1      .text:00000000 $t
+/cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s:83     .text:00000000 main
+/cygdrive/c/Users/andre.EA/AppData/Local/Temp/cclIxbch.s:445    .text:00000220 $d
+
+UNDEFINED SYMBOLS
+__divsi3
+__udivsi3
+eaInit
+simplePrintf
+wavSoundSize
+wavSound

@@ -1,0 +1,16 @@
+.EXPORT_ALL_VARIABLES:
+############################################################################
+
+CPUFLAGS := -march=armv4t -mtune=arm7tdmi
+# VENDOR_CFLAGS :=
+DISABLE_XIP := 1             # XIP works fine
+DISABLE_MOVE_RODATA := 1       # until we get a toolchain release
+LOPT := -O2                    # library is alway 02
+UOPT := -Os                    # user apps are always Os
+
+############################################################################
+
+include $(ROOTDIR)/vendors/config/armnommu/config.arch
+ARCH = arm
+
+############################################################################
