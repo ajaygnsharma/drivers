@@ -1,4 +1,0 @@
-Read this for good info on the SPI 
-https://www.kernel.org/doc/htmldocs/device-drivers/index.html
-
-
