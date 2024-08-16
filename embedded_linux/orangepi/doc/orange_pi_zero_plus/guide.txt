@@ -1,0 +1,50 @@
+WIFI router based off orange pi
+
+
+Login
+To find out the IP address, run nmap.
+
+$ nmap -sP 10.10.19.10-60
+Nmap scan report for 10.10.19.41
+Host is up (0.00069s latency).
+Nmap scan report for 10.10.19.57
+Host is up (0.00081s latency).
+Nmap done: 61 IP addresses (15 hosts up) scanned in 1.50 seconds
+
+Most likely the last entry is the correct one. Use that.
+
+Now Login
+$ ssh root@10.10.19.57
+passwd12
+
+
+Configuration
+To start the server start the hostapd service.
+
+# service hostapd status
+* hostapd.service - LSB: Advanced IEEE 802.11 management daemon
+   Loaded: loaded (/etc/init.d/hostapd; static; vendor preset: enabled)
+   Active: inactive (dead)
+     Docs: man:systemd-sysv-generator(8)
+
+root@orangepizeroplus:/etc/init.d# service hostapd start 
+
+root@orangepizeroplus:/etc/init.d# service hostapd status
+* hostapd.service - LSB: Advanced IEEE 802.11 management daemon
+   Loaded: loaded (/etc/init.d/hostapd; static; vendor preset: enabled)
+   Active: active (running) since Wed 2019-09-11 21:59:30 UTC; 2s ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 1589 ExecStart=/etc/init.d/hostapd start (code=exited, status=0/SUCCESS)
+    Tasks: 1 (limit: 4915)
+   CGroup: /system.slice/hostapd.service
+           `-1595 /usr/sbin/hostapd -B -P /run/hostapd.pid /etc/hostapd.conf
+
+Sep 11 21:59:19 orangepizeroplus systemd[1]: Starting LSB: Advanced IEEE 802.11 management daemon...
+Sep 11 21:59:30 orangepizeroplus hostapd[1589]: Starting advanced IEEE 802.11 management: hostapd.
+Sep 11 21:59:30 orangepizeroplus systemd[1]: Started LSB: Advanced IEEE 802.11 management daemon.
+
+
+Network Connectivity
+Make sure to use a good network cable. The one that is small does not work. LED on the board which is green should stay solid green and the one on the network should remain blinking green with steady amber. If the lights on the network adaptor dont show up that means the cable is bad.
+
+

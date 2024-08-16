@@ -1,0 +1,31 @@
+    1  ls
+    2  ls -l
+    3  clear
+    4  ls
+    5  sudo apt-get update
+    6  sudo apt-get upgrade
+    7  ll
+    8  ls -l
+    9  sudo apt-get install isc-dhcp-server
+   10  sudo apt-get install hostapd
+   11  sudo vi /etc/dhcp/dhcpd.conf 
+   12  cd /etc/
+   13  ls
+   14  sudo vi /etc/dhcp/dhcpd.conf 
+   15  sudo vi /etc/default/isc-dhcp-server 
+   16  iwcon
+   17  iwconfig
+   18  /sbin/iwconfig 
+   19  sudo ifdown wlan0
+   20  sudo vi /etc/network/interfaces
+   21  cat /etc/network/interfaces
+   22  sudo vi /etc/hostapd.conf 
+   23  sudo vi /etc/sysctl.conf 
+   24  sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
+   25  sudo ifup wlan0
+   26  sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+   27  sudo ifup eth0
+   28  sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+   29  sudo modprobe ip_tables
+   30  history 
+
