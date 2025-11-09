@@ -240,3 +240,13 @@ If you want, I can next:
 [5]: https://lists.buildroot.org/pipermail/buildroot/2016-March/521077.html?utm_source=chatgpt.com "new configuration for STM32F469 Discovery board"
 [6]: https://lists.buildroot.org/pipermail/buildroot/2018-March/580621.html?utm_source=chatgpt.com "[Buildroot] [PATCH 1/2] package/linux: fix custom dts files ..."
 [7]: https://gitlab.savoirfairelinux.com/netdsa/buildroot/-/tree/11271540bfe6adafbc133caf6b5b902a816f5f02/board/stmicroelectronics/stm32f469-disco?utm_source=chatgpt.com "stm32f469-disco - netdsa / buildroot"
+
+Linux options to enable
+```
+CONFIG_AUXDISPLAY=y
+CONFIG_CHARLCD=y
+CONFIG_CHARLCD_BL_FLASH=y
+CONFIG_HD44780_COMMON=y
+CONFIG_HD44780=y
+CONFIG_GPIO_PCF857X=y
+```
