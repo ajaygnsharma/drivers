@@ -1,0 +1,5 @@
+menu "External options (SS_STM32F469_EXT)"
+
+source "$BR2_EXTERNAL_SS_STM32F469_EXT_PATH/package/hello_world/Config.in"
+
+endmenu

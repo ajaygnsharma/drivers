@@ -1,0 +1,2 @@
+name: SS_STM32F469_EXT
+desc: External tree for STM32F469-Discovery (custom DTS + sample app)
