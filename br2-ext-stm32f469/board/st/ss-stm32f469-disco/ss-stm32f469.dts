@@ -130,11 +130,12 @@
 		display-height-chars = <2>;
 		display-width-chars = <16>;
 
-		data-gpios = <&pcf8574 0 GPIO_ACTIVE_HIGH>,  <&pcf8574 1 GPIO_ACTIVE_HIGH>,  <&pcf8574 2 GPIO_ACTIVE_HIGH>, <&pcf8574 3 GPIO_ACTIVE_HIGH>; 
+		data-gpios = <&pcf8574 4 GPIO_ACTIVE_HIGH>,  <&pcf8574 5 GPIO_ACTIVE_HIGH>,  <&pcf8574 6 GPIO_ACTIVE_HIGH>, <&pcf8574 7 GPIO_ACTIVE_HIGH>; 
 		
-		rs-gpios = <&pcf8574 4 GPIO_ACTIVE_HIGH>;
-		enable-gpios = <&pcf8574 5 GPIO_ACTIVE_HIGH>;
-		backlight-gpios = <&pcf8574 6 GPIO_ACTIVE_HIGH>;
+		rs-gpios = <&pcf8574 0 GPIO_ACTIVE_HIGH>;
+		rw-gpios =  <&pcf8574 1 GPIO_ACTIVE_HIGH>;	
+		enable-gpios = <&pcf8574 2 GPIO_ACTIVE_HIGH>;
+		//backlight-gpios = <&pcf8574 6 GPIO_ACTIVE_HIGH>;
 	};
 };
 
@@ -251,12 +252,25 @@
 	status = "okay";
 };
 
+/* Kernel mapping in the actual device tree seems invalid. So i am 
+putting based on the actual STM32F469 board */
+&pinctrl {
+    i2c1_pins_pb8pb9: i2c1-pb8pb9 {
+        pins {
+            pinmux = <STM32_PINMUX('B', 9, AF4)>, /* SDA */
+                     <STM32_PINMUX('B', 8, AF4)>; /* SCL */
+            bias-disable;
+            drive-open-drain;
+            slew-rate = <3>;
+        };
+    };
+};
+
 &i2c1 {
     status = "okay";
     clock-frequency = <100000>;
     pinctrl-names = "default";
-    pinctrl-0 = <&i2c1_pins>;
-
+    pinctrl-0 = <&i2c1_pins_pb8pb9>; /* Defined in stm32f4-pinctrl.dtsi */
 
     pcf8574: gpio@27 {
         compatible = "nxp,pcf8574";
