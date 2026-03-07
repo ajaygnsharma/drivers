@@ -184,3 +184,113 @@ If you want, next we can:
 * add a **boot-time systemd service** that prints status
 * make a **progress bar**
 * or integrate it with your existing embedded logging / alarm framework
+In **Buildroot**, `$(BINARIES_DIR)` (or `$BINARIES_DIR` in shell hooks) is a **Buildroot-defined output directory** where all *final bootable images* are placed.
+
+### What `BINARIES_DIR` actually is
+
+It expands to:
+
+```text
+output/images
+```
+
+(relative to your Buildroot top directory)
+
+So in your line:
+
+```sh
+install -m 0644 -D $BOARD_DIR/extlinux.conf \
+    $BINARIES_DIR/extlinux/extlinux.conf
+```
+
+it installs the file to:
+
+```text
+output/images/extlinux/extlinux.conf
+```
+
+Buildroot then picks that up when creating the SD-card / image layout.
+
+---
+
+## Common Buildroot directories (very useful mental model)
+
+| Variable          | Typical path              | Purpose                  |
+| ----------------- | ------------------------- | ------------------------ |
+| `$(TOPDIR)`       | `buildroot/`              | Buildroot source root    |
+| `$(OUTPUT_DIR)`   | `output/`                 | All generated output     |
+| `$(BINARIES_DIR)` | `output/images/`          | Final boot images        |
+| `$(TARGET_DIR)`   | `output/target/`          | Root filesystem staging  |
+| `$(BUILD_DIR)`    | `output/build/`           | Temporary package builds |
+| `$(HOST_DIR)`     | `output/host/`            | Host tools               |
+| `$(BOARD_DIR)`    | `board/<vendor>/<board>/` | Board support files      |
+
+---
+
+## Why extlinux.conf goes into `BINARIES_DIR`
+
+`extlinux.conf` is **not part of the root filesystem**. It belongs to the **boot partition**, so Buildroot expects it under:
+
+```text
+output/images/extlinux/extlinux.conf
+```
+
+That directory is later copied into the boot filesystem (FAT/ext) when:
+
+* generating an SD card image
+* using `genimage`
+* or installing manually
+
+---
+
+## How to verify at build time
+
+After `make`:
+
+```sh
+ls output/images/
+ls output/images/extlinux/
+```
+
+You should see:
+
+```text
+extlinux.conf
+zImage
+dtb/
+```
+
+---
+
+## One important gotcha (people hit this often)
+
+`BINARIES_DIR` exists **only in Buildroot hooks** and Makefiles.
+
+If you try to use it in a normal shell:
+
+```sh
+echo $BINARIES_DIR
+```
+
+it will be empty.
+
+It’s exported only when Buildroot runs:
+
+* `post-build.sh`
+* `post-image.sh`
+* board hooks
+
+---
+
+### Bottom line
+
+* `$BINARIES_DIR` = **`output/images`**
+* Correct place for `extlinux.conf`
+* Safe across rebuilds
+* Exactly how Buildroot expects boot assets to be installed
+
+If you want, I can also explain:
+
+* when to use `TARGET_DIR` vs `BINARIES_DIR`
+* how `genimage.cfg` consumes `output/images`
+* or how to drop DT overlays cleanly into the boot partition
