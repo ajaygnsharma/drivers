@@ -1,0 +1,5 @@
+config BR2_PACKAGE_KMOD_HELLO
+    bool "hello kernel module"
+    depends on BR2_LINUX_KERNEL      # only make sense if we build a kernel
+    help
+      Simple out-of-tree hello-world kernel module.
