@@ -264,6 +264,11 @@ putting based on the actual STM32F469 board */
             slew-rate = <3>;
         };
     };
+		adc1_in9_pin: adc1-in9-pin {
+        pins {
+            pinmux = <STM32_PINMUX('B', 1, ANALOG)>; /* PB1 = ADC12_IN9 on many F4 parts */
+        };
+    };
 };
 
 &i2c1 {
@@ -279,3 +284,21 @@ putting based on the actual STM32F469 board */
         #gpio-cells = <2>;
     };
 };	
+
+&adc {
+    status = "okay";
+};
+
+&adc1 {
+    status = "okay";
+
+		/delete-property/ dmas;
+    /delete-property/ dma-names;
+
+    st,adc-channels = <8>;              /* example ADC channel */
+    assigned-resolution-bits = <12>;
+    st,min-sample-time-nsecs = <10000>;
+
+		pinctrl-names = "default";
+    pinctrl-0 = <&adc1_in9_pin>;
+};
